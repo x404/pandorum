@@ -1,5 +1,9 @@
 $(document).ready(function(){
 
+	// styler
+	$('#lang').styler();
+
+
 
 	// $("#foo1").owlCarousel({
 	// 	items : 1,
