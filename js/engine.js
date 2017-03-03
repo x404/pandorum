@@ -1,5 +1,10 @@
 $(document).ready(function(){
 
+	$('.logomenu').hover(
+		function(){$('body').addClass('l-with-nav')},
+		function(){$('body').removeClass('l-with-nav')}
+	);
+
 	// styler
 	$('#lang').styler();
 
