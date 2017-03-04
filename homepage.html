@@ -47,7 +47,7 @@
 			</div>	
 			<div class="support">
 				<a href="tel:88002000000" class="phone">8 800 200 0000</a>
-				<a href="#" class="btn" role="button"><span>Обратный звонок</span></a>
+				<a href="#" class="btn" role="button" data-toggle="modal" data-target="#callback"><span>Обратный звонок</span></a>
 			</div>
 			<div class="switch">
 				ЯЗЫК
@@ -156,8 +156,39 @@
 		</div>
 	</footer>
 	<!-- =/footer -->
-	
 </div>
+
+
+
+<!-- =callback -->
+<div class="modal fade" id="callback" tabindex="-1" role="dialog" aria-labelledby="callbackLabel">
+	<div class="modal-dialog" role="document">
+		<div class="modal-content">
+			<div class="modal-title" id="callbackLabel">Обратный звонок</div>
+			<form action="#" method="post" id="callback-form">
+				<fieldset>
+					<div class="input-field">
+						<label for="name" class="name-field">Ваше имя</label>
+						<label for="name" class="helper-field helper-field-name">Ваше имя</label>					
+						<input type="text" id="name" name="name" class="form-control required" value="" />
+					</div>
+					<div class="input-field">
+						<label for="tel" class="name-field">Телефон</label>
+						<label for="tel" class="helper-field helper-field-tel">Телефон</label>
+						<input type="tel" id="tel" name="tel" class="form-control required tel" value="" />
+					</div>
+
+					<div class="bottom row">
+						<input type="submit" class="submit" value="Перезвоните мне" />						
+					</div>
+				</fieldset>
+			</form>
+			<button type="button" class="close" data-dismiss="modal"><img src="images/close-modal.png" alt="" /></button>
+		</div>
+	</div>
+</div>
+<!-- =/callback -->
+
 
 
 <div id="outdated"></div>
