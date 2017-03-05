@@ -7,6 +7,7 @@ $(document).ready(function(){
 
 	// styler
 	$('#lang').styler();
+	$('#countries').styler();
 
 
 	// inputs
@@ -29,6 +30,20 @@ $(document).ready(function(){
 			return $(this).addClass('is-charged');
 		}
 	});
+
+
+	// выбор города из ненумерованного списка
+	$('.cities dd a').click(function(e){
+		e.preventDefault();
+		$this = $(this);
+		$('.city-select-link span').text($this.text());
+		$('.cities dd').removeClass('current');
+		$this.parent().addClass('current');
+
+		$('#opencity').modal('hide');
+
+		$('.rating-actions-filter .open-city-select').text($this.text())
+	})
 
 
 	// $("#foo1").owlCarousel({
