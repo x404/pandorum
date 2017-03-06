@@ -11,7 +11,7 @@
 
 <meta name="robots" content="noindex,nofollow" />
 <!-- InstanceBeginEditable name="doctitle" -->
-<title>Акции</title>
+<title>Контакты</title>
 <!-- InstanceEndEditable -->
 <!-- <link rel="stylesheet" href="css/bootstrap.min.css" /> -->
 <!-- <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/font-awesome/4.6.3/css/font-awesome.min.css"> -->
@@ -33,8 +33,11 @@
 </head>
 <body>
 <!-- InstanceBeginEditable name="EditRegion3" -->
-<div class="wrap actions">
+<div class="wrap inner contacts">
 	<div class="outerwrapper">
+		<div class="bg"></div>
+
+
 		<!-- =header -->
 		<header class="header">
 			<div class="city-select">
@@ -87,46 +90,126 @@
 
 		<!-- =main -->
 		<div class="main">
-			<section class="actions_list">
-				<h1>Акции Pandorum</h1>
-				<div class="actions_list_row flexbox">
-					<div class="cell">
-						<a href="#" title="" class="cell_wrapper">
-							<h3>Дарим сувенирные кружки всем участникам квестов в честь новогодних праздников</h3>
-							<time datetime="2016-12-01 11:26:19" class="datetime">1 декабря 2016</time>
-							<div class="pic"><img src="tmp/action-1.jpg" alt="" /></div>
-						</a>
+			<h1>Контакты</h1>
+			<ul class="tabs">
+				<li data-tab="tab1" onclick="google.maps.event.trigger(map1, "resize");">Представительство в регионе</li>
+				<li class="current" data-tab="tab2">Центральный офис</li>
+			</ul>
+
+			<div class="content">
+				<div class="tab tab1">
+					<p class="address">г. Красноярск, ул. Молокова д. 76</p>
+					<p class="tel"><a href="tel:+7391255-55-55" title="" class="tel_link">+7 (391) 255-55-55</a></p>
+					<p><a href="mailto:quests@pandorum.ru" title="" class="email_link">quests@pandorum.ru</a></p>
+					<div class="schedule">
+						<p>ВРЕМЯ РАБОТЫ</p>
+						<ul class="days">
+							<li>пн</li>
+							<li>вт</li>
+							<li>ср</li>
+							<li>чт</li>
+							<li>ПТ</li>
+							<li>СБ</li>
+							<li>ВС</li>
+						</ul>
+						<ul class="worktime">
+							<li>11:00 - 24:00</li>
+							<li>12:00 - 03:00</li>
+						</ul>
 					</div>
-					<div class="cell">
-						<a href="#" title="" class="cell_wrapper">
-							<h3>Скидка 25% для именинников и приятные мелочи</h3>
-							<time datetime="2016-12-01 11:26:19" class="datetime">1 декабря 2016</time>
-							<div class="pic"><img src="tmp/action-2.jpg" alt="" /></div>
-						</a>
+					<a href="#" role="button" class="btn"><span>Напишите нам</span></a>
+				</div>
+				<div class="tab visible tab2">
+					<p class="address">Россия, г. Красноярск, ул. Молокова д. 76</p>
+					<p class="tel"><a href="tel:+7391255-55-55" title="" class="tel_link">+7 (391) 255-55-55</a></p>
+					<p><a href="mailto:quests@pandorum.ru" title="" class="email_link">quests@pandorum.ru</a></p>
+					<div class="schedule">
+						<p>ВРЕМЯ РАБОТЫ</p>
+						<ul class="days">
+							<li>пн</li>
+							<li>вт</li>
+							<li>ср</li>
+							<li>чт</li>
+							<li>ПТ</li>
+							<li>СБ</li>
+							<li>ВС</li>
+						</ul>
+						<ul class="worktime">
+							<li>11:00 - 24:00</li>
+							<li>12:00 - 03:00</li>
+						</ul>
 					</div>
-					<div class="cell">
-						<a href="#" title="" class="cell_wrapper">
-							<h3>Вы у нас уже бывали? Тогда следующее посещение вас ждет сюрприз!</h3>
-							<time datetime="2016-12-01 11:26:19" class="datetime">1 декабря 2016</time>
-							<div class="pic"><img src="tmp/action-3.jpg" alt="" /></div>
-						</a>
-					</div>
-					<div class="cell">
-						<a href="#" title="" class="cell_wrapper">
-							<h3>Эти акции так сложно придумывать...</h3>
-							<time datetime="2016-12-01 11:26:19" class="datetime">1 декабря 2016</time>
-							<div class="pic"><img src="tmp/action-4.jpg" alt="" /></div>
-						</a>
-					</div>
-					<div class="cell">
-						<a href="#" title="" class="cell_wrapper">
-							<h3>Сходи на магическое шоу Александра и мы пожмем тебе руку</h3>
-							<time datetime="2016-12-01 11:26:19" class="datetime">1 декабря 2016</time>
-							<div class="pic"><img src="tmp/action-5.jpg" alt="" /></div>
-						</a>
-					</div>
-				</div>				
-			</section>
+					<a href="#" role="button" class="btn"><span>Напишите нам</span></a>		
+				</div>
+			</div>
+		</div>
+
+
+		<div class="map">
+			<div class="gmap tab1">
+				<div id="map1"></div>				
+			</div>
+			<div class="gmap tab2 visible">
+				<div id="map2"></div>				
+			</div>
+			<script>
+			var map1, map2;
+			function initMap() {
+				var myLatlng = new google.maps.LatLng(56.0358307,95.8917704);
+				var mapOptions = {
+					zoom: 13,
+					center: myLatlng,
+					mapTypeId: google.maps.MapTypeId.ROADMAP,
+					scrollwheel : false
+				};
+				var styles = [{
+					stylers: [
+						{saturation: -100},
+						{lightness: '0'},
+						{invert_lightness : true}
+						]
+					}];  
+
+				var myLatlng2 = new google.maps.LatLng(56.0358307,92.8917704);
+				var mapOptions2 = {
+					zoom: 13,
+					center: myLatlng2,
+					mapTypeId: google.maps.MapTypeId.ROADMAP,
+					scrollwheel : false
+				};
+				var styles2 = [{
+					stylers: [
+						{saturation: -100},
+						{lightness: '0'},
+						{invert_lightness : true}
+						]
+					}];
+
+
+
+				var map1 = new google.maps.Map(document.getElementById("map1"), mapOptions);
+				map1.setOptions({styles: styles});
+
+				var image1 = '/images/balloon.png';
+				var image2 = '/images/balloon.png';
+
+				var marker1 = new google.maps.Marker({
+					position: {lat: 56.0358307, lng: 95.8917704},
+					map: map1,
+					icon: image1
+				});
+
+
+				var map2 = new google.maps.Map(document.getElementById("map2"), mapOptions2);
+				map2.setOptions({styles: styles2});
+
+				var marker2 = new google.maps.Marker({
+					position: {lat: 56.0358307, lng: 92.8917704},
+					map: map2,
+					icon: image1
+				});
+			}
+			</script>
 		</div>
 		<!-- =/main -->
 	</div>

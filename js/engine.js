@@ -43,6 +43,24 @@ $(document).ready(function(){
 		$('#opencity').modal('hide');
 
 		$('.rating-actions-filter .open-city-select').text($this.text())
+	});
+
+
+	// табы в контактах
+	$('.tabs li').click(function(e){
+		e.preventDefault();
+		var $this = $(this),
+			tab = $this.data('tab');
+
+			$('.tabs li.current').removeClass('current');
+			$this.addClass('current');
+
+		$('.content .visible').removeClass('visible');
+		$('.content ').find('.' + tab).addClass('visible');
+
+		$('.gmap.visible').removeClass('visible');
+		$('.map ').find('.' + tab).addClass('visible');
+
 	})
 
 
