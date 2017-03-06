@@ -1,5 +1,5 @@
 <!DOCTYPE HTML>
-<html lang="ru"><!-- InstanceBegin template="/Templates/actions.dwt" codeOutsideHTMLIsLocked="false" -->
+<html lang="ru">
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
 <meta name="keywords" content="" />
@@ -10,12 +10,12 @@
 <link rel="shortcut icon" href="/favicon.ico" type="image/x-icon"/>
 
 <meta name="robots" content="noindex,nofollow" />
-<!-- InstanceBeginEditable name="doctitle" -->
+<!-- TemplateBeginEditable name="doctitle" -->
 <title>Акции</title>
-<!-- InstanceEndEditable -->
+<!-- TemplateEndEditable -->
 <!-- <link rel="stylesheet" href="css/bootstrap.min.css" /> -->
 <!-- <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/font-awesome/4.6.3/css/font-awesome.min.css"> -->
-<link rel="stylesheet" href="css/styles.css" />
+<link rel="stylesheet" href="../css/styles.css" />
 
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
 <script>window.jQuery || document.write('<script src="/js/jquery-1.12.4.min.js"><\/script>')</script>
@@ -28,132 +28,13 @@
 	<script src="http://html5shiv.googlecode.com/svn/trunk/html5.js"></script>
 <![endif]-->
 
-<!-- InstanceBeginEditable name="head" -->
-<!-- InstanceEndEditable -->
+<!-- TemplateBeginEditable name="head" -->
+<!-- TemplateEndEditable -->
 </head>
 <body>
-<!-- InstanceBeginEditable name="EditRegion3" -->
-<div class="wrap actions">
-	<div class="outerwrapper">
-		<div class="bg"></div>
+<!-- TemplateBeginEditable name="EditRegion3" -->
 
-		<!-- =header -->
-		<header class="header">
-			<div class="city-select">
-				ВАШ ГОРОД
-				<div id="city-chooser">
-					<a href="#" title="" class="city-select-link" data-toggle="modal" data-target="#opencity" data-backdrop="true">
-						<span>Красноярск</span>
-					</a>
-				</div>
-			</div>	
-			<div class="support">
-				<a href="tel:88002000000" class="phone">8 800 200 0000</a>
-				<a href="#" class="btn" role="button" data-toggle="modal" data-target="#callback"><span>Обратный звонок</span></a>
-			</div>
-			<div class="switch">
-				ЯЗЫК
-				<select name="lang" id="lang">
-					<option value="Рус" selected="">Рус</option>
-					<option value="Eng">Eng</option>
-					<option value="Fra">Fra</option>
-					<option value="BLG">BLG</option>
-					<option value="Aus">Aus</option>
-					<option value="中国">中国</option>
-				</select>
-			</div>
-		</header>
-		<!-- =/header -->
-
-		<!-- =logomenu -->
-		<div class="logomenu">
-			<div class="skew"></div>
-			<div class="logo">
-				<a href="/"><img src="images/logo.png" alt="pandorum" /></a>
-			</div>
-			<nav>
-				<ul>
-					<li class="icon1"><a href="#"><span>Меню</span></a></li>
-					<li class="icon2"><a href="#"><span>Бронирование</span></a></li>
-					<li class="icon3"><a href="#"><span>Подбор квеста</span></a></li>
-					<li class="icon4"><a href="#"><span>Pandorum</span></a></li>
-					<li class="icon5"><a href="#"><span>Франшиза</span></a></li>
-					<li class="icon6"><a href="#"><span>Отзывы</span></a></li>
-					<li class="icon7"><a href="#"><span>Новости</span></a></li>
-					<li class="icon8"><a href="#"><span>Акции</span></a></li>
-					<li class="icon9"><a href="#"><span>Контакты</span></a></li>
-				</ul>
-			</nav>
-		</div>
-		<!-- =/logomenu -->
-
-		<!-- =main -->
-		<div class="main">
-			<section class="actions_list">
-				<h1>Акции Pandorum</h1>
-				<div class="actions_list_row flexbox">
-					<div class="cell">
-						<a href="#" title="" class="cell_wrapper">
-							<h3>Дарим сувенирные кружки всем участникам квестов в честь новогодних праздников</h3>
-							<time datetime="2016-12-01 11:26:19" class="datetime">1 декабря 2016</time>
-							<div class="pic"><img src="tmp/action-1.jpg" alt="" /></div>
-						</a>
-					</div>
-					<div class="cell">
-						<a href="#" title="" class="cell_wrapper">
-							<h3>Скидка 25% для именинников и приятные мелочи</h3>
-							<time datetime="2016-12-01 11:26:19" class="datetime">1 декабря 2016</time>
-							<div class="pic"><img src="tmp/action-2.jpg" alt="" /></div>
-						</a>
-					</div>
-					<div class="cell">
-						<a href="#" title="" class="cell_wrapper">
-							<h3>Вы у нас уже бывали? Тогда следующее посещение вас ждет сюрприз!</h3>
-							<time datetime="2016-12-01 11:26:19" class="datetime">1 декабря 2016</time>
-							<div class="pic"><img src="tmp/action-3.jpg" alt="" /></div>
-						</a>
-					</div>
-					<div class="cell">
-						<a href="#" title="" class="cell_wrapper">
-							<h3>Эти акции так сложно придумывать...</h3>
-							<time datetime="2016-12-01 11:26:19" class="datetime">1 декабря 2016</time>
-							<div class="pic"><img src="tmp/action-4.jpg" alt="" /></div>
-						</a>
-					</div>
-					<div class="cell">
-						<a href="#" title="" class="cell_wrapper">
-							<h3>Сходи на магическое шоу Александра и мы пожмем тебе руку</h3>
-							<time datetime="2016-12-01 11:26:19" class="datetime">1 декабря 2016</time>
-							<div class="pic"><img src="tmp/action-5.jpg" alt="" /></div>
-						</a>
-					</div>
-				</div>				
-			</section>
-		</div>
-		<!-- =/main -->
-	</div>
-
-
-	<!-- =footer -->
-	<footer>
-		<div class="left">
-			<span class="copyright">© 2016 Pandorum</span>
-			КВЕСТЫ В РЕАЛЬНОТИ 
-		</div>
-		<div class="right">
-			<div class="music">
-				<a href="#">Музыка</a>
-			</div>
-			<div class="social">
-				<a href="#" target="_blank" title=""><img src="images/vk.png" alt="vkontakte" /></a>
-				<a href="#" target="_blank" title=""><img src="images/instagramm.png" alt="instagramm" /></a>
-				<a href="#" target="_blank" title=""><img src="images/facebook.png" alt="facebook" /></a>
-			</div>
-		</div>
-	</footer>
-	<!-- =/footer -->
-</div>
-<!-- InstanceEndEditable -->
+<!-- TemplateEndEditable -->
 
 <!-- =opencity -->
 <div class="modal fade city-choose-popup" id="opencity" tabindex="-1" role="dialog" aria-labelledby="add-opencityLabel">
@@ -258,7 +139,7 @@
 					</dl>
 				</div>
 			</div>
-			<button type="button" class="close" data-dismiss="modal"><img src="images/close-modal.png" alt="" /></button>
+			<button type="button" class="close" data-dismiss="modal"><img src="../images/close-modal.png" alt="" /></button>
 		</div>
 	</div>
 </div>
@@ -287,23 +168,23 @@
 					</div>
 				</fieldset>
 			</form>
-			<button type="button" class="close" data-dismiss="modal"><img src="images/close-modal.png" alt="" /></button>
+			<button type="button" class="close" data-dismiss="modal"><img src="../images/close-modal.png" alt="" /></button>
 		</div>
 	</div>
 </div>
 <!-- =/callback -->
 
 <div id="outdated"></div>
-<link rel="stylesheet" property="stylesheet" href="outdatedbrowser/outdatedbrowser.min.css" />
-<script src="outdatedbrowser/outdatedbrowser.min.js"></script>
+<link rel="stylesheet" property="stylesheet" href="../outdatedbrowser/outdatedbrowser.min.css" />
+<script src="../outdatedbrowser/outdatedbrowser.min.js"></script>
 
-<link href="css/jquery.formstyler.css" rel="stylesheet" property="stylesheet" />
-<script src="js/jquery.formstyler.min.js"></script>
+<link href="../css/jquery.formstyler.css" rel="stylesheet" property="stylesheet" />
+<script src="../js/jquery.formstyler.min.js"></script>
 
 <script src="https://ajax.microsoft.com/ajax/jquery.validate/1.15.0/jquery.validate.min.js"></script>
 <script>window.jQuery || document.write('<script src="js/jquery.validate.min.js"><\/script>')</script>
 
-<script src="js/modal.min.js"></script>
-<script src="js/engine.js"></script>
+<script src="../js/modal.min.js"></script>
+<script src="../js/engine.js"></script>
 </body>
-<!-- InstanceEnd --></html>
+</html>
