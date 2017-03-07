@@ -76,10 +76,29 @@ $(document).ready(function(){
 		loop:false,
 		nav:true,
 		dots: false,
-		items:5,
-		navText: ["PREV", "NEXT"]
+		items:3,
+		startPosition : 2,
+		stagePadding : 250,
+		navText: ["", ""],
+		onInitialized: function (event) {
+			refreshFirstLastVisible(event);
+		},
+		onChanged: function (event) {
+			refreshFirstLastVisible(event);
+		}
 	});
+
+	function refreshFirstLastVisible(event){
+		var target = $(event.target).find('.owl-item');
+			target.removeClass('first');
+			target.eq(event.item.index-1).addClass('first');
+			target.removeClass('last');
+			target.eq(event.item.index+event.page.size).addClass('last');		
+	}
+
 });
+
+
 
 // =заглушка для IE
 //event listener: DOM ready
