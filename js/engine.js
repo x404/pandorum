@@ -60,8 +60,8 @@ $(document).ready(function(){
 
 		$('.gmap.visible').removeClass('visible');
 		$('.map ').find('.' + tab).addClass('visible');
+	});
 
-	})
 
 
 	// $("#foo1").owlCarousel({
@@ -72,31 +72,13 @@ $(document).ready(function(){
 	// 	navigationText: ["", ""]
 	// });	
 
-	// carousel
-	// $('#foo1').owlCarousel({
-	// 	loop:false,
-	// 	nav:true,
-	// 	dots: true,
-	// 	items:4,
-	// 	navText: ["PREV", "NEXT"],
-	// 	navContainer : '.powerfarms .owl-nav',
-	// 	dotsContainer : '.powerfarms .owl-dots',
-	// 	responsive:{
-	// 		0:{
-	// 			items:1,
-	// 			stagePadding: 20
-	// 		},
-	// 		670:{
-	// 			items:2
-	// 		},
-	// 		991:{
-	// 			items:3
-	// 		},
-	// 		1300:{
-	// 			items:4
-	// 		}
-	// 	}
-	// });
+	$('#foo1').owlCarousel({
+		loop:false,
+		nav:true,
+		dots: false,
+		items:5,
+		navText: ["PREV", "NEXT"]
+	});
 });
 
 // =заглушка для IE
