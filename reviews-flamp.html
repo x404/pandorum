@@ -120,7 +120,7 @@
 								<div class="user_text">
 									<p>Сегодня с друзьями побывали гостинице "дельфин". Мы все в восторге. Мозг кипит, эмоции переполняют. Рекомендую, если хотите зарядку для ума, вам сюда!</p>
 								</div>
-								<p class="more"><a href="#" class="more_link">Смотреть полный отзыв</a></p>
+								<p class="more"><a href="#" class="more_link" data-toggle="modal" data-target="#review1" data-backdrop="true">Смотреть полный отзыв</a></p>
 								<div class="stars"> 
 									<span class="stars_rate">
 										<img src="images/star.png" alt="" />
@@ -145,7 +145,7 @@
 								<div class="user_text">
 									<p>Сегодня с друзьями побывали гостинице "дельфин". Мы все в восторге. Мозг кипит, эмоции переполняют. Рекомендую, если хотите зарядку для ума, вам сюда!</p>
 								</div>
-								<p class="more"><a href="#" class="more_link">Смотреть полный отзыв</a></p>
+								<p class="more"><a href="#" class="more_link" data-toggle="modal" data-target="#review2" data-backdrop="true">Смотреть полный отзыв</a></p>
 								<div class="stars"> 
 									<span class="stars_rate">
 										<img src="images/star.png" alt="" />
@@ -172,7 +172,7 @@
 								<div class="user_text">
 									<p>Раньше слышала про *Клаустрофобию* от друзей, но только в Красноярске попробовали сами и не разочаровались</p>
 								</div>
-								<p class="more"><a href="#" class="more_link">Смотреть полный отзыв</a></p>
+								<p class="more"><a href="#" class="more_link" data-toggle="modal" data-target="#review3" data-backdrop="true">Смотреть полный отзыв</a></p>
 								<div class="stars"> 
 									<span class="stars_rate">
 										<img src="images/star.png" alt="" />
@@ -190,14 +190,14 @@
 								<div class="user_info">
 									<div class="user_info_meta">
 										<p class="name">Екимова Екатерина</p>
-										<p>Играла 15го сентября 2016</p>									
+										<p>Играла 15го сентября 2016</p>
 									</div>
 									<img src="tmp/user-1.png" alt="" class="photo" />
 								</div>
 								<div class="user_text">
 									<p>Сегодня с друзьями побывали гостинице "дельфин". Мы все в восторге. Мозг кипит, эмоции переполняют. Рекомендую, если хотите зарядку для ума, вам сюда!</p>
 								</div>
-								<p class="more"><a href="#" class="more_link">Смотреть полный отзыв</a></p>
+								<p class="more"><a href="#" class="more_link" data-toggle="modal" data-target="#review1" data-backdrop="true">Смотреть полный отзыв</a></p>
 								<div class="stars"> 
 									<span class="stars_rate">
 										<img src="images/star.png" alt="" />
@@ -285,6 +285,8 @@
 		<!-- =/other-reviews -->
 	</div>
 
+
+
 <script>
 	(function($){
 		$(window).on('load',function(){
@@ -328,7 +330,84 @@
 	</footer>
 	<!-- =/footer -->
 </div>
+
+
+
+<!-- =fullreviews-->
+<div class="modal fade fullreview" id="review1" tabindex="-1" role="dialog">
+	<div class="modal-dialog" role="document">
+		<div class="modal-content">
+			<div class="top">
+				<img src="tmp/user.png" alt="" class="photo" />
+				<div class="meta">
+					<p class="name">Иванов Иван</p>
+					<p class="date">Играл 15го сентября 2016</p>					
+				</div>
+				<div class="mark">4</div>
+			</div>
+			<div class="text">
+				<p>Что может быть "В темноте"?  Оказывается много чего... Много страхов, жути и специфических эмоций.
+				Этот квест я не забуду никогда. Ещё в пути начало сумасшедше биться сердце и в панике оно пыталось убежать в пятки. Приём был очень тёплым, что не может не порадовать. Это было невероятно. Я не думала, что мои страхи настолько велики... От любого шороха (даже созданного моим партнером) уже очень сильно трясло. Двигаться на ощупь очень проблематично, особенно когда ты боишься всего.</p>
+
+				<p>Моё воображение вместе с страхами сыграли со мной очень злую шутку. Мне представлялись жуткие картины, от этого выброс адреналина был колоссальным. В общем, квест очень интересный, погружение полное, он держит в напряжении. Все было на высшем уровне. Понравилось всё от начала и до конца. После возвращения в реальность потребовалось некоторое время, что бы успокоить свои эмоции и подобрать хоть какие-то слова.
+				Отдельное спасибо команде, которая помогла нам погрузиться и пережить эти эмоции.</p>
+			</div>
+			<button type="button" class="close" data-dismiss="modal"><img src="images/close-modal.png" alt="" /></button>
+		</div>
+	</div>
+</div>
+
+<div class="modal fade fullreview" id="review2" tabindex="-1" role="dialog">
+	<div class="modal-dialog" role="document">
+		<div class="modal-content">
+			<div class="top">
+				<img src="tmp/user.png" alt="" class="photo" />
+				<div class="meta">
+					<p class="name">Юдина Надежда</p>
+					<p class="date">Играла 15го сентября 2016</p>					
+				</div>
+				<div class="mark">4</div>
+			</div>
+			<div class="text">
+				<p>Что может быть "В темноте"?  Оказывается много чего... Много страхов, жути и специфических эмоций.
+				Этот квест я не забуду никогда. Ещё в пути начало сумасшедше биться сердце и в панике оно пыталось убежать в пятки. Приём был очень тёплым, что не может не порадовать. Это было невероятно. Я не думала, что мои страхи настолько велики... От любого шороха (даже созданного моим партнером) уже очень сильно трясло. Двигаться на ощупь очень проблематично, особенно когда ты боишься всего.</p>
+
+				<p>Моё воображение вместе с страхами сыграли со мной очень злую шутку. Мне представлялись жуткие картины, от этого выброс адреналина был колоссальным. В общем, квест очень интересный, погружение полное, он держит в напряжении. Все было на высшем уровне. Понравилось всё от начала и до конца. После возвращения в реальность потребовалось некоторое время, что бы успокоить свои эмоции и подобрать хоть какие-то слова.
+				Отдельное спасибо команде, которая помогла нам погрузиться и пережить эти эмоции.</p>
+			</div>
+			<button type="button" class="close" data-dismiss="modal"><img src="images/close-modal.png" alt="" /></button>
+		</div>
+	</div>
+</div>
+
+<div class="modal fade fullreview" id="review3" tabindex="-1" role="dialog">
+	<div class="modal-dialog" role="document">
+		<div class="modal-content">
+			<div class="top">
+				<img src="tmp/user.png" alt="" class="photo" />
+				<div class="meta">
+					<p class="name">Екимова Екатерина</p>
+					<p class="date">Играла 5го сентября 2016</p>					
+				</div>
+				<div class="mark">4</div>
+			</div>
+			<div class="text">
+				<p>Что может быть "В темноте"?  Оказывается много чего... Много страхов, жути и специфических эмоций.
+				Этот квест я не забуду никогда. Ещё в пути начало сумасшедше биться сердце и в панике оно пыталось убежать в пятки. Приём был очень тёплым, что не может не порадовать. Это было невероятно. Я не думала, что мои страхи настолько велики... От любого шороха (даже созданного моим партнером) уже очень сильно трясло. Двигаться на ощупь очень проблематично, особенно когда ты боишься всего.</p>
+
+				<p>Моё воображение вместе с страхами сыграли со мной очень злую шутку. Мне представлялись жуткие картины, от этого выброс адреналина был колоссальным. В общем, квест очень интересный, погружение полное, он держит в напряжении. Все было на высшем уровне. Понравилось всё от начала и до конца. После возвращения в реальность потребовалось некоторое время, что бы успокоить свои эмоции и подобрать хоть какие-то слова.
+				Отдельное спасибо команде, которая помогла нам погрузиться и пережить эти эмоции.</p>
+			</div>
+			<button type="button" class="close" data-dismiss="modal"><img src="images/close-modal.png" alt="" /></button>
+		</div>
+	</div>
+</div>
+<!-- =/fullreviews -->
+
+
 <!-- InstanceEndEditable -->
+
+
 
 <!-- =opencity -->
 <div class="modal fade city-choose-popup" id="opencity" tabindex="-1" role="dialog" aria-labelledby="add-opencityLabel">
