@@ -8,8 +8,21 @@ $(document).ready(function(){
 	// styler
 	$('#lang').styler();
 	$('#countries').styler();
+	$('#sort').styler();
 
 
+	$('#review-scroller').mCustomScrollbar({
+		scrollButtons : {enable:true},
+		autoDraggerLength : true
+	});	
+
+
+	$('#other_reviews-scroller').mCustomScrollbar({
+		scrollButtons : {enable:true},
+		autoDraggerLength : true
+	});	
+
+	
 	// inputs
 	$('.input-field').each(function(){
 		if ($(this).find('.form-control').val().length > 0) {
