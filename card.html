@@ -19,6 +19,7 @@
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
 <script>window.jQuery || document.write('<script src="/js/jquery-1.12.4.min.js"><\/script>')</script>
 
+
 <!--[if IE]>
 	<link href="css/styles-ie.css" rel="stylesheet" type="text/css" />
 <![endif]-->
@@ -238,7 +239,7 @@
 					</div>
 				</div>
 				<div class="bottom">
-					<a href="#" title="" role="button" class="btn"><span>Оставить отзыв</span></a>					
+					<a href="#" title="" role="button" class="btn" data-toggle="modal" data-target="#addreview" data-backdrop="true"><span>Оставить отзыв</span></a>					
 				</div>
 			</section>
 			<!-- =/reviews -->
@@ -291,6 +292,68 @@
 	</div>
 </div>
 <!-- =fullreviews-->
+
+<!-- =addreview-->
+<div class="modal fade addreview" id="addreview" tabindex="-1" role="dialog">
+	<div class="modal-dialog" role="document">
+		<div class="modal-content">
+			<div class="modal-title">ОСТАВИТЬ ОТЗЫВ</div>
+			<form action="#" method="post">
+				<fieldset>
+					<div class="row">
+						<div class="cell">
+							<div class="input-field">
+								<label for="name2" class="name-field">Ваше имя</label>
+								<label for="name2" class="helper-field helper-field-name">Ваше имя</label>
+								<input type="text" id="name2" name="name2" class="form-control required" value="" />
+							</div>
+						</div>
+						<div class="cell">
+							<div class="input-field">
+								<label for="email2" class="name-field">E-mail</label>
+								<label for="email2" class="helper-field helper-field-name">E-mail</label>
+								<input type="email" id="email2" name="email2" class="form-control required" value="" />
+							</div>
+						</div>
+					</div>
+					<div class="row">
+						<div class="cell">
+							<div class="input-field" id="datetimepicker">
+								<label for="date" class="name-field">Когда играли?</label>
+								<label for="date" class="helper-field helper-field-name">Когда играли?</label>
+								<input type="text" id="date" name="date" class="form-control required" value="" />
+							</div>
+						</div>
+						<div class="cell mark">
+							Оценка 
+							<div class="rating">
+								<img src="images/star.png" alt="" />
+								<img src="images/star.png" alt="" />
+								<img src="images/star.png" alt="" />
+								<img src="images/star.png" alt="" />
+								<img src="images/star-gray.png" alt="" />
+							</div>
+						</div>
+					</div>
+					<div class="row">
+						<div class="cell cell-2">
+							<div class="input-field">
+								<label for="msg" class="name-field">Текст отзыва</label>
+								<label for="msg" class="helper-field helper-field-name">Текст отзыва</label>
+								<textarea name="msg" id="msg" cols="30" rows="10" class="form-control"></textarea>
+							</div>
+						</div>
+					</div>
+					<input type="submit" class="btn submit" value="Оставить отзыв" />
+				</fieldset>
+			</form>
+
+			<button type="button" class="close" data-dismiss="modal"><img src="images/close-modal.png" alt="" /></button>
+		</div>
+	</div>
+</div>
+<!-- =/addreview -->
+
 <!-- InstanceEndEditable -->
 
 <!-- =opencity -->
@@ -441,16 +504,22 @@
 <script src="https://ajax.microsoft.com/ajax/jquery.validate/1.15.0/jquery.validate.min.js"></script>
 <script>window.jQuery || document.write('<script src="js/jquery.validate.min.js"><\/script>')</script>
 
-<script src="js/modal.min.js"></script>
+<!-- <script src="js/modal.min.js"></script> -->
 <script src="js/owl.carousel.min.js"></script>
 
 <link rel="stylesheet" property="stylesheet" href="css/jquery.mCustomScrollbar.css" />
 <script src="js/jquery.mCustomScrollbar.concat.min.js"></script>
 
 
-<link  href="css/jquery.fancybox.css" rel="stylesheet" property="stylesheet" />
+<link href="css/jquery.fancybox.css" rel="stylesheet" property="stylesheet" />
 <script src="js/jquery.fancybox.min.js"></script>
 
+
+<script src="js/bootstrap.min.js"></script>
+<script src="js/moment-with-locales.min.js"></script>
+<script src="js/bootstrap-datetimepicker.min.js"></script>
+<!-- <link href="css/bootstrap.css" rel="stylesheet"  property="stylesheet"/> -->
+<link href="css/bootstrap-datetimepicker.css" rel="stylesheet"  property="stylesheet"/>
 
 <script src="js/engine.js"></script>
 <script async defer src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDJon0oRy7AYzbHfD1DO2oSOEDaVRDxzHU&callback=initMap"></script>

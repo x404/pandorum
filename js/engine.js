@@ -107,7 +107,16 @@ $(document).ready(function(){
 			target.eq(event.item.index-1).addClass('first');
 			target.removeClass('last');
 			target.eq(event.item.index+event.page.size).addClass('last');		
-	}
+	};
+
+
+	// datetime picker
+	$('#datetimepicker').datetimepicker({
+		language: 'ru',
+		pickTime: false,
+		format: 'D MMMM YYYY'
+		}
+	)
 
 });
 
