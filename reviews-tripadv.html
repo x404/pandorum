@@ -11,7 +11,7 @@
 
 <meta name="robots" content="noindex,nofollow" />
 <!-- InstanceBeginEditable name="doctitle" -->
-<title>Отзывы Flamp</title>
+<title>Отзывы TripAdvisor</title>
 <!-- InstanceEndEditable -->
 <link rel="stylesheet" href="css/owl.carousel.css" />
 <link rel="stylesheet" href="css/styles.css" />
@@ -218,25 +218,26 @@
 		<!-- =/main -->
 
 		<!-- =other-reviews -->
-		<div class="other_reviews flamp">
+		<div class="other_reviews tripadvisor">
 			<div class="other_reviews_content">
-				<a href="#" title="" class="link_company" target="_blank"><img src="images/flamp.png" alt="" /></a>
-				<p class="title">Отзывы с <img src="images/flamp.gif" alt="Flamp" /></p>
+				<a href="#" title="" class="link_company" target="_blank"><img src="images/tripadvisor.png" alt="" /></a>
+				<p class="title">Отзывы с TripAdvisor</p>
 
 				<div id="other_reviews-scroller">
 					<div class="other_reviews_wrapper">
 						<div class="review">
 							<div class="user_info">
 								<div class="photo">
-									<img src="tmp/flamp-1.png" alt="" />
+									<img src="tmp/flamp-1.png" alt="" />									
 								</div>
 								<div class="user_info_meta">
 									<p class="name"><a href="#" title="">AlenaIgorevnaK</a></p>
-									<div class="score">309.6</div>
+									<div class="mark-date">
+										<div class="mark"><img src="images/mark-4.png" alt="" /></div>
+										<p class="date">28 ноября в 20:16</p>
+									</div>
 								</div>
-								<div class="mark mark-5">5</div>
 							</div>
-							<p class="date">28 ноября в 20:16</p>
 							<div class="user_text">
 								<p>Спустя уже месяц, с лишним, пишу отзыв.</p>
 								<p>Эмоции под утихли, но это не забыть никогда!:) </p>
@@ -252,11 +253,12 @@
 								</div>
 								<div class="user_info_meta">
 									<p class="name"><a href="#" title="">lesha.anosov</a></p>
-									<div class="score">31</div>
+									<div class="mark-date">
+										<div class="mark"><img src="images/mark-4.png" alt="" /></div>
+										<p class="date">28 ноября в 20:16</p>
+									</div>
 								</div>
-								<div class="mark mark-4">4</div>
 							</div>
-							<p class="date">28 ноября в 20:16</p>
 							<div class="user_text">
 								<p>Спустя уже месяц, с лишним, пишу отзыв.</p>
 								<p>Эмоции под утихли, но это не забыть никогда!:) </p>
@@ -272,11 +274,12 @@
 								</div>
 								<div class="user_info_meta">
 									<p class="name"><a href="#" title="">Paranoia</a></p>
-									<div class="score">3.7</div>
+									<div class="mark-date">
+										<div class="mark"><img src="images/mark-4.png" alt="" /></div>
+										<p class="date">28 ноября в 20:16</p>
+									</div>
 								</div>
-								<div class="mark mark-1">1</div>
 							</div>
-							<p class="date">28 ноября в 20:16</p>
 							<div class="user_text">
 								<p>Спустя уже месяц, с лишним, пишу отзыв.</p>
 								<p>Эмоции под утихли, но это не забыть никогда!:) </p>
@@ -292,29 +295,30 @@
 	</div>
 
 
-	<script>
-		(function($){
-			$(window).on('load',function(){
-				function equalheight(){
-					// принудительно назначаем высоту скрол-областям
-					var h = $(window).height();
-					$('#review-scroller').height(h-345);
-					$('#other_reviews-scroller').height(h-320);				
-				};
 
+<script>
+	(function($){
+		$(window).on('load',function(){
+			function equalheight(){
+				// принудительно назначаем высоту скрол-областям
+				var h = $(window).height();
+				$('#review-scroller').height(h-345);
+				$('#other_reviews-scroller').height(h-320);				
+			};
+
+			equalheight();
+			
+			// меняем высоту скрол-областям при ресайзе окна браузера
+			$(window).resize(function() {
 				equalheight();
-				
-				// меняем высоту скрол-областям при ресайзе окна браузера
-				$(window).resize(function() {
-					equalheight();
-				});
 			});
-		})(jQuery);
-	</script>
+		});
+	})(jQuery);
+</script>
 
 
 	<div class="shadow-main"></div>
-	<div class="shadow-flamp"></div>
+	<div class="shadow-tripadv"></div>
 
 	<!-- =footer -->
 	<footer>
