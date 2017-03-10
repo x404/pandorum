@@ -87,10 +87,12 @@
 
 		<!-- =intro -->
 		<div class="intro" style="background-image: url(/tmp/card-bg.jpg);">
-			<a data-fancybox="" href="https://www.youtube.com/watch?v=_sI_Ps7JSEk&autoplay=1&rel=0&controls=0&showinfo=0" class="play"><img src="images/play.png" alt="" /></a>
+			<div class="play hi-icon-effect-8">
+				<a data-fancybox="" href="https://www.youtube.com/watch?v=_sI_Ps7JSEk&autoplay=1&rel=0&controls=0&showinfo=0" class="hi-icon"><img src="images/play.png" alt="" /></a>
+			</div>
 			<div class="intro_wrapper">
 				<div class="title">
-					<div class="rate">5.0</div>
+					<div class="rate"><a href="#reviews" title="">5.0</a></div>
 					<h1>ИЛЛЮЗИОН КВЕСТ</h1>					
 				</div>
 
@@ -235,7 +237,7 @@
 
 
 			<!-- =reviews -->
-			<section class="reviews">
+			<section class="reviews" id="reviews">
 				<div class="reviews_top">
 					<h2>Отзывы о «Иллюзион квест»</h2>
 					<a href="#" class="btn"><span>Смотреть все отзывы</span></a>
@@ -575,6 +577,8 @@
 <script src="js/bootstrap-datetimepicker.min.js"></script>
 <link href="css/bootstrap-datetimepicker.css" rel="stylesheet"  property="stylesheet"/>
 
+<link  href="css/jquery.fancybox.css" rel="stylesheet" property="stylesheet" />
+<script src="js/jquery.fancybox.min.js"></script>
 
 <script src="js/engine.js"></script>
 <script async defer src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDJon0oRy7AYzbHfD1DO2oSOEDaVRDxzHU&callback=initMap"></script>

@@ -5,6 +5,25 @@ $(document).ready(function(){
 		function(){$('body').removeClass('l-with-nav')}
 	);
 
+	// плавная промотка из хедера
+	$('.card .intro .rate a[href*="#"]:not([href="#"])').click(function() {
+		if (location.pathname.replace(/^\//,'') == this.pathname.replace(/^\//,'') && location.hostname == this.hostname) {
+			var target = $(this.hash);
+			target = target.length ? target : $('[name=' + this.hash.slice(1) +']');
+			if (target.length) {
+				// $('body').removeClass('o-menu');
+				// $('#navbar').css('height', 'auto');
+				$('html, body').animate({
+					scrollTop: target.offset().top
+				}, 1000, function() {
+		        	target.focus();
+		        });
+				return false;
+			}
+		}
+	});
+
+	
 	// styler
 	$('#lang').styler();
 	$('#countries').styler();
@@ -116,7 +135,7 @@ $(document).ready(function(){
 		pickTime: false,
 		format: 'D MMMM YYYY'
 		}
-	)
+	);
 
 });
 
