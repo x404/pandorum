@@ -95,15 +95,7 @@ $(document).ready(function(){
 	});
 
 
-
-	// $("#foo1").owlCarousel({
-	// 	items : 1,
-	// 	pagination : true,
-	// 	navigation : true,
-	// 	singleItem : true,
-	// 	navigationText: ["", ""]
-	// });	
-
+	// карусель
 	$('#foo1').owlCarousel({
 		loop:false,
 		nav:true,
@@ -134,9 +126,7 @@ $(document).ready(function(){
 		language: 'ru',
 		pickTime: false,
 		format: 'D MMMM YYYY'
-		}
-	);
-
+	});
 });
 
 
