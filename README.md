@@ -20,5 +20,5 @@ __Используемые в проекте js плагины__
 * Сообщение для устаревших браузеров Outdated Browser v1.1.3[https://github.com/burocratik/outdated-browser](https://github.com/burocratik/outdated-browser) [Демо](http://outdatedbrowser.com/ru)
 * Всплывающие окна FancyBox 3 [http://fancyapps.com/fancybox/3/](http://fancyapps.com/fancybox/3/)
 * Знак рубля - [http://artgorbunov.ru/bb/soviet/20120223/]http://artgorbunov.ru/bb/soviet/20120223/ , [http://www.apsolyamov.ru/blog/kak_ustanovit_na_sajt_simvol_rublya_ispolzuya_fontface/2013-12-28-145]http://www.apsolyamov.ru/blog/kak_ustanovit_na_sajt_simvol_rublya_ispolzuya_fontface/2013-12-28-145
-
+* Выбор даты [http://eonasdan.github.io/bootstrap-datetimepicker/]http://eonasdan.github.io/bootstrap-datetimepicker/
 ---------------------------------------------------------

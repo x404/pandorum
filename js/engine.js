@@ -127,6 +127,34 @@ $(document).ready(function(){
 		pickTime: false,
 		format: 'D MMMM YYYY'
 	});
+
+
+	// datepicker in booking card
+	var dateNow = new Date();
+	$('#selectdatepicker').datetimepicker({
+		language: 'ru',
+		pickTime: false,
+		format: 'D MMMM YYYY',
+		defaultDate:dateNow
+	});
+
+	$('#selectdatepicker').on('dp.change', function(e){
+		day1 = e.date.format('D');
+		month1 = e.date.format('MMM');
+
+		day2 = e.date.add(1, 'd').format('D');
+		month2 = e.date.format('MMM');
+
+
+		html1 = '<i>' + day1 + '</i>' + month1;
+		html2 = '<i>' + day2 + '</i>' + month2;
+
+		$('#date1 span').html(html1);
+		$('#date2 span').html(html2);
+		// console.log(day1 + ' , ' + month1);
+		// console.log(day2 + ' , ' + month2);
+	})
+
 });
 
 
