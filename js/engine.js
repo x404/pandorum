@@ -112,6 +112,38 @@ $(document).ready(function(){
 		}
 	});
 
+
+	$('#foo2').owlCarousel({
+		loop:false,
+		nav:true,
+		dots: false,
+		items:5,
+		navText: ["", ""]
+	});
+
+
+	$('.plus').click(function(e){
+		e.preventDefault();
+		var $this = $(this),
+			$el = $this.prev();
+			$count = parseInt($el.data('count'))+1;
+			$el.data('count', $count);
+			$el.text($count + 'шт');
+	});
+
+
+	$('.minus').click(function(e){
+		e.preventDefault();
+		var $this = $(this),
+			$el = $this.next();
+			$count = parseInt($el.data('count'))-1;
+			($count <= 0) ? $count = 0 : '';
+
+			$el.data('count', $count);
+			$el.text($count + 'шт');
+	});
+
+
 	function refreshFirstLastVisible(event){
 		var target = $(event.target).find('.owl-item');
 			target.removeClass('first');
