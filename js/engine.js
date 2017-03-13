@@ -16,8 +16,8 @@ $(document).ready(function(){
 				$('html, body').animate({
 					scrollTop: target.offset().top
 				}, 1000, function() {
-		        	target.focus();
-		        });
+					target.focus();
+				});
 				return false;
 			}
 		}
@@ -41,6 +41,30 @@ $(document).ready(function(){
 		scrollButtons : {enable:true},
 		autoDraggerLength : true
 	});	
+
+
+		/* Time Parser */
+		// $('.cifr span').each(function() {
+		  // $(this).attr("data-number", parseInt($(this).text()));
+		// });
+
+		var inter = 1;
+		$('.cifr span').each(function() {
+			var count = parseInt($(this).data('number')),
+				block = $(this),
+				timeout = null,
+				step = 1;
+			timeout = setInterval(function() {
+				if (step == 25) {
+					block.text(count.toString());
+					clearInterval(timeout);
+				} else {
+					block.text((Math.floor(count*step/25)).toString());
+					step++;
+				}
+			}, 30);
+		});
+
 
 	
 	// inputs
