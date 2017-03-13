@@ -48,24 +48,42 @@ $(document).ready(function(){
 		  // $(this).attr("data-number", parseInt($(this).text()));
 		// });
 
-		var inter = 1;
-		$('.cifr span').each(function() {
-			var count = parseInt($(this).data('number')),
-				block = $(this),
-				timeout = null,
-				step = 1;
-			timeout = setInterval(function() {
-				if (step == 25) {
-					block.text(count.toString());
-					clearInterval(timeout);
-				} else {
-					block.text((Math.floor(count*step/25)).toString());
-					step++;
-				}
-			}, 30);
-		});
+	var inter = 1;
+	$('.cifr span').each(function() {
+		var count = parseInt($(this).data('number')),
+			block = $(this),
+			timeout = null,
+			step = 1;
+		timeout = setInterval(function() {
+			if (step == 25) {
+				block.text(count.toString());
+				clearInterval(timeout);
+			} else {
+				block.text((Math.floor(count*step/25)).toString());
+				step++;
+			}
+		}, 30);
+	});
 
 
+	$('#stay').change(function(e) {
+		($(this).prop('checked')) ? $('.oneuser .now_link').addClass('disabled') : $('.oneuser .now_link').removeClass('disabled');
+	})
+
+	// add gamers
+	$('.now_link').on('click', function(e){
+		e.preventDefault();
+		var check = $('#stay').prop('checked');
+		console.log(check);
+
+		if (!check) {
+			i = parseInt($('.userinfo .users .row:last-child').data('row')) + 1;
+			var row = '<div class="row" data-row="' + i + '"><a href="#" class="deluser"></a> <div class="cell"> <div class="input-field"> <label for="username' + i + '" class="name-field">ФИО</label> <label for="username' + i + '" class="helper-field helper-field-name">ФИО</label> <input type="text" id="username' + i + '" name="userame1" class="form-control required" value="" /> </div> </div> <div class="cell"> <div class="input-field"> <label for="usertel' + i + '" class="name-field">Телефон</label> <label for="usertel' + i + '" class="helper-field helper-field-name">Телефон</label> <input type="tel" id="usertel' + i + '" name="usertel1" class="form-control required phone" value="" /> </div> </div> <div class="cell"> <div class="input-field"> <label for="usermail' + i + '" class="name-field">E-mail</label> <label for="usermail' + i + '" class="helper-field helper-field-name">E-mail</label> <input type="email" id="usermail' + i + '" name="usermail' + i + '" class="form-control required" value="" /> </div> </div> </div> ';
+			$('.users').append(row);
+			$('.oneuser').addClass('hide');
+			$('.multiuser').removeClass('hide');
+		}
+	})
 	
 	// inputs
 	$('.input-field').each(function(){
@@ -213,6 +231,19 @@ $(document).ready(function(){
 	})
 
 });
+
+$(document).on('click','.deluser', function(e){
+	e.preventDefault();
+	var $this = $(this);
+	$(this).parent().remove();
+
+	$l = $('.userinfo .users .row').length;
+
+	if ($l <= 1){
+		$('.oneuser').removeClass('hide');
+		$('.multiuser').addClass('hide');
+	}
+})
 
 
 
