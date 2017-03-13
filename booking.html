@@ -179,7 +179,101 @@
 
 				<!-- =detailinfo -->
 				<section class="detailinfo">
-					<h2>У вас скоро день рождения?</h2>
+					<div class="flexbox">
+						<div class="cell birthday">
+							<h2>У вас скоро день рождения?</h2>
+							<div class="flexbox">
+								<div class="day">
+									<select name="birthdaydate" id="birthdaydate" data-placeholder="День">
+										<option value=""></option>
+										<option value="1">1</option>
+										<option value="2">2</option>
+										<option value="3">3</option>
+										<option value="4">4</option>
+										<option value="5">5</option>
+										<option value="6">6</option>
+										<option value="7">7</option>
+										<option value="8">8</option>
+										<option value="9">9</option>
+										<option value="10">10</option>
+										<option value="11">11</option>
+										<option value="12">12</option>
+										<option value="13">13</option>
+										<option value="14">14</option>
+										<option value="15">15</option>
+										<option value="16">16</option>
+										<option value="17">17</option>
+										<option value="18">18</option>
+										<option value="19">19</option>
+										<option value="20">20</option>
+										<option value="21">21</option>
+										<option value="22">22</option>
+										<option value="23">23</option>
+										<option value="24">24</option>
+										<option value="25">25</option>
+										<option value="26">26</option>
+										<option value="27">27</option>
+										<option value="28">28</option>
+										<option value="29">29</option>
+										<option value="30">30</option>
+									</select>
+								</div>
+								<div class="month">
+									<select name="birthdaymonth" id="birthdaymonth" data-placeholder="Месяц">
+										<option value=""></option>
+										<option value="Январь">Январь</option>
+										<option value="Февраль">Февраль</option>
+										<option value="Март">Март</option>
+										<option value="Апрель">Апрель</option>
+										<option value="Май">Май</option>
+										<option value="Июнь">Июнь</option>
+										<option value="Июль">Июль</option>
+										<option value="Август">Август</option>
+										<option value="Сентябрь">Сентябрь</option>
+										<option value="Октябрь">Октябрь</option>
+										<option value="Ноябрь">Ноябрь</option>
+										<option value="Декабрь">Декабрь</option>
+									</select>
+								</div>
+								<div class="year">
+									<select name="birthdayyear" id="birthdayyear" data-placeholder="Год">
+										<option value=""></option>
+										<option value="1980">1980</option>
+										<option value="1981">1981</option>
+										<option value="1982">1982</option>
+										<option value="1983">1983</option>
+										<option value="1984">1984</option>
+										<option value="1985">1985</option>
+										<option value="1986">1986</option>
+										<option value="1987">1987</option>
+										<option value="1988">1988</option>
+										<option value="1989">1989</option>
+										<option value="2017">2017</option>
+									</select>
+								</div>
+							</div>
+						</div>
+						<div class="cell health">
+							<h2>Проблемы со здоровьем?</h2>
+							<div class="value">
+								<div class="vision">
+									<input type="checkbox" name="vision" id="vision" class="checkbox" value="" /> <label for="vision">Плохое зрение</label>
+								</div>
+								<div class="hearing">
+									<input type="checkbox" name="hearing" id="hearing" class="checkbox" value="" /> <label for="hearing">Проблемы со слухом</label>
+								</div>
+							</div>
+						</div>
+						<div class="cell language">
+							<h2>Язык проведения квеста</h2>
+							<select name="langquest" id="langquest">
+								<option value="Русский" selected="selected">Русский</option>
+								<option value="English" selected="selected">English</option>
+								<option value="France" selected="selected">France</option>
+								<option value="Китайский" selected="selected">Китайский</option>
+							</select>
+						</div>
+					</div>
 				</section>
 				<!-- =/detailinfo -->
 
@@ -531,6 +625,10 @@
 <link rel="stylesheet" property="stylesheet" href="outdatedbrowser/outdatedbrowser.min.css" />
 <script src="outdatedbrowser/outdatedbrowser.min.js"></script>
 
+<!-- <script src="js/jquery.jscrollpane.min.js"></script> -->
+<!-- <link href="css/jquery.jscrollpane.css" rel="stylesheet" property="stylesheet" /> -->
+
+
 <link href="css/jquery.formstyler.css" rel="stylesheet" property="stylesheet" />
 <script src="js/jquery.formstyler.min.js"></script>
 
@@ -547,7 +645,7 @@
 <script src="js/bootstrap-datetimepicker.min.js"></script>
 <link href="css/bootstrap-datetimepicker.css" rel="stylesheet"  property="stylesheet"/>
 
-<link  href="css/jquery.fancybox.css" rel="stylesheet" property="stylesheet" />
+<link href="css/jquery.fancybox.css" rel="stylesheet" property="stylesheet" />
 <script src="js/jquery.fancybox.min.js"></script>
 
 <script src="js/inputmask/inputmask.js"></script>

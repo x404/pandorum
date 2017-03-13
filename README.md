@@ -21,4 +21,5 @@ __Используемые в проекте js плагины__
 * Всплывающие окна FancyBox 3 [http://fancyapps.com/fancybox/3/](http://fancyapps.com/fancybox/3/)
 * Знак рубля - [http://artgorbunov.ru/bb/soviet/20120223/]http://artgorbunov.ru/bb/soviet/20120223/ , [http://www.apsolyamov.ru/blog/kak_ustanovit_na_sajt_simvol_rublya_ispolzuya_fontface/2013-12-28-145]http://www.apsolyamov.ru/blog/kak_ustanovit_na_sajt_simvol_rublya_ispolzuya_fontface/2013-12-28-145
 * Выбор даты [http://eonasdan.github.io/bootstrap-datetimepicker/]http://eonasdan.github.io/bootstrap-datetimepicker/
+* Scroll панель [http://manos.malihu.gr/jquery-custom-content-scroller/]http://manos.malihu.gr/jquery-custom-content-scroller/
 ---------------------------------------------------------

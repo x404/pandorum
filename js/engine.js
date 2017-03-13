@@ -29,6 +29,63 @@ $(document).ready(function(){
 	$('#countries').styler();
 	$('#sort').styler();
 	$('#people').styler();
+	
+	$('#langquest').styler();
+
+	var _dropdown;
+	$('#birthdaydate').styler({
+		onFormStyled: function(){
+			_dropdown = $('.day .jq-selectbox__dropdown');
+			_dropdown.find('ul').wrap('<div class="scroll-pane"></div>');
+		},
+		onSelectOpened: function(){
+			var _ul = $(this).find('.jq-selectbox__dropdown ul');
+			var height = _ul.height();
+			var _srollPane = _dropdown.find('.scroll-pane');
+			_srollPane.height(height);
+			_ul.css('max-height', 'none');
+			_srollPane.mCustomScrollbar({
+				scrollButtons : {enable:true},
+				autoDraggerLength : true
+			});
+		}		
+	});
+
+	$('#birthdaymonth').styler({
+		onFormStyled: function(){
+			_dropdown2 = $('.month .jq-selectbox__dropdown');
+			_dropdown2.find('ul').wrap('<div class="scroll-pane"></div>');
+		},
+		onSelectOpened: function(){
+			var _ul = $(this).find('.jq-selectbox__dropdown ul');
+			var height = _ul.height();
+			var _srollPane = _dropdown2.find('.scroll-pane');
+			_srollPane.height(height);
+			_ul.css('max-height', 'none');
+			_srollPane.mCustomScrollbar({
+				scrollButtons : {enable:true},
+				autoDraggerLength : true
+			});
+		}		
+	});
+
+	$('#birthdayyear').styler({
+		onFormStyled: function(){
+			_dropdown3 = $('.year .jq-selectbox__dropdown');
+			_dropdown3.find('ul').wrap('<div class="scroll-pane"></div>');
+		},
+		onSelectOpened: function(){
+			var _ul = $(this).find('.jq-selectbox__dropdown ul');
+			var height = _ul.height();
+			var _srollPane = _dropdown3.find('.scroll-pane');
+			_srollPane.height(height);
+			_ul.css('max-height', 'none');
+			_srollPane.mCustomScrollbar({
+				scrollButtons : {enable:true},
+				autoDraggerLength : true
+			});
+		}		
+	});
 
 
 	$('#review-scroller').mCustomScrollbar({
