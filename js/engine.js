@@ -28,6 +28,7 @@ $(document).ready(function(){
 	$('#lang').styler();
 	$('#countries').styler();
 	$('#sort').styler();
+	$('#people').styler();
 
 
 	$('#review-scroller').mCustomScrollbar({
