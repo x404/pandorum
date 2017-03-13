@@ -68,29 +68,33 @@ $(document).ready(function(){
 
 	$('#stay').change(function(e) {
 		($(this).prop('checked')) ? $('.oneuser .now_link').addClass('disabled') : $('.oneuser .now_link').removeClass('disabled');
-	})
+	});
 
 	// add gamers
 	$('.now_link').on('click', function(e){
 		e.preventDefault();
 		var check = $('#stay').prop('checked');
-		console.log(check);
 
 		if (!check) {
 			i = parseInt($('.userinfo .users .row:last-child').data('row')) + 1;
-			var row = '<div class="row" data-row="' + i + '"><a href="#" class="deluser"></a> <div class="cell"> <div class="input-field"> <label for="username' + i + '" class="name-field">ФИО</label> <label for="username' + i + '" class="helper-field helper-field-name">ФИО</label> <input type="text" id="username' + i + '" name="userame1" class="form-control required" value="" /> </div> </div> <div class="cell"> <div class="input-field"> <label for="usertel' + i + '" class="name-field">Телефон</label> <label for="usertel' + i + '" class="helper-field helper-field-name">Телефон</label> <input type="tel" id="usertel' + i + '" name="usertel1" class="form-control required phone" value="" /> </div> </div> <div class="cell"> <div class="input-field"> <label for="usermail' + i + '" class="name-field">E-mail</label> <label for="usermail' + i + '" class="helper-field helper-field-name">E-mail</label> <input type="email" id="usermail' + i + '" name="usermail' + i + '" class="form-control required" value="" /> </div> </div> </div> ';
+			var row = '<div class="row" data-row="' + i + '"><a href="#" class="deluser"></a> <div class="cell"> <div class="input-field"> <label for="username' + i + '" class="name-field">ФИО</label> <label for="username' + i + '" class="helper-field helper-field-name">ФИО</label> <input type="text" id="username' + i + '" name="userame1" class="form-control required" value="" /> </div> </div> <div class="cell"> <div class="input-field"> <label for="usertel' + i + '" class="name-field">Телефон</label> <label for="usertel' + i + '" class="helper-field helper-field-name">Телефон</label> <input type="tel" id="usertel' + i + '" name="usertel1" class="form-control required tel" value="" /> </div> </div> <div class="cell"> <div class="input-field"> <label for="usermail' + i + '" class="name-field">E-mail</label> <label for="usermail' + i + '" class="helper-field helper-field-name">E-mail</label> <input type="email" id="usermail' + i + '" name="usermail' + i + '" class="form-control required" value="" /> </div> </div> </div> ';
 			$('.users').append(row);
 			$('.oneuser').addClass('hide');
 			$('.multiuser').removeClass('hide');
+
+			$('input.tel').inputmask({
+				mask: '+7(999)999-99-99',
+				showMaskOnHover : false
+			});
 		}
-	})
+	});
 	
 	// inputs
 	$('.input-field').each(function(){
 		if ($(this).find('.form-control').val().length > 0) {
 			return $(this).addClass('is-charged');
 		}
-	})
+	});
 
 	$('body').on('focusin', '.input-field', function(e) {
 		return $(this).addClass('is-focused');
@@ -228,7 +232,38 @@ $(document).ready(function(){
 		$('#date2 span').html(html2);
 		// console.log(day1 + ' , ' + month1);
 		// console.log(day2 + ' , ' + month2);
-	})
+	});
+
+
+	// mask
+	$('input.tel').inputmask({
+		mask: '+7(999)999-99-99',
+		showMaskOnHover : false
+	});
+	// #mask
+
+
+	// // validate
+ //    $.validator.addMethod("validphone", function(value){
+ //        if (Inputmask.isValid(value, { mask: '+7(999)999-99-99'})) return true
+ //        else return false;
+ //    },"");
+
+
+	// $('#callback-form').validate({
+	// 	rules: {
+	// 		name:{
+	// 			required : true
+	// 		},
+	// 		tel: {
+	// 			validphone:true
+	// 		}
+	// 	},
+	// 	errorPlacement: function(error, element) {
+	// 		if (element.attr('name') == 'name') $('#callback-form .helper-field-name').text('Заполните поле');
+	// 		if (element.attr('name') == 'tel') $('#callback-form .helper-field-tel').text('Заполните поле');
+	// 	}
+	// });
 
 });
 
