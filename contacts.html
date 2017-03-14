@@ -35,8 +35,6 @@
 <div class="wrap inner contacts">
 	<div class="outerwrapper">
 		<div class="bg"></div>
-
-
 		<!-- =header -->
 		<header class="header">
 			<div class="city-select">
@@ -233,6 +231,43 @@
 	</footer>
 	<!-- =/footer -->
 </div>
+
+<!-- =writeus -->
+<div class="modal fade" id="writeus" tabindex="-1" role="dialog" aria-labelledby="writeusLabel">
+	<div class="modal-dialog" role="document">
+		<div class="modal-content">
+			<div class="modal-title" id="writeusLabel">Напишите нам</div>
+			<form action="#" method="post" id="writeus-form">
+				<fieldset>
+					<div class="input-field">
+						<label for="wname" class="name-field">Ваше имя</label>
+						<label for="wname" class="helper-field helper-field-name">Ваше имя</label>					
+						<input type="text" id="wname" name="name" class="form-control required" value="" />
+					</div>
+					<div class="input-field">
+						<label for="wemail" class="name-field">E-mail</label>
+						<label for="wemail" class="helper-field helper-field-name">E-mail</label>
+						<input type="email" id="wemail" name="email" class="form-control required" value="" />
+					</div>
+
+					<div class="input-field">
+						<label for="wmsg" class="name-field">Ваше сообщение</label>
+						<label for="wmsg" class="helper-field helper-field-name">Ваше сообщение</label>
+						<textarea name="wmsg" id="wmsg" cols="30" rows="10" class="form-control"></textarea>
+					</div>
+
+					<div class="bottom row">
+						<input type="submit" class="btn submit" value="Отправить" />						
+					</div>
+				</fieldset>
+			</form>
+			<button type="button" class="close" data-dismiss="modal"><img src="images/close-modal.png" alt="" /></button>
+		</div>
+	</div>
+</div>
+<!-- =/writeus -->
+
+
 <!-- InstanceEndEditable -->
 
 <!-- =opencity -->
