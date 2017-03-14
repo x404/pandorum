@@ -393,6 +393,40 @@ $(document).ready(function(){
 		}
 	});	
 
+
+
+	// =page reviews
+	// TripAdvisor, Flamp
+	$('#addgeneralreview-form .submit').click(function(e){
+		e.preventDefault();
+		$(this).closest('form').submit();
+	});
+
+	$('#addgeneralreview-form').validate({
+		rules: {
+			name:{
+				required : true
+			},
+			email: {
+				required : true,
+				email: true
+			},
+			msg: {
+				required : true
+			}
+		},
+		errorPlacement: function(error, element) {
+			if (element.attr('name') == 'name') $('#addgeneralreview-form .helper-field-name').text('Ошибка!').addClass('lerror');
+			if (element.attr('name') == 'email') $('#addgeneralreview-form .helper-field-name').text('Ошибка!').addClass('lerror');
+			if (element.attr('name') == 'msg') $('#addgeneralreview-form .helper-field-name').text('Ошибка!').addClass('lerror');
+		},
+		submitHandler: function(form){
+			// send form ajax
+			//alert("Отправлено!")
+		}
+	});	
+	// =/page reviews
+
 });
 
 $(document).on('click','.deluser', function(e){
