@@ -330,27 +330,32 @@ $(document).ready(function(){
 	// #mask
 
 
-	// // validate
- //    $.validator.addMethod("validphone", function(value){
- //        if (Inputmask.isValid(value, { mask: '+7(999)999-99-99'})) return true
- //        else return false;
- //    },"");
+	// validate
+	$.validator.addMethod("validphone", function(value){
+		if (Inputmask.isValid(value, { mask: '+7(999)999-99-99'})) return true
+		else return false;
+	},"");
 
 
-	// $('#callback-form').validate({
-	// 	rules: {
-	// 		name:{
-	// 			required : true
-	// 		},
-	// 		tel: {
-	// 			validphone:true
-	// 		}
-	// 	},
-	// 	errorPlacement: function(error, element) {
-	// 		if (element.attr('name') == 'name') $('#callback-form .helper-field-name').text('Заполните поле');
-	// 		if (element.attr('name') == 'tel') $('#callback-form .helper-field-tel').text('Заполните поле');
-	// 	}
-	// });
+	$('#callback-form .submit').click(function(e){
+		e.preventDefault();
+		$(this).closest('form').submit();
+	});
+
+	$('#callback-form').validate({
+		rules: {
+			name:{
+				required : true
+			},
+			tel: {
+				validphone:true
+			}
+		},
+		errorPlacement: function(error, element) {
+			if (element.attr('name') == 'name') $('#callback-form .helper-field-name').text('Ошибка!').addClass('lerror');
+			if (element.attr('name') == 'tel') $('#callback-form .helper-field-tel').text('Ошибка!').addClass('lerror');
+		}
+	});
 
 });
 
