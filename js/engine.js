@@ -337,6 +337,7 @@ $(document).ready(function(){
 	},"");
 
 
+	// callback form
 	$('#callback-form .submit').click(function(e){
 		e.preventDefault();
 		$(this).closest('form').submit();
@@ -353,9 +354,44 @@ $(document).ready(function(){
 		},
 		errorPlacement: function(error, element) {
 			if (element.attr('name') == 'name') $('#callback-form .helper-field-name').text('Ошибка!').addClass('lerror');
-			if (element.attr('name') == 'tel') $('#callback-form .helper-field-tel').text('Ошибка!').addClass('lerror');
-		}
+			if (element.attr('name') == 'tel') $('#callback-form .helper-field-name').text('Ошибка!').addClass('lerror');
+		},
+		submitHandler: function(form){
+			// send form ajax
+			//alert("Отправлено!")
+		}		
 	});
+
+
+	// page contact
+	$('#writeus-form .submit').click(function(e){
+		e.preventDefault();
+		$(this).closest('form').submit();
+	});
+
+	$('#writeus-form').validate({
+		rules: {
+			name:{
+				required : true
+			},
+			email: {
+				required : true,
+				email: true
+			},
+			msg: {
+				required : true
+			}
+		},
+		errorPlacement: function(error, element) {
+			if (element.attr('name') == 'name') $('#writeus-form .helper-field-name').text('Ошибка!').addClass('lerror');
+			if (element.attr('name') == 'email') $('#writeus-form .helper-field-name').text('Ошибка!').addClass('lerror');
+			if (element.attr('name') == 'msg') $('#writeus-form .helper-field-name').text('Ошибка!').addClass('lerror');
+		},
+		submitHandler: function(form){
+			// send form ajax
+			//alert("Отправлено!")
+		}
+	});	
 
 });
 
