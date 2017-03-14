@@ -226,6 +226,7 @@ $(document).ready(function(){
 	});
 
 
+	// booking page - calc products
 	$('.plus').click(function(e){
 		e.preventDefault();
 		var $this = $(this),
