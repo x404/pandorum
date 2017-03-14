@@ -1,5 +1,17 @@
 $(document).ready(function(){
 
+	var container = $('.icon2 a span'), 
+		userText = $('.icon2 a'); 
+	
+	// Shuffle the contents of container
+
+	// Bind events
+	$('.logomenu nav span').mouseover(function(e){
+		e.stopPropagation();
+		$(this).shuffleLetters();
+	})
+
+
 	$('.logomenu').hover(
 		function(){$('body').addClass('l-with-nav')},
 		function(){$('body').removeClass('l-with-nav')}
