@@ -85,7 +85,7 @@
 		<!-- =/logomenu -->
 
 		<!-- =main -->
-		<form action="#" method="post">
+		<form action="#" method="post" id="booking-form">
 			<div class="main">
 				<h1>Забронировать игру</h1>
 
@@ -143,21 +143,21 @@
 								<div class="input-field">
 									<label for="username1" class="name-field">ФИО</label>
 									<label for="username1" class="helper-field helper-field-name">ФИО</label>
-									<input type="text" id="username1" name="userame1" class="form-control required" value="" />
+									<input type="text" id="username1" name="name" class="form-control required name" value="" />
 								</div>
 							</div>
 							<div class="cell">
 								<div class="input-field">
 									<label for="usertel1" class="name-field">Телефон</label>
 									<label for="usertel1" class="helper-field helper-field-name">Телефон</label>
-									<input type="tel" id="usertel1" name="usertel1" class="form-control required tel" value="" />
+									<input type="tel" id="usertel1" name="tel" class="form-control required tel validphone" value="" />
 								</div>
 							</div>
 							<div class="cell">
 								<div class="input-field">
 									<label for="usermail1" class="name-field">E-mail</label>
 									<label for="usermail1" class="helper-field helper-field-name">E-mail</label>
-									<input type="email" id="usermail1" name="usermail1" class="form-control required" value="" />
+									<input type="email" id="usermail1" name="email" class="form-control email required" value="" />
 								</div>
 							</div>
 						</div>
@@ -457,7 +457,7 @@
 					<div class="promo">
 						<input type="text" name="promocode" class="form-control" value="" placeholder="У меня есть промокод" />
 					</div>
-					<a href="#" class="btn"><span>Забронировать игру</span></a>
+					<a href="#" class="btn submit" role="button"><span>Забронировать игру</span></a>
 				</div>
 			</div>
 		<!-- =/bottom -->

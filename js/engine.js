@@ -134,7 +134,7 @@ $(document).ready(function(){
 
 		if (!check) {
 			i = parseInt($('.userinfo .users .row:last-child').data('row')) + 1;
-			var row = '<div class="row" data-row="' + i + '"><a href="#" class="deluser"></a> <div class="cell"> <div class="input-field"> <label for="username' + i + '" class="name-field">ФИО</label> <label for="username' + i + '" class="helper-field helper-field-name">ФИО</label> <input type="text" id="username' + i + '" name="userame1" class="form-control required" value="" /> </div> </div> <div class="cell"> <div class="input-field"> <label for="usertel' + i + '" class="name-field">Телефон</label> <label for="usertel' + i + '" class="helper-field helper-field-name">Телефон</label> <input type="tel" id="usertel' + i + '" name="usertel1" class="form-control required tel" value="" /> </div> </div> <div class="cell"> <div class="input-field"> <label for="usermail' + i + '" class="name-field">E-mail</label> <label for="usermail' + i + '" class="helper-field helper-field-name">E-mail</label> <input type="email" id="usermail' + i + '" name="usermail' + i + '" class="form-control required" value="" /> </div> </div> </div> ';
+			var row = '<div class="row" data-row="' + i + '"><a href="#" class="deluser"></a> <div class="cell"> <div class="input-field"> <label for="username' + i + '" class="name-field">ФИО</label> <label for="username' + i + '" class="helper-field helper-field-name">ФИО</label> <input type="text" id="username' + i + '" name="name' + i + '" class="form-control required name" value="" /> </div> </div> <div class="cell"> <div class="input-field"> <label for="usertel' + i + '" class="name-field">Телефон</label> <label for="usertel' + i + '" class="helper-field helper-field-name">Телефон</label> <input type="tel" id="usertel' + i + '" name="tel' + i + '" class="form-control required tel validphone" value="" /> </div> </div> <div class="cell"> <div class="input-field"> <label for="usermail' + i + '" class="name-field">E-mail</label> <label for="usermail' + i + '" class="helper-field helper-field-name">E-mail</label> <input type="email" id="usermail' + i + '" name="email' + i + '" class="form-control required email" value="" /> </div> </div> </div> ';
 			$('.users').append(row);
 			$('.oneuser').addClass('hide');
 			$('.multiuser').removeClass('hide');
@@ -464,6 +464,58 @@ $(document).ready(function(){
 	});	
 	// =/page reviews
 
+
+
+	// =booking
+	$('#booking-form .submit').click(function(e){
+		e.preventDefault();
+		$(this).closest('form').submit();
+	});
+
+	$('#booking-form').validate({
+		errorPlacement: function(error, element) {
+			if (element.hasClass('name')) {
+				element.prev().text('Ошибка!').addClass('lerror')
+			};
+			if (element.hasClass('tel')) {
+				element.prev().text('Ошибка!').addClass('lerror')
+			};
+			if (element.hasClass('email')) {
+				element.prev().text('Ошибка!').addClass('lerror')
+			}
+		}
+	});
+
+
+	$('#booking-form2').validate({
+		rules: {
+			name:{
+				required : true
+			},
+			email: {
+				required : true,
+				email: true
+			},
+			date: {
+				required : true
+			},		
+			msg: {
+				required : true
+			}
+		},
+		errorPlacement: function(error, element) {
+			if (element.attr('name') == 'name') $('#booking-form .helper-field-name').text('Ошибка!').addClass('lerror');
+			if (element.attr('name') == 'email') $('#booking-form .helper-field-name').text('Ошибка!').addClass('lerror');
+			if (element.attr('name') == 'date') $('#booking-form .helper-field-name').text('Ошибка!').addClass('lerror');
+			if (element.attr('name') == 'msg') $('#booking-form .helper-field-name').text('Ошибка!').addClass('lerror');
+		},
+		submitHandler: function(form){
+			// send form ajax
+			//alert("Отправлено!")
+		}
+	});	
+	// =/booking
+
 });
 
 $(document).on('click','.deluser', function(e){
@@ -506,3 +558,29 @@ addLoadEvent(function(){
 	})
 });
 // =/заглушка для IE
+
+
+
+/*
+ * Translated default messages for the jQuery validation plugin.
+ * Locale: RU
+ */
+jQuery.extend(jQuery.validator.messages, {
+	required: "Заполните поле",
+	remote: "Пожалуйста, введите правильное значение.",
+	email: "Пожалуйста, введите корректный адрес электронной почты.",
+	url: "Пожалуйста, введите корректный URL.",
+	date: "Пожалуйста, введите корректную дату.",
+	dateISO: "Пожалуйста, введите корректную дату в формате ISO.",
+	number: "Пожалуйста, введите число.",
+	digits: "Пожалуйста, вводите только цифры.",
+	creditcard: "Пожалуйста, введите правильный номер кредитной карты.",
+	equalTo: "Пожалуйста, введите такое же значение ещё раз.",
+	accept: "Пожалуйста, выберите файл с правильным расширением.",
+	maxlength: jQuery.validator.format("Пожалуйста, введите не больше {0} символов."),
+	minlength: jQuery.validator.format("Пожалуйста, введите не меньше {0} символов."),
+	rangelength: jQuery.validator.format("Пожалуйста, введите значение длиной от {0} до {1} символов."),
+	range: jQuery.validator.format("Пожалуйста, введите число от {0} до {1}."),
+	max: jQuery.validator.format("Пожалуйста, введите число, меньшее или равное {0}."),
+	min: jQuery.validator.format("Пожалуйста, введите число, большее или равное {0}.")
+});
