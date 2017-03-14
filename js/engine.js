@@ -427,6 +427,43 @@ $(document).ready(function(){
 	});	
 	// =/page reviews
 
+
+	// =page reviews
+	// TripAdvisor, Flamp
+	$('#addreview-form .submit').click(function(e){
+		e.preventDefault();
+		$(this).closest('form').submit();
+	});
+
+	$('#addreview-form').validate({
+		rules: {
+			name:{
+				required : true
+			},
+			email: {
+				required : true,
+				email: true
+			},
+			date: {
+				required : true
+			},		
+			msg: {
+				required : true
+			}
+		},
+		errorPlacement: function(error, element) {
+			if (element.attr('name') == 'name') $('#addreview-form .helper-field-name').text('Ошибка!').addClass('lerror');
+			if (element.attr('name') == 'email') $('#addreview-form .helper-field-name').text('Ошибка!').addClass('lerror');
+			if (element.attr('name') == 'date') $('#addreview-form .helper-field-name').text('Ошибка!').addClass('lerror');
+			if (element.attr('name') == 'msg') $('#addreview-form .helper-field-name').text('Ошибка!').addClass('lerror');
+		},
+		submitHandler: function(form){
+			// send form ajax
+			//alert("Отправлено!")
+		}
+	});	
+	// =/page reviews
+
 });
 
 $(document).on('click','.deluser', function(e){
