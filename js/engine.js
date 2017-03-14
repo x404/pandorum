@@ -233,6 +233,7 @@ $(document).ready(function(){
 			$count = parseInt($el.data('count'))+1;
 			$el.data('count', $count);
 			$el.text($count + 'шт');
+			calc();
 	});
 
 
@@ -245,7 +246,35 @@ $(document).ready(function(){
 
 			$el.data('count', $count);
 			$el.text($count + 'шт');
+			calc();
 	});
+
+	function calc(){
+		var sum1 = $('.costgame').data('cost'),
+			sum2 = 0;
+		$('#foo2 .owl-item').each(function(i, el){
+			price = parseInt($(el).find('.price .value span').text());
+			count = parseInt($(el).find('.amount').data('count'));
+			sum2 += price*count;
+		});
+
+		sum = sum1 + sum2;
+		$('#cost').text(addSpaces(sum));
+		$('#sum2').text(sum2);
+	}
+
+	function addSpaces(nStr){
+		nStr += '';
+		x = nStr.split('.');
+		x1 = x[0];
+		x2 = x.length > 1 ? '.' + x[1] : '';
+		var rgx = /(\d+)(\d{3})/;
+		while (rgx.test(x1)) {
+			x1 = x1.replace(rgx, '$1' + ' ' + '$2');
+		}
+		return x1 + x2;
+	}
+
 
 
 	function refreshFirstLastVisible(event){
