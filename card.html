@@ -592,6 +592,7 @@
 									<div class="user_info">
 										<p class="name">Екимова Екатерина</p>
 										<p class="date">Играла 15го сентября 2016</p>
+										<p class="city">г. Красноярск</p>
 									</div>
 									<div class="mark">5</div>
 								</div>
@@ -611,6 +612,7 @@
 									<div class="user_info">
 										<p class="name">Иванов Иван</p>
 										<p class="date">Играл 15го сентября 2016</p>
+										<p class="city">г. Амстердам</p>
 									</div>
 									<div class="mark">4</div>
 								</div>
@@ -630,6 +632,7 @@
 									<div class="user_info">
 										<p class="name">Евгений Харитонов</p>
 										<p class="date">Играл 15го сентября 2016</p>
+										<p class="city">г. Красноярск</p>
 									</div>
 									<div class="mark">5</div>
 								</div>
@@ -703,6 +706,18 @@
 			<form action="#" method="post" id="addreview-form">
 				<fieldset>
 					<div class="row">
+						<div class="cell cell-2 mark">
+							Оценка 
+							<div class="rating">
+								<img src="images/star.png" alt="" />
+								<img src="images/star.png" alt="" />
+								<img src="images/star.png" alt="" />
+								<img src="images/star.png" alt="" />
+								<img src="images/star-gray.png" alt="" />
+							</div>
+						</div>
+					</div>
+					<div class="row">
 						<div class="cell">
 							<div class="input-field">
 								<label for="name2" class="name-field">Ваше имя</label>
@@ -726,15 +741,25 @@
 								<input type="text" id="date" name="date" class="form-control required" value="" />
 							</div>
 						</div>
-						<div class="cell mark">
-							Оценка 
-							<div class="rating">
-								<img src="images/star.png" alt="" />
-								<img src="images/star.png" alt="" />
-								<img src="images/star.png" alt="" />
-								<img src="images/star.png" alt="" />
-								<img src="images/star-gray.png" alt="" />
-							</div>
+						<div class="cell cityselect">
+							<select name="city" id="cityselect" data-placeholder="В каком городе играли?">
+								<option value=""></option>
+								<option value="Красноярск">Красноярск</option>
+								<option value="Амстердам">Амстердам</option>
+								<option value="София">София</option>
+								<option value="Берлин">Берлин</option>				
+								<option value="Берлин">Берлин</option>				
+								<option value="Берлин">Берлин</option>				
+								<option value="Берлин">Берлин</option>				
+								<option value="Берлин">Берлин</option>				
+								<option value="Берлин">Берлин</option>				
+								<option value="Берлин">Берлин</option>				
+								<option value="Берлин">Берлин</option>				
+								<option value="Берлин">Берлин</option>				
+								<option value="Берлин">Берлин</option>				
+								<option value="Берлин">Берлин</option>				
+								<option value="Берлин">Берлин</option>				
+							</select>
 						</div>
 					</div>
 					<div class="row">
@@ -746,7 +771,16 @@
 							</div>
 						</div>
 					</div>
-					<input type="submit" class="btn submit" value="Оставить отзыв" />
+					<div class="row">
+						<div class="cell">
+							<div class="captcha">
+								<img src="tmp/captcha.jpg" alt="" />
+							</div>
+						</div>
+						<div class="cell">
+							<a href="#" role="button" class="btn submit"><span>Оставить отзыв</span></a>
+						</div>
+					</div>
 				</fieldset>
 			</form>
 

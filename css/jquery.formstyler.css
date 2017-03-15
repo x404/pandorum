@@ -236,33 +236,27 @@
 }
 .jq-selectbox__select {
 	height: 32px;
-	padding: 0 45px 0 10px;
-	border: 1px solid #CCC;
-	border-bottom-color: #B3B3B3;
-	border-radius: 4px;
-	background: #F5F5F5;
-	font: 14px/32px Arial, sans-serif;
+	// padding: 0 45px 0 10px;
+	font-size: 16px;
 	color: #333;
 }
 .jq-selectbox__select:hover {
-	background: #E6E6E6;
-	background: -webkit-linear-gradient(#F6F6F6, #E6E6E6);
-	background:         linear-gradient(#F6F6F6, #E6E6E6);
 }
 .jq-selectbox__select:active {
-	background: #F5F5F5;
+	// background: #F5F5F5;
 	// box-shadow: inset 1px 1px 3px #DDD;
 }
 .jq-selectbox.focused .jq-selectbox__select {
-	border: 1px solid #5794BF;
+	// border: 1px solid #5794BF;
 }
 .jq-selectbox.disabled .jq-selectbox__select {
-	border-color: #CCC;
+	// border-color: #CCC;
 	background: #F5F5F5;
 	box-shadow: none;
 	color: #888;
 }
 .jq-selectbox__select-text {
+	color: #fff;
 	display: block;
 	overflow: hidden;
 	width: 100%;
@@ -270,25 +264,24 @@
 	text-overflow: ellipsis;
 }
 .jq-selectbox .placeholder {
-	color: #888;
 }
 .jq-selectbox__trigger {
 	position: absolute;
 	top: 0;
 	right: 0;
-	width: 34px;
+	width: 12px;
 	height: 100%;
-	border-left: 1px solid #CCC;
 }
 .jq-selectbox__trigger-arrow {
 	position: absolute;
 	top: 14px;
 	right: 12px;
-	width: 0;
-	height: 0;
-	border-top: 5px solid #999;
-	border-right: 5px solid transparent;
-	border-left: 5px solid transparent;
+	background: url(../images/sprite.png) no-repeat -13px -63px;
+	border: none;
+	height: 8px;
+	right: 0;
+	top: 16px;
+	width: 12px;
 }
 .jq-selectbox:hover .jq-selectbox__trigger-arrow {
 	border-top-color: #000;
@@ -301,8 +294,7 @@
 	width: 100%;
 	margin: 2px 0 0;
 	padding: 0;
-	background: #FFF;
-	font: 14px/18px Arial, sans-serif;
+	background: #00bbc7;
 }
 .jq-selectbox__search {
 	margin: 5px;
@@ -331,10 +323,12 @@
 	font-size: 13px;
 }
 .jq-selectbox ul {
+	font-family: "MyriadProSemiBold";
 	margin: 0;
 	padding: 0;
 }
 .jq-selectbox li {
+	font-size: 15px;
 	min-height: 18px;
 	padding: 5px 10px 6px;
 	-webkit-user-select: none;
@@ -342,7 +336,7 @@
 	    -ms-user-select: none;
 	        user-select: none;
 	white-space: nowrap;
-	color: #231F20;
+	color: #fff;
 }
 .jq-selectbox li.selected {
 	background-color: #0099a3;
@@ -350,7 +344,7 @@
 }
 .jq-selectbox li:hover {
 	background-color: #0099a3;
-	color: #FFF;
+	color: #000;
 }
 .jq-selectbox li.disabled {
 	color: #AAA;

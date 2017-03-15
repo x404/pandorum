@@ -121,7 +121,7 @@ strong {
   font-weight: 300; }
 
 .regularlightext, .form-control, .logomenu nav ul li a, .logomenu nav ul li div, .header .city-select, .header .support, footer .left, .modal .input-field label,
-.elform .input-field label, .bookinggame .userinfo .row .input-field label, #addgeneralreview .input-rate, #opencity .jq-selectbox__select, .home .play, .news_list_row .cell .cell_wrapper, .contacts, .page main, .page main h2.light, .catalog .main_header p, .catalog_list .item .params .left_top .age, .catalog_list .item .params .right, .catalog_list .item .description, .reviews .main_header .sort, .reviews .review_list .review_wrapper .user_info p:not(.name), .reviews .review_list .review_wrapper .user_text, .reviews .review_list .review_wrapper .more, .other_reviews .review .user_text, .other_reviews .review .date, .fullreview .date, .fullreview .text, .card .intro_wrapper, .card .intro_wrapper .params .item-count .param_body_text, .card .intro_wrapper .bottom .address .tel span, .card .intro_wrapper .where, .card .booking .selectdate, .card .booking .date-places .places .item_body .top .date, .card .booking .date-places .places .item_body .bottom, .card .booking .date_tab ul li span i, .card main, .card .reviews_list .item .date, .card .reviews_list .item .text, .addreview .row .cell.mark, .bookinggame .quest-info p.title, .bookinggame .userinfo .addgamers a,
+.elform .input-field label, .bookinggame .userinfo .row .input-field label, #addgeneralreview .input-rate, #opencity .jq-selectbox__select, .home .play, .news_list_row .cell .cell_wrapper, .contacts, .page main, .page main h2.light, .catalog .main_header p, .catalog_list .item .params .left_top .age, .catalog_list .item .params .right, .catalog_list .item .description, .reviews .main_header .sort, .reviews .review_list .review_wrapper .user_info p:not(.name), .reviews .review_list .review_wrapper .user_text, .reviews .review_list .review_wrapper .more, .other_reviews .review .user_text, .other_reviews .review .date, .fullreview .date, .fullreview .text, .card .intro_wrapper, .card .intro_wrapper .params .item-count .param_body_text, .card .intro_wrapper .bottom .address .tel span, .card .intro_wrapper .where, .card .booking .selectdate, .card .booking .date-places .places .item_body .top .date, .card .booking .date-places .places .item_body .bottom, .card .booking .date_tab ul li span i, .card main, .card .reviews_list .item .date, .card .reviews_list .item .city, .card .reviews_list .item .text, .addreview .row .cell.mark, .bookinggame .quest-info p.title, .bookinggame .userinfo .addgamers a,
 .bookinggame .userinfo .addgamers span,
 .bookinggame .userinfo .addgamers label, .bookinggame .detailinfo .flexbox .health, .bookinggame .detailinfo .flexbox .language .jq-selectbox__select-text,
 .bookinggame .detailinfo .flexbox .birthday .jq-selectbox__select-text, .bookinggame .payment_list .item_desc, .bookinggame .souvenir-carousel .item h3, .bookinggame .souvenir-carousel .item .price p:not(.value), .bookinggame .souvenir-carousel .item .count .amount, .bookinggame .souvenir .sum, .booking_bottom .sum, .booking_bottom .promo {
@@ -213,7 +213,7 @@ strong {
 footer:before,
 nav ul li:before, footer .right .music a:after, #opencity .modal-dialog:before, .home .play:after, .actions_list_row .cell .pic:after, .actions_list_row .cell .pic:before, .news_list_row .cell .cell_wrapper .datetime:after, .contacts .content .btn:before, .contacts .schedule .worktime li:first-child:before, .contacts .schedule .worktime li:first-child:after, .contacts .map:before, .catalog_list .item:before, .catalog_list .item .params .left:before, .catalog_list .item .params .right:before, .catalog_list .owl-nav .owl-prev:before,
 .catalog_list .owl-nav .owl-next:before, .reviews .review_list:before, .reviews .review_list:after, .reviews .review_list .review:before, .reviews .review_list .review:after, .reviews .review_list .review_wrapper .user_info:after, .reviews .review_list .review_wrapper .user_text:before, .reviews .review_list .review_wrapper .user_text:after, .reviews .review_list .review_wrapper .more_link:before, .other_reviews .review .user_info .score:before, .fullreview .modal-dialog:after, .fullreview .text:before, .card .play a:before, .card .intro:before, .card .intro:after, .card .intro_wrapper .title .rate:before, .card .intro_wrapper .more_link:before, .card .intro_wrapper .bottom .address .city:before,
-.card .intro_wrapper .bottom .address .tel:before, .card .intro_wrapper .bottom .right:before, .card .photos_list_item a span, .card .booking .date-places .places .item_body .top .time:before, .card .booking .date-places .places .item_body:after, .card .booking .date_tab ul li:before, .card .booking .date_tab ul li:after, .card .booking .date_tab ul li.active a:before, .card .reviews_list .item:after, .card .reviews_list .item_wrapper:before, .card .reviews_list .item_wrapper:after, .card .reviews_list .item_wrapper_body .more_link:before, .card .reviews .bottom:before, .card .reviews .bottom:after, .bootstrap-datetimepicker-widget td.active:before,
+.card .intro_wrapper .bottom .address .tel:before, .card .intro_wrapper .bottom .right:before, .card .photos_list_item a span, .card .booking .date-places .places .item_body .top .time:before, .card .booking .date-places .places .item_body:after, .card .booking .date_tab ul li:before, .card .booking .date_tab ul li:after, .card .booking .date_tab ul li.active a:before, .card .reviews_list .item:after, .card .reviews_list .item_wrapper:before, .card .reviews_list .item_wrapper:after, .card .reviews_list .item_wrapper_body .more_link:before, .card .reviews .bottom:before, .card .reviews .bottom:after, .addreview .row .cell #datetimepicker:after, .bootstrap-datetimepicker-widget td.active:before,
 .bootstrap-datetimepicker-widget td.active:hover:before,
 .bootstrap-datetimepicker-widget td.day:hover:before,
 .bootstrap-datetimepicker-widget td.hour:hover:before,
@@ -242,7 +242,8 @@ nav ul li:before, footer .right .music a:after, #opencity .modal-dialog:before, 
   display: block;
   text-transform: uppercase;
   position: relative;
-  text-decoration: none; }
+  text-decoration: none;
+  text-align: center; }
   .btn:before {
     -webkit-transition: opacity 0.2s ease-out;
     transition: opacity 0.2s ease-out;
@@ -1164,6 +1165,26 @@ footer {
   background-color: #262c35;
   -webkit-filter: drop-shadow(0 0 30px rgba(0, 0, 0, 0.9));
   filter: drop-shadow(0 0 30px rgba(0, 0, 0, 0.9)); }
+
+.scroll-pane {
+  height: 212px !important; }
+
+.jq-selectbox__dropdown .mCustomScrollbar {
+  height: 20.5rem !important; }
+
+.jq-selectbox__dropdown .mCSB_inside > .mCSB_container {
+  margin-right: 16px; }
+
+.jq-selectbox__dropdown .mCSB_scrollTools {
+  background: #00787f; }
+  .jq-selectbox__dropdown .mCSB_scrollTools .mCSB_draggerContainer {
+    margin: 8px 0; }
+  .jq-selectbox__dropdown .mCSB_scrollTools .mCSB_draggerRail {
+    background: none; }
+  .jq-selectbox__dropdown .mCSB_scrollTools .mCSB_dragger .mCSB_dragger_bar {
+    background: #00bbc7;
+    border-radius: 0;
+    width: 5px; }
 
 .l-with-nav .home .bg {
   background-position: 240px center; }
@@ -2743,8 +2764,8 @@ footer {
       color: #989a9d;
       padding-left: 6.2rem; }
       .card .booking .selectdate .input-field {
-        margin-left: 2rem;
-        display: inline-block; }
+        display: inline-block;
+        margin-left: 2rem; }
         .card .booking .selectdate .input-field .form-control {
           font-size: 17px;
           font-size: 1.7rem;
@@ -2752,8 +2773,8 @@ footer {
           border: none;
           border-bottom: 2px solid #0099a3;
           color: #0099a3;
-          width: 12.8rem;
           text-align: center;
+          width: 12.8rem;
           -webkit-transition: all 0.2s ease-out;
           transition: all 0.2s ease-out; }
           .card .booking .selectdate .input-field .form-control:hover {
@@ -2822,9 +2843,9 @@ footer {
               .card .booking .date-places .places .item_body .bottom .price {
                 color: #7b7e87; }
                 .card .booking .date-places .places .item_body .bottom .price strong {
-                  color: #fff;
                   font-size: 18px;
-                  font-size: 1.8rem; }
+                  font-size: 1.8rem;
+                  color: #fff; }
             .card .booking .date-places .places .item_body:after {
               background: url(../images/basket-bg-1.png) no-repeat left top;
               bottom: -18px;
@@ -3144,7 +3165,7 @@ footer {
           -webkit-align-items: center;
           -moz-align-items: center;
           align-items: center;
-          padding-bottom: .5rem;
+          padding-bottom: 1rem;
           border-bottom: 1px solid #58595c; }
         .card .reviews_list .item .user_info {
           margin-left: 1rem; }
@@ -3156,6 +3177,10 @@ footer {
           color: #a3b6c1;
           font-size: 15px;
           font-size: 1.5rem; }
+        .card .reviews_list .item .city {
+          font-size: 15px;
+          font-size: 1.5rem;
+          padding-top: .5rem; }
         .card .reviews_list .item .text {
           font-size: 15px;
           font-size: 1.5rem;
@@ -3221,25 +3246,28 @@ footer {
   -webkit-justify-content: space-between;
   -moz-justify-content: space-between;
   justify-content: space-between;
-  margin-top: 4rem; }
+  margin-top: 2.3rem; }
   .addreview .row .cell {
     width: 365px; }
     .addreview .row .cell .form-control {
       width: 100%; }
     .addreview .row .cell textarea.form-control {
       background: url("data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAAoCAYAAAA/tpB3AAAAGXRFWHRTb2Z0d2FyZQBBZG9iZSBJbWFnZVJlYWR5ccllPAAAABhJREFUeNpi+P//PwMTAxAMVeI/mAUQYAB1BgRLmVMmHQAAAABJRU5ErkJggg==") left top;
+      border-bottom: none;
       height: 17rem;
       line-height: 2.6;
       margin-top: 1.5rem !important;
-      border-bottom: none;
-      resize: none;
-      overflow: hidden; }
+      overflow: hidden;
+      resize: none; }
+      .addreview .row .cell textarea.form-control.error {
+        background: url("data:img/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAAoCAYAAAFIsaDhAAAAGXRFWHRTb2Z0d2FyZQBBZG9iZSBJbWFnZVJlYWR5ccllPAAAAClJREFUeNpi+P//PwMTAxCgEQABxIBLAiCAcEpgVwxEAAFGkg7SCbAdACB9EDXG/yijAAAAAElFTkSuQmCC") left top; }
     .addreview .row .cell.cell-2 {
       width: 100%; }
     .addreview .row .cell.mark {
       font-size: 17px;
       font-size: 1.7rem;
-      padding-top: 1.5rem; }
+      margin-bottom: -.7rem;
+      margin-top: -1.2rem; }
       .addreview .row .cell.mark .rating {
         display: inline-block;
         margin-left: 1rem;
@@ -3247,17 +3275,63 @@ footer {
         top: -2px; }
         .addreview .row .cell.mark .rating img {
           vertical-align: top; }
+    .addreview .row .cell #datetimepicker:after {
+      background-image: url(../images/sprite.png);
+      background-repeat: no-repeat;
+      background-position: -13px -63px;
+      height: 8px;
+      right: 0;
+      top: 20px;
+      width: 13px; }
+
+.addreview .cityselect .jq-selectbox {
+  height: 100%;
+  width: 100%; }
+  .addreview .cityselect .jq-selectbox__select-text {
+    border-bottom: 2px solid #fff;
+    height: 55px;
+    padding-top: 15px;
+    width: 100% !important; }
+  .addreview .cityselect .jq-selectbox__trigger {
+    top: 4px; }
+  .addreview .cityselect .jq-selectbox.error .jq-selectbox__select-text {
+    border-bottom-color: red;
+    color: red; }
+  .addreview .cityselect .jq-selectbox.changed .jq-selectbox__select-text {
+    border-bottom-color: #fff;
+    color: #fff; }
+
+.addreview .cityselect .jq-selectbox__dropdown {
+  top: 51px !important; }
+  .addreview .cityselect .jq-selectbox__dropdown li.sel {
+    background-color: #0099a3;
+    color: #000; }
 
 .addreview .submit {
   font-size: 17px;
   font-size: 1.7rem;
   background-image: url(../images/callback-btn.png);
   background-repeat: no-repeat;
-  background-position: -16px -1247px;
+  background-position: -10px -1247px;
   color: #fff;
-  height: 53px;
-  margin-top: 3.5rem;
-  width: 218px; }
+  float: right;
+  margin-top: .5rem;
+  height: 65px;
+  width: 230px;
+  padding-top: 15px; }
+  .addreview .submit span {
+    -webkit-transition: color 0.2s ease-out;
+    transition: color 0.2s ease-out; }
+  .addreview .submit:before {
+    background-image: url(../images/callback-btn.png);
+    background-repeat: no-repeat;
+    background-position: -261px -1247px;
+    top: 0;
+    left: 0;
+    height: 65px;
+    width: 230px; }
+  .addreview .submit:hover span {
+    color: #000; }
 
 .bootstrap-datetimepicker-widget td.active:before,
 .bootstrap-datetimepicker-widget td.active:hover:before,
@@ -3672,14 +3746,14 @@ footer {
           height: 50px; }
           .bookinggame .detailinfo .flexbox .language .jq-selectbox__select-text,
           .bookinggame .detailinfo .flexbox .birthday .jq-selectbox__select-text {
-            color: #fff;
             font-size: 16px;
             font-size: 1.6rem;
             -webkit-transition: all 0.2s ease-out;
             transition: all 0.2s ease-out;
             border-bottom: 2px solid #fff;
+            color: #fff;
             height: 50px;
-            padding-top: 4px; }
+            padding-top: 11px; }
         .bookinggame .detailinfo .flexbox .language .jq-selectbox:hover .jq-selectbox__select-text, .bookinggame .detailinfo .flexbox .language .jq-selectbox.opened .jq-selectbox__select-text,
         .bookinggame .detailinfo .flexbox .birthday .jq-selectbox:hover .jq-selectbox__select-text,
         .bookinggame .detailinfo .flexbox .birthday .jq-selectbox.opened .jq-selectbox__select-text {
@@ -3734,20 +3808,6 @@ footer {
       .bookinggame .detailinfo .flexbox .birthday .year {
         margin-left: 2.8rem;
         width: 70px; }
-      .bookinggame .detailinfo .flexbox .birthday .jq-selectbox__dropdown .mCustomScrollbar {
-        height: 20.5rem !important; }
-      .bookinggame .detailinfo .flexbox .birthday .mCSB_inside > .mCSB_container {
-        margin-right: 16px; }
-      .bookinggame .detailinfo .flexbox .birthday .mCSB_scrollTools {
-        background: #00787f; }
-        .bookinggame .detailinfo .flexbox .birthday .mCSB_scrollTools .mCSB_draggerContainer {
-          margin: 8px 0; }
-        .bookinggame .detailinfo .flexbox .birthday .mCSB_scrollTools .mCSB_draggerRail {
-          background: none; }
-        .bookinggame .detailinfo .flexbox .birthday .mCSB_scrollTools .mCSB_dragger .mCSB_dragger_bar {
-          background: #00bbc7;
-          border-radius: 0;
-          width: 5px; }
   .bookinggame .payment h2,
   .bookinggame .souvenir h2,
   .bookinggame .userinfo h2,

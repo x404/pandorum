@@ -43,7 +43,13 @@ $(document).ready(function(){
 	
 	$('#langquest').styler();
 
-	var _dropdown;
+
+	var _dropdown,
+		_dropdown2,
+		_dropdown3,
+		_dropdown4;
+		
+
 	$('#birthdaydate').styler({
 		onFormStyled: function(){
 			_dropdown = $('.day .jq-selectbox__dropdown');
@@ -97,6 +103,24 @@ $(document).ready(function(){
 			});
 		}		
 	});
+
+	$('#cityselect').styler({
+		onFormStyled: function(){
+			_dropdown4 = $('.cityselect .jq-selectbox__dropdown');
+			_dropdown4.find('ul').wrap('<div class="scroll-pane"></div>');
+		},
+		onSelectOpened: function(){
+			var _ul = $(this).find('.jq-selectbox__dropdown ul');
+			var height = _ul.height();
+			var _srollPane = _dropdown4.find('.scroll-pane');
+			_srollPane.height(height);
+			_ul.css('max-height', 'none');
+			_srollPane.mCustomScrollbar({
+				scrollButtons : {enable:true},
+				autoDraggerLength : true
+			});
+		}
+	});	
 
 
 	$('#review-scroller').mCustomScrollbar({
@@ -457,7 +481,10 @@ $(document).ready(function(){
 			},
 			date: {
 				required : true
-			},		
+			},
+			city: {
+				required : true
+			},
 			msg: {
 				required : true
 			}
@@ -468,6 +495,27 @@ $(document).ready(function(){
 			if (element.attr('name') == 'date') $('#addreview-form .helper-field-name').text('Ошибка!').addClass('lerror');
 			if (element.attr('name') == 'msg') $('#addreview-form .helper-field-name').text('Ошибка!').addClass('lerror');
 		},
+		 invalidHandler: function() {
+			setTimeout(function() {
+				$('#cityselect').trigger('refresh').styler({
+					onFormStyled: function(){
+						_dropdown4 = $('.cityselect .jq-selectbox__dropdown');
+						_dropdown4.find('ul').wrap('<div class="scroll-pane"></div>');
+					},
+					onSelectOpened: function(){
+						var _ul = $(this).find('.jq-selectbox__dropdown ul');
+						var height = _ul.height();
+						var _srollPane = _dropdown4.find('.scroll-pane');
+						_srollPane.height(height);
+						_ul.css('max-height', 'none');
+						_srollPane.mCustomScrollbar({
+							scrollButtons : {enable:true},
+							autoDraggerLength : true
+						});
+					}
+				})
+			}, 1)
+		},
 		submitHandler: function(form){
 			// send form ajax
 			//alert("Отправлено!")
@@ -475,6 +523,24 @@ $(document).ready(function(){
 	});	
 	// =/page reviews
 
+
+	$('#ityselect').styler({
+		onFormStyled: function(){
+			_dropdown4 = $('.cityselect .jq-selectbox__dropdown');
+			_dropdown4.find('ul').wrap('<div class="scroll-pane"></div>');
+		},
+		onSelectOpened: function(){
+			var _ul = $(this).find('.jq-selectbox__dropdown ul');
+			var height = _ul.height();
+			var _srollPane = _dropdown4.find('.scroll-pane');
+			_srollPane.height(height);
+			_ul.css('max-height', 'none');
+			_srollPane.mCustomScrollbar({
+				scrollButtons : {enable:true},
+				autoDraggerLength : true
+			});
+		}
+	});	
 
 
 	// =booking
