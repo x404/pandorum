@@ -136,6 +136,7 @@ strong {
 
 .myriadbold, h1, h3, .logomenu nav ul li div, #callback .submit,
 #writeus .submit,
+#writeme .submit,
 #addgeneralreview .submit, .modal-title, .home .text-1,
 .home .text-2, .actions_list_row .cell h3, .page main h1, .page main h2, .page main h3, .page main h4, .page main h5, .page main h6, .page main ol li:before, .catalog .main_header .btn, .catalog_list .item .params .left_top .count, .catalog_list .item .params .right strong, .catalog_list .item .description .btn span, .reviews .review_list .review_wrapper .stars, .other_reviews .title, .other_reviews .review .user_info .name,
 .other_reviews .review .user_info .mark, .other_reviews .review .user_info .score, .fullreview .name, .fullreview .mark, .card .intro_wrapper .title .rate, .card .intro_wrapper .params .item-count .param_body_text .cifr, .card .intro_wrapper .params .item-lang .param_body_text, .card .intro_wrapper .bottom, .card .booking h2, .card .booking .date-places .places .item_body .top .time, .card .booking .date-places .places .item_body .bottom .price strong, .card .booking .date-places .places .item_bottom a, .card .recommendation h2, .card main h2, .card .reviews h2, .card .reviews_list .item .name, .card .reviews_list .item .mark, .addreview .submit, .bookinggame .quest-info .info h2, .bookinggame .quest-info .info_bottom .cell p:not(.title), .bookinggame .quest-info .info .jq-selectbox__select-text, .bookinggame .quest-info .time, .bookinggame .quest-info .time .hours,
@@ -806,36 +807,43 @@ footer {
 ---------------------------*/
 #callback form,
 #writeus form,
+#writeme form,
 #addgeneralreview form {
   padding-top: 1rem; }
 
 #callback .modal-dialog,
 #writeus .modal-dialog,
+#writeme .modal-dialog,
 #addgeneralreview .modal-dialog {
   margin-top: 15%;
   width: 365px; }
 
 #callback .input-field,
 #writeus .input-field,
+#writeme .input-field,
 #addgeneralreview .input-field {
   margin-bottom: 2.5rem; }
 
 #callback .form-control,
 #writeus .form-control,
+#writeme .form-control,
 #addgeneralreview .form-control {
   width: 100%; }
   #callback .form-control:focus,
   #writeus .form-control:focus,
+  #writeme .form-control:focus,
   #addgeneralreview .form-control:focus {
     border-bottom-color: #00bbc7; }
 
 #callback .bottom,
 #writeus .bottom,
+#writeme .bottom,
 #addgeneralreview .bottom {
   margin-top: 4rem; }
 
 #callback textarea,
 #writeus textarea,
+#writeme textarea,
 #addgeneralreview textarea {
   background: url("data:img/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAAoCAYAAAA/tpB3AAAAGXRFWHRTb2Z0d2FyZQBBZG9iZSBJbWFnZVJlYWR5ccllPAAAABhJREFUeNpi+P//PwMTAxAMVeInmAUQYAB04gRFXMXVHwAAAABJRU5ErkJggg==") left top;
   border-bottom: none !important;
@@ -846,16 +854,25 @@ footer {
   margin-top: 1rem; }
   #callback textarea.error,
   #writeus textarea.error,
+  #writeme textarea.error,
   #addgeneralreview textarea.error {
     background: url("data:img/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAAoCAYAAAFIsaDhAAAAGXRFWHRTb2Z0d2FyZQBBZG9iZSBJbWFnZVJlYWR5ccllPAAAAClJREFUeNpi+P//PwMTAxCgEQABxIBLAiCAcEpgVwxEAAFGkg7SCbAdACB9EDXG/yijAAAAAElFTkSuQmCC") left top; }
 
 #callback .submit,
 #writeus .submit,
+#writeme .submit,
 #addgeneralreview .submit {
-  background: url(../images/callback-submit.png) no-repeat left top;
-  height: 53px;
+  background-image: url(../images/callback-btn.png);
+  background-repeat: no-repeat;
+  background-position: -267px -1001px;
   display: block;
+  height: 66px;
   width: 218px; }
+  #callback .submit:hover span,
+  #writeus .submit:hover span,
+  #writeme .submit:hover span,
+  #addgeneralreview .submit:hover span {
+    color: #000; }
 
 #writeus .modal-dialog,
 #addgeneralreview .modal-dialog {
@@ -2448,18 +2465,18 @@ footer {
   .card .outerwrapper {
     background: url(../images/noise3.jpg); }
   .card .main {
-    padding-left: 0;
     margin-bottom: 0;
+    padding-left: 0;
     padding-top: 905px; }
   .card footer {
     background: #101115; }
   .card .play {
-    position: absolute;
-    z-index: 5;
-    top: 50%;
     left: 50%;
     margin-left: -68px;
-    margin-top: -68px; }
+    margin-top: -68px;
+    position: absolute;
+    top: 50%;
+    z-index: 5; }
     .card .play a {
       background: url(../images/play.png) no-repeat left top;
       display: block;
@@ -2530,8 +2547,8 @@ footer {
             display: block;
             padding-top: 20px;
             position: relative;
-            z-index: 10;
-            text-decoration: none; }
+            text-decoration: none;
+            z-index: 10; }
           .card .intro_wrapper .title .rate:before {
             -webkit-transition: opacity 0.2s ease-out;
             transition: opacity 0.2s ease-out;
@@ -2555,9 +2572,9 @@ footer {
         -webkit-transition: color 0.2s ease-out;
         transition: color 0.2s ease-out;
         color: #00c2cf;
-        text-decoration: none;
+        margin-left: .3rem;
         position: relative;
-        margin-left: .3rem; }
+        text-decoration: none; }
         .card .intro_wrapper .more_link:before {
           background-image: url(../images/sprite.png);
           background-repeat: no-repeat;
@@ -2572,8 +2589,8 @@ footer {
             background-position: -9px -36px; }
       .card .intro_wrapper .params {
         background: url(../images/param-bg.png) no-repeat left top;
-        margin: 2.3rem 0 2.6rem -5rem;
         height: 248px;
+        margin: 2.3rem 0 2.6rem -5rem;
         width: 609px;
         display: -webkit-box;
         display: -webkit-flex;
@@ -2689,8 +2706,8 @@ footer {
     display: -ms-flexbox;
     display: flex; }
     .card .photos_list_item {
-      width: 25%;
-      position: relative; }
+      position: relative;
+      width: 25%; }
       .card .photos_list_item a {
         display: block;
         overflow: hidden;
@@ -3356,6 +3373,21 @@ footer {
     width: 230px; }
   .addreview .submit:hover span {
     color: #000; }
+
+#writeme .submit {
+  background-position: -264px -1001px;
+  width: 222px; }
+  #writeme .submit:before {
+    background-image: url(../images/callback-btn.png);
+    background-repeat: no-repeat;
+    background-position: -13px -1130px;
+    height: 75px;
+    left: 0;
+    top: 0;
+    width: 222px; }
+  #writeme .submit span {
+    display: block;
+    padding-top: 1.7rem; }
 
 .bootstrap-datetimepicker-widget td.active:before,
 .bootstrap-datetimepicker-widget td.active:hover:before,

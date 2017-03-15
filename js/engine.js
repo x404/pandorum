@@ -543,25 +543,6 @@ $(document).ready(function(){
 	// =/page reviews
 
 
-	$('#ityselect').styler({
-		onFormStyled: function(){
-			_dropdown4 = $('.cityselect .jq-selectbox__dropdown');
-			_dropdown4.find('ul').wrap('<div class="scroll-pane"></div>');
-		},
-		onSelectOpened: function(){
-			var _ul = $(this).find('.jq-selectbox__dropdown ul');
-			var height = _ul.height();
-			var _srollPane = _dropdown4.find('.scroll-pane');
-			_srollPane.height(height);
-			_ul.css('max-height', 'none');
-			_srollPane.mCustomScrollbar({
-				scrollButtons : {enable:true},
-				autoDraggerLength : true
-			});
-		}
-	});	
-
-
 	// =booking
 	$('#booking-form .submit').click(function(e){
 		e.preventDefault();
@@ -583,33 +564,37 @@ $(document).ready(function(){
 	});
 
 
-	$('#booking-form2').validate({
+	// =writeme
+	$('#writeme-form .submit').click(function(e){
+		e.preventDefault();
+		$(this).closest('form').submit();
+	});
+
+	$('#writeme-form').validate({
 		rules: {
 			name:{
 				required : true
 			},
+			tel: {
+				required : true
+			},
 			email: {
 				required : true,
-				email: true
-			},
-			date: {
-				required : true
-			},		
-			msg: {
-				required : true
+				email : true
 			}
 		},
 		errorPlacement: function(error, element) {
-			if (element.attr('name') == 'name') $('#booking-form .helper-field-name').text('Ошибка!').addClass('lerror');
-			if (element.attr('name') == 'email') $('#booking-form .helper-field-name').text('Ошибка!').addClass('lerror');
-			if (element.attr('name') == 'date') $('#booking-form .helper-field-name').text('Ошибка!').addClass('lerror');
-			if (element.attr('name') == 'msg') $('#booking-form .helper-field-name').text('Ошибка!').addClass('lerror');
+			if (element.attr('name') == 'name') $('#writeme-form .helper-field-name').text('Ошибка!').addClass('lerror');
+			if (element.attr('name') == 'tel') $('#writeme-form .helper-field-name').text('Ошибка!').addClass('lerror');
+			if (element.attr('name') == 'email') $('#writeme-form .helper-field-name').text('Ошибка!').addClass('lerror');
 		},
 		submitHandler: function(form){
 			// send form ajax
 			//alert("Отправлено!")
-		}
-	});	
+		}		
+	});
+	// =/writeme
+
 	// =/booking
 
 });
