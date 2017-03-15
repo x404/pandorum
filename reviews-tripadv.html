@@ -295,26 +295,25 @@
 	</div>
 
 
+	<script>
+		(function($){
+			$(window).on('load',function(){
+				function equalheight(){
+					// принудительно назначаем высоту скрол-областям
+					var h = $(window).height();
+					$('#review-scroller').height(h-171);
+					$('#other_reviews-scroller').height(h-171);
+				};
 
-<script>
-	(function($){
-		$(window).on('load',function(){
-			function equalheight(){
-				// принудительно назначаем высоту скрол-областям
-				var h = $(window).height();
-				$('#review-scroller').height(h-345);
-				$('#other_reviews-scroller').height(h-320);				
-			};
-
-			equalheight();
-			
-			// меняем высоту скрол-областям при ресайзе окна браузера
-			$(window).resize(function() {
 				equalheight();
+				
+				// меняем высоту скрол-областям при ресайзе окна браузера
+				$(window).resize(function() {
+					equalheight();
+				});
 			});
-		});
-	})(jQuery);
-</script>
+		})(jQuery);
+	</script>
 
 
 	<div class="shadow-main"></div>

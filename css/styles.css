@@ -1944,7 +1944,7 @@ footer {
   .reviews .shadow-tripadv {
     position: fixed;
     bottom: 0;
-    height: 271px; }
+    height: 97px; }
   .reviews .shadow-main {
     background: url(../images/review-shadow.png) repeat-x left bottom;
     left: 0;
@@ -2323,7 +2323,7 @@ footer {
       vertical-align: top;
       margin-top: -4px; }
   .other_reviews_wrapper {
-    padding-bottom: 180px; }
+    padding-bottom: 110px; }
   .other_reviews .review {
     margin-bottom: 5.5rem;
     margin-top: 4rem;
