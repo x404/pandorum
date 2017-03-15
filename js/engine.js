@@ -6,8 +6,7 @@ $(document).ready(function(){
 	// Shuffle the contents of container
 
 	// Bind events
-	$('.logomenu nav span').mouseover(function(e){
-		e.stopPropagation();
+	$('.logomenu nav a span').mouseover(function(e){
 		$(this).shuffleLetters();
 	})
 
