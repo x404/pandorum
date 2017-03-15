@@ -1,16 +1,16 @@
 $(document).ready(function(){
 
-	$('.music_switch').click(function(e){
-		e.preventDefault();
-		$(this).toggleClass('stop');
+	// $('.music_switch').click(function(e){
+	// 	e.preventDefault();
+	// 	$(this).toggleClass('stop');
 
-		player = $('#bgsoundplayer')[0];
-		if (player.paused == false) {
-			player.pause();
-		} else {
-			player.play();
-		}
-	});
+	// 	player = $('#bgsoundplayer')[0];
+	// 	if (player.paused == false) {
+	// 		player.pause();
+	// 	} else {
+	// 		player.play();
+	// 	}
+	// });
 
 
 	var container = $('.icon2 a span'), 
@@ -52,8 +52,7 @@ $(document).ready(function(){
 	$('#lang').styler();
 	$('#countries').styler();
 	$('#sort').styler();
-	$('#people').styler();
-	
+	$('#people').styler();	
 	$('#langquest').styler();
 
 
@@ -117,12 +116,13 @@ $(document).ready(function(){
 		}		
 	});
 
+
 	$('#cityselect').styler({
 		onFormStyled: function(){
-			_dropdown4 = $('.cityselect .jq-selectbox__dropdown');
-			_dropdown4.find('ul').wrap('<div class="scroll-pane"></div>');
 		},
 		onSelectOpened: function(){
+			_dropdown4 = $('.cityselect .jq-selectbox__dropdown');
+			_dropdown4.find('ul').wrap('<div class="scroll-pane"></div>');
 			var _ul = $(this).find('.jq-selectbox__dropdown ul');
 			var height = _ul.height();
 			var _srollPane = _dropdown4.find('.scroll-pane');
@@ -133,7 +133,7 @@ $(document).ready(function(){
 				autoDraggerLength : true
 			});
 		}
-	});	
+	});
 
 
 	$('#sortcity').styler({
@@ -499,6 +499,7 @@ $(document).ready(function(){
 	// TripAdvisor, Flamp
 	$('#addreview-form .submit').click(function(e){
 		e.preventDefault();
+		// alert("!");
 		$(this).closest('form').submit();
 	});
 
