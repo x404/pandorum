@@ -212,7 +212,7 @@ strong {
 .before, .btn:before, .logomenu:before, .logomenu nav ul li:after, .header .city-select:before,
 .header .support .phone:before, .header .city-select-link:before, .header .city-select-link:after, .header .support .btn:before, .header .switch #lang-styler .jq-selectbox__select-text:before, .logo:before,
 footer:before,
-nav ul li:before, footer .right .music a:after, #opencity .modal-dialog:before, .home .play:after, .actions_list_row .cell .pic:after, .actions_list_row .cell .pic:before, .news_list_row .cell .cell_wrapper .datetime:after, .contacts .content .btn:before, .contacts .schedule .worktime li:first-child:before, .contacts .schedule .worktime li:first-child:after, .contacts .map:before, .catalog_list .item:before, .catalog_list .item .params .left:before, .catalog_list .item .params .right:before, .catalog_list .owl-nav .owl-prev:before,
+nav ul li:before, footer .right .music_switch:after, #opencity .modal-dialog:before, .home .play:after, .actions_list_row .cell .pic:after, .actions_list_row .cell .pic:before, .news_list_row .cell .cell_wrapper .datetime:after, .contacts .content .btn:before, .contacts .schedule .worktime li:first-child:before, .contacts .schedule .worktime li:first-child:after, .contacts .map:before, .catalog_list .item:before, .catalog_list .item .params .left:before, .catalog_list .item .params .right:before, .catalog_list .owl-nav .owl-prev:before,
 .catalog_list .owl-nav .owl-next:before, .reviews .review_list:before, .reviews .review_list:after, .reviews .review_list .review:before, .reviews .review_list .review:after, .reviews .review_list .review_wrapper .user_info:after, .reviews .review_list .review_wrapper .user_text:before, .reviews .review_list .review_wrapper .user_text:after, .reviews .review_list .review_wrapper .more_link:before, .other_reviews .review .user_info .score:before, .fullreview .modal-dialog:after, .fullreview .text:before, .card .play a:before, .card .intro:before, .card .intro:after, .card .intro_wrapper .title .rate:before, .card .intro_wrapper .more_link:before, .card .intro_wrapper .bottom .address .city:before,
 .card .intro_wrapper .bottom .address .tel:before, .card .intro_wrapper .bottom .right:before, .card .photos_list_item a span, .card .booking .date-places .places .item_body .top .time:before, .card .booking .date-places .places .item_body:after, .card .booking .date_tab ul li:before, .card .booking .date_tab ul li:after, .card .booking .date_tab ul li.active a:before, .card .reviews_list .item:after, .card .reviews_list .item_wrapper:before, .card .reviews_list .item_wrapper:after, .card .reviews_list .item_wrapper_body .more_link:before, .card .reviews .bottom:before, .card .reviews .bottom:after, .addreview .row .cell #datetimepicker:after, .bootstrap-datetimepicker-widget td.active:before,
 .bootstrap-datetimepicker-widget td.active:hover:before,
@@ -716,20 +716,31 @@ footer {
     padding-right: 6rem;
     text-align: right; }
     footer .right a {
-      text-decoration: none;
-      opacity: .5; }
+      text-decoration: none; }
     footer .right .music {
-      margin-right: 6.5rem; }
-      footer .right .music a {
-        position: relative; }
-        footer .right .music a:after {
+      margin-right: 3rem; }
+      footer .right .music_switch {
+        padding-right: 35px;
+        opacity: .5;
+        position: relative;
+        -webkit-transition: opacity 0.2s ease-out;
+        transition: opacity 0.2s ease-out; }
+        footer .right .music_switch:after {
           background-image: url(../images/sprite.png);
           background-repeat: no-repeat;
           background-position: 0 -42px;
           height: 21px;
-          right: -36px;
+          right: 0;
           top: -5px;
           width: 23px; }
+        footer .right .music_switch.stop, footer .right .music_switch:hover {
+          opacity: 1; }
+          footer .right .music_switch.stop:after, footer .right .music_switch:hover:after {
+            background-image: url(../images/sprite.png);
+            background-repeat: no-repeat;
+            background-position: -40px -107px;
+            height: 49px;
+            width: 23px; }
   footer .social {
     display: -webkit-box;
     display: -webkit-flex;
@@ -743,6 +754,9 @@ footer {
       transition: opacity 0.2s ease-out; }
       footer .social a:hover {
         opacity: 1; }
+
+#bgsoundplayer {
+  height: 0; }
 
 /* =/footer
 ---------------------------*/

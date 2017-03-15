@@ -173,6 +173,8 @@
 </div>
 <!-- =/callback -->
 
+<audio id="bgsoundplayer" loop="true" autoplay="true"><source src="/music/1.mp3"></audio>
+
 <div id="outdated"></div>
 <link rel="stylesheet" property="stylesheet" href="../outdatedbrowser/outdatedbrowser.min.css" />
 <script src="../outdatedbrowser/outdatedbrowser.min.js"></script>

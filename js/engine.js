@@ -1,5 +1,18 @@
 $(document).ready(function(){
 
+	$('.music_switch').click(function(e){
+		e.preventDefault();
+		$(this).toggleClass('stop');
+
+		player = $('#bgsoundplayer')[0];
+		if (player.paused == false) {
+			player.pause();
+		} else {
+			player.play();
+		}
+	});
+
+
 	var container = $('.icon2 a span'), 
 		userText = $('.icon2 a'); 
 	
