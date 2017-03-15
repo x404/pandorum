@@ -188,15 +188,15 @@ $(document).ready(function(){
 
 		if (!check) {
 			i = parseInt($('.userinfo .users .row:last-child').data('row')) + 1;
-			var row = '<div class="row" data-row="' + i + '"><a href="#" class="deluser"></a> <div class="cell"> <div class="input-field"> <label for="username' + i + '" class="name-field">ФИО</label> <label for="username' + i + '" class="helper-field helper-field-name">ФИО</label> <input type="text" id="username' + i + '" name="name' + i + '" class="form-control required name" value="" /> </div> </div> <div class="cell"> <div class="input-field"> <label for="usertel' + i + '" class="name-field">Телефон</label> <label for="usertel' + i + '" class="helper-field helper-field-name">Телефон</label> <input type="tel" id="usertel' + i + '" name="tel' + i + '" class="form-control required tel validphone" value="" /> </div> </div> <div class="cell"> <div class="input-field"> <label for="usermail' + i + '" class="name-field">E-mail</label> <label for="usermail' + i + '" class="helper-field helper-field-name">E-mail</label> <input type="email" id="usermail' + i + '" name="email' + i + '" class="form-control required email" value="" /> </div> </div> </div> ';
+			var row = '<div class="row" data-row="' + i + '"><a href="#" class="deluser"></a> <div class="cell"> <div class="input-field"> <label for="username' + i + '" class="name-field">ФИО</label> <label for="username' + i + '" class="helper-field helper-field-name">ФИО</label> <input type="text" id="username' + i + '" name="name' + i + '" class="form-control required name" value="" /> </div> </div> <div class="cell"> <div class="input-field"> <label for="usertel' + i + '" class="name-field">Телефон</label> <label for="usertel' + i + '" class="helper-field helper-field-name">Телефон</label> <input type="tel" id="usertel' + i + '" name="tel' + i + '" class="form-control required tel" value="" /> </div> </div> <div class="cell"> <div class="input-field"> <label for="usermail' + i + '" class="name-field">E-mail</label> <label for="usermail' + i + '" class="helper-field helper-field-name">E-mail</label> <input type="email" id="usermail' + i + '" name="email' + i + '" class="form-control required email" value="" /> </div> </div> </div> ';
 			$('.users').append(row);
 			$('.oneuser').addClass('hide');
 			$('.multiuser').removeClass('hide');
 
-			$('input.tel').inputmask({
-				mask: '+7(999)999-99-99',
-				showMaskOnHover : false
-			});
+			// $('input.tel').inputmask({
+			// 	mask: '+7(999)999-99-99',
+			// 	showMaskOnHover : false
+			// });
 		}
 	});
 	
@@ -377,18 +377,18 @@ $(document).ready(function(){
 
 
 	// mask
-	$('input.tel').inputmask({
-		mask: '+7(999)999-99-99',
-		showMaskOnHover : false
-	});
+	// $('input.tel').inputmask({
+	// 	mask: '+7(999)999-99-99',
+	// 	showMaskOnHover : false
+	// });
 	// #mask
 
 
 	// validate
-	$.validator.addMethod("validphone", function(value){
-		if (Inputmask.isValid(value, { mask: '+7(999)999-99-99'})) return true
-		else return false;
-	},"");
+	// $.validator.addMethod("validphone", function(value){
+	// 	if (Inputmask.isValid(value, { mask: '+7(999)999-99-99'})) return true
+	// 	else return false;
+	// },"");
 
 
 	// callback form
@@ -403,7 +403,7 @@ $(document).ready(function(){
 				required : true
 			},
 			tel: {
-				validphone:true
+				required:true
 			}
 		},
 		errorPlacement: function(error, element) {
