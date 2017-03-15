@@ -123,6 +123,25 @@ $(document).ready(function(){
 	});	
 
 
+	$('#sortcity').styler({
+		onFormStyled: function(){
+			_dropdown4 = $('.sortcity .jq-selectbox__dropdown');
+			_dropdown4.find('ul').wrap('<div class="scroll-pane"></div>');
+		},
+		onSelectOpened: function(){
+			var _ul = $(this).find('.jq-selectbox__dropdown ul');
+			var height = _ul.height();
+			var _srollPane = _dropdown4.find('.scroll-pane');
+			_srollPane.height(height);
+			_ul.css('max-height', 'none');
+			_srollPane.mCustomScrollbar({
+				scrollButtons : {enable:true},
+				autoDraggerLength : true
+			});
+		}
+	});	
+
+
 	$('#review-scroller').mCustomScrollbar({
 		scrollButtons : {enable:true},
 		autoDraggerLength : true

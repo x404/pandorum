@@ -121,7 +121,7 @@ strong {
   font-weight: 300; }
 
 .regularlightext, .form-control, .logomenu nav ul li a, .logomenu nav ul li div, .header .city-select, .header .support, footer .left, .modal .input-field label,
-.elform .input-field label, .bookinggame .userinfo .row .input-field label, #addgeneralreview .input-rate, #opencity .jq-selectbox__select, .home .play, .news_list_row .cell .cell_wrapper, .contacts, .page main, .page main h2.light, .catalog .main_header p, .catalog_list .item .params .left_top .age, .catalog_list .item .params .right, .catalog_list .item .description, .reviews .main_header .sort, .reviews .review_list .review_wrapper .user_info p:not(.name), .reviews .review_list .review_wrapper .user_text, .reviews .review_list .review_wrapper .more, .other_reviews .review .user_text, .other_reviews .review .date, .fullreview .date, .fullreview .text, .card .intro_wrapper, .card .intro_wrapper .params .item-count .param_body_text, .card .intro_wrapper .bottom .address .tel span, .card .intro_wrapper .where, .card .booking .selectdate, .card .booking .date-places .places .item_body .top .date, .card .booking .date-places .places .item_body .bottom, .card .booking .date_tab ul li span i, .card main, .card .reviews_list .item .date, .card .reviews_list .item .city, .card .reviews_list .item .text, .addreview .row .cell.mark, .bookinggame .quest-info p.title, .bookinggame .userinfo .addgamers a,
+.elform .input-field label, .bookinggame .userinfo .row .input-field label, #addgeneralreview .input-rate, #opencity .jq-selectbox__select, .home .play, .news_list_row .cell .cell_wrapper, .contacts, .page main, .page main h2.light, .catalog .main_header p, .catalog_list .item .params .left_top .age, .catalog_list .item .params .right, .catalog_list .item .description, .reviews .main_header .sort, .reviews .review_list .review_wrapper .user_info p:not(.name), .reviews .review_list .review_wrapper .user_text, .reviews .review_list .review_wrapper .more, .other_reviews .review .user_text, .other_reviews .review .date, .fullreview .date, .fullreview .text, .card .intro_wrapper, .card .intro_wrapper .params .item-count .param_body_text, .card .intro_wrapper .bottom .address .tel span, .card .intro_wrapper .where, .card .booking .selectdate, .card .booking .date-places .places .item_body .top .date, .card .booking .date-places .places .item_body .bottom, .card .booking .date_tab ul li span i, .card main, .card .reviews .sort, .card .reviews_list .item .date, .card .reviews_list .item .city, .card .reviews_list .item .text, .addreview .row .cell.mark, .bookinggame .quest-info p.title, .bookinggame .userinfo .addgamers a,
 .bookinggame .userinfo .addgamers span,
 .bookinggame .userinfo .addgamers label, .bookinggame .detailinfo .flexbox .health, .bookinggame .detailinfo .flexbox .language .jq-selectbox__select-text,
 .bookinggame .detailinfo .flexbox .birthday .jq-selectbox__select-text, .bookinggame .payment_list .item_desc, .bookinggame .souvenir-carousel .item h3, .bookinggame .souvenir-carousel .item .price p:not(.value), .bookinggame .souvenir-carousel .item .count .amount, .bookinggame .souvenir .sum, .booking_bottom .sum, .booking_bottom .promo {
@@ -3038,6 +3038,30 @@ footer {
       font-size: 50px;
       font-size: 5rem;
       color: #fff; }
+    .card .reviews .sort {
+      font-size: 17px;
+      font-size: 1.7rem;
+      color: #989a9d;
+      margin: 2rem 0 0; }
+      .card .reviews .sort .sortcity {
+        display: inline-block;
+        vertical-align: top;
+        margin-top: 2px;
+        margin-left: 2.5rem; }
+        .card .reviews .sort .sortcity .jq-selectbox__trigger {
+          height: 8px;
+          margin-top: 5px; }
+          .card .reviews .sort .sortcity .jq-selectbox__trigger-arrow {
+            top: 0; }
+      .card .reviews .sort .jq-selectbox__select-text {
+        -webkit-transition: all 0.2s ease-out;
+        transition: all 0.2s ease-out;
+        padding-bottom: 3px; }
+      .card .reviews .sort .jq-selectbox:hover .jq-selectbox__select-text {
+        color: #00f9ff;
+        border-bottom-color: #00f9ff; }
+      .card .reviews .sort .jq-selectbox:hover .jq-selectbox__trigger-arrow {
+        background-position: -26px -63px; }
     .card .reviews_top {
       display: -webkit-box;
       display: -webkit-flex;
