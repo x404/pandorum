@@ -20,6 +20,7 @@ $(document).ready(function(){
 
 	// Bind events
 	$('.logomenu nav a span').mouseover(function(e){
+		e.stopPropagation();
 		$(this).shuffleLetters();
 	})
 
