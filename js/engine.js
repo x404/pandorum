@@ -50,7 +50,7 @@ $(document).ready(function(){
 
 
 	// styler
-	$('#lang').styler();
+	$('#lang, #footerlang').styler();
 	$('#countries').styler();
 	$('#sort').styler();
 	$('#people').styler();	
@@ -612,7 +612,27 @@ $(document).ready(function(){
 
 	// =/booking
 
+
+
+	// mobile-menu
+	// $('.mobile-menu').hammer().on('panleft', function(){
+	// 	$('body').removeClass('o-menu');
+	// });
+
 });
+
+
+// mobile-menu
+$(document).on('click','.navbar-toggle', function(e){
+	e.preventDefault();
+	$('body').addClass('o-menu');
+});
+
+$(document).on('click','.o-menu .navbar-toggle', function(e){
+	e.preventDefault();
+	$('body').removeClass('o-menu');
+});
+
 
 $(document).on('click','.deluser', function(e){
 	e.preventDefault();

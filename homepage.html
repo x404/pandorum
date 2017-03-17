@@ -37,7 +37,7 @@
 		<!-- =header -->
 		<header class="header">
 			<div class="city-select">
-				ВАШ ГОРОД
+				<i>ВАШ ГОРОД</i>
 				<div id="city-chooser">
 					<a href="#" title="" class="city-select-link" data-toggle="modal" data-target="#opencity" data-backdrop="true">
 						<span>Красноярск</span>
@@ -45,7 +45,7 @@
 				</div>
 			</div>	
 			<div class="support">
-				<a href="tel:88002000000" class="phone">8 800 200 0000</a>
+				<a href="tel:88002000000" class="phone"><span>8 800 200 0000</span></a>
 				<a href="#" class="btn" role="button" data-toggle="modal" data-target="#callback"><span>Обратный звонок</span></a>
 			</div>
 			<div class="switch">
@@ -59,6 +59,14 @@
 					<option value="中国">中国</option>
 				</select>
 			</div>
+
+			<!--  =mobile button -->
+			<button type="button" class="navbar-toggle show-sm">
+				<span class="icon-bar"></span>
+				<span class="icon-bar"></span>
+				<span class="icon-bar"></span>
+			</button>
+			<!--  =/mobile button -->
 		</header>
 		<!-- =/header -->
 
@@ -84,13 +92,29 @@
 		</div>
 		<!-- =/logomenu -->
 
+		<!-- =mobilemenu -->
+		<div class="mobile-menu">
+			<div class="skew"></div>
+			<ul>
+				<li class="icon2"><a href="booking.html" title=""><span>Бронирование</span></a></li>
+				<li class="icon3"><a href="catalog.html" title=""><span>Подбор квеста</span></a></li>
+				<li class="icon4"><a href="#" title=""><span>Pandorum</span></a></li>
+				<li class="icon5"><a href="#" title=""><span>Франшиза</span></a></li>
+				<li class="icon6"><a href="reviews-flamp.html" title=""><span>Отзывы</span></a></li>
+				<li class="icon7"><a href="news.html" title=""><span>Новости</span></a></li>
+				<li class="icon8"><a href="actions.html" title=""><span>Акции</span></a></li>
+				<li class="icon9"><a href="contacts.html" title=""><span>Контакты</span></a></li>
+			</ul>
+		</div>
+		<!-- =/mobilemenu -->
+
 		<a href="#" class="play">ИГРАТЬ</a>
 		<div class="main">
 
 			<!-- =text -->
 			<div class="text">
 				<div class="text-1">
-					<div class="text-wrapper flexbox">
+					<div class="text-wrapper flexbox hide-sm">
 						<div class="column">
 							<div>К</div>
 							<div>В</div>
@@ -120,10 +144,13 @@
 							<div>И</div>
 						</div>
 					</div>
+					<div class="title show-sm">
+						Квесты на основе иллюзии
+					</div>
 				</div>
 
 				<div class="text-2">
-					ИНОЙ ВЗГЛЯД <br>НА КВЕСТЫ |
+					ИНОЙ ВЗГЛЯД <br>НА КВЕСТЫ
 				</div>
 			</div>
 
@@ -141,7 +168,7 @@
 	<footer>
 		<div class="left">
 			<span class="copyright">© 2016 Pandorum</span>
-			КВЕСТЫ В РЕАЛЬНОТИ 
+			<span class="quest">КВЕСТЫ В РЕАЛЬНОТИ</span>
 		</div>
 		<div class="right">
 			<div class="music">
@@ -215,9 +242,22 @@
 				</a>
 			</div>
 			<div class="social">
-				<a href="#" target="_blank" title=""><img src="images/vk.png" alt="vkontakte" /></a>
-				<a href="#" target="_blank" title=""><img src="images/instagramm.png" alt="instagramm" /></a>
-				<a href="#" target="_blank" title=""><img src="images/facebook.png" alt="facebook" /></a>
+				<div class="social_wrapper">
+					<a href="#" target="_blank" title=""><img src="images/vk.png" alt="vkontakte" /></a>
+					<a href="#" target="_blank" title=""><img src="images/instagramm.png" alt="instagramm" /></a>
+					<a href="#" target="_blank" title=""><img src="images/facebook.png" alt="facebook" /></a>
+				</div>
+			</div>
+
+			<div class="switch">
+				<select name="lang" id="footerlang">
+					<option value="Рус" selected="">Рус</option>
+					<option value="Eng">Eng</option>
+					<option value="Fra">Fra</option>
+					<option value="BLG">BLG</option>
+					<option value="Aus">Aus</option>
+					<option value="中国">中国</option>
+				</select>
 			</div>
 		</div>
 	</footer>
