@@ -281,6 +281,37 @@ $(document).ready(function(){
 		},
 		onChanged: function (event) {
 			refreshFirstLastVisible(event);
+		},
+		responsive:{
+			0:{
+				items:1,
+				stagePadding: 20
+			},
+			321:{
+				items:1,
+				stagePadding: 50
+			},
+			521:{
+				items:1,
+				stagePadding: 0
+			},
+			600:{
+				items:1,
+				stagePadding: 120
+			},
+			900:{
+				items:2,
+				stagePadding: 0
+			},
+			992:{
+				items:1
+			},
+			1250:{
+				items:2
+			},
+			1550:{
+				items:3
+			}
 		}
 	});
 
