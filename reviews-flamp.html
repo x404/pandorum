@@ -321,7 +321,7 @@
 			$(window).on('load',function(){
 				function equalheight(){
 					// принудительно назначаем высоту скрол-областям
-					var h = $(window).height();
+					var h = $(window).height();						
 					$('#review-scroller').height(h-171);
 					$('#other_reviews-scroller').height(h-171);
 				};
@@ -475,7 +475,7 @@
 					</div>
 
 					<div class="bottom row">
-						<input type="submit" class="btn submit" value="Оставить отзыв" />						
+						<a href="#" role="button" class="btn submit"><span>Оставить отзыв</span></a>
 					</div>
 				</fieldset>
 			</form>
