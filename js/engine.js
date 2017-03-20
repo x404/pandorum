@@ -321,7 +321,19 @@ $(document).ready(function(){
 		nav:true,
 		dots: false,
 		items:5,
-		navText: ["", ""]
+		navText: ["", ""],
+		responsive:{
+			0:{
+				items:1,
+				stagePadding: 20
+			},
+			1000:{
+				items:3
+			},
+			1650:{
+				items:5
+			}
+		}
 	});
 
 
