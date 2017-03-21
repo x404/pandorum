@@ -324,13 +324,18 @@ $(document).ready(function(){
 		navText: ["", ""],
 		responsive:{
 			0:{
-				items:1,
-				stagePadding: 20
+				items:1
 			},
-			1000:{
+			500:{
+				items:2
+			},
+			769:{
 				items:3
 			},
-			1650:{
+			1160:{
+				items:4
+			},
+			1651:{
 				items:5
 			}
 		}
