@@ -337,6 +337,42 @@ $(document).ready(function(){
 	});
 
 
+	$('#foo3').owlCarousel({
+		loop:false,
+		nav:true,
+		dots: false,
+		items:4,
+		startPosition : 2,
+		navText: ["", ""],
+		responsive:{
+			0:{
+				items:1,
+				stagePadding: 20
+			},
+			350:{
+				items:1,
+				stagePadding: 50
+			},
+			480:{
+				items:2,
+				stagePadding: 90
+			},
+			700:{
+				items:2,
+				stagePadding: 65
+			},
+			1000:{
+				items:3,
+				stagePadding: 65
+			},
+			1200:{
+				items:4
+			}
+		}
+	});
+
+
+
 	// booking page - calc products
 	$('.plus').click(function(e){
 		e.preventDefault();
