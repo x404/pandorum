@@ -168,11 +168,6 @@ $(document).ready(function(){
 	});	
 
 
-		/* Time Parser */
-		// $('.cifr span').each(function() {
-		  // $(this).attr("data-number", parseInt($(this).text()));
-		// });
-
 	var inter = 1;
 	$('.cifr span').each(function() {
 		var count = parseInt($(this).data('number')),
@@ -301,13 +296,15 @@ $(document).ready(function(){
 			},
 			900:{
 				items:2,
+				stagePadding: 120
+			},
+			1180:{
+				items:3,
 				stagePadding: 0
 			},
-			992:{
-				items:1
-			},
-			1250:{
-				items:2
+			1260:{
+				items:3,
+				stagePadding: 100
 			},
 			1550:{
 				items:3

@@ -158,14 +158,14 @@ border-spacing: 0;
   position: relative;
 }
 .bootstrap-datetimepicker-widget td.today:after {
-  content: '';
-  display: inline-block;
-  border-left: 7px solid transparent;
-  border-bottom: 7px solid #00969e;
-  border-top-color: rgba(0, 0, 0, 0.2);
-  position: absolute;
-  bottom: 4px;
-  right: 4px;
+  // content: '';
+  // display: inline-block;
+  // border-left: 7px solid transparent;
+  // border-bottom: 7px solid #00969e;
+  // border-top-color: rgba(0, 0, 0, 0.2);
+  // position: absolute;
+  // bottom: 4px;
+  // right: 4px;
 }
 
 .bootstrap-datetimepicker-widget td.today:hover:before {
