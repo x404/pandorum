@@ -158,7 +158,7 @@ $(document).ready(function(){
 
 	$('#review-scroller').mCustomScrollbar({
 		scrollButtons : {enable:true},
-		autoDraggerLength : true
+		autoDraggerLength : false
 	});	
 
 
