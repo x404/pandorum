@@ -440,6 +440,7 @@ $(document).ready(function(){
 	$('#datetimepicker').datetimepicker({
 		language: 'ru',
 		pickTime: false,
+		direction : 'bottom',
 		format: 'D MMMM YYYY'
 	});
 
@@ -450,6 +451,7 @@ $(document).ready(function(){
 		language: 'ru',
 		pickTime: false,
 		format: 'D MMMM YYYY',
+		direction : 'bottom',
 		defaultDate:dateNow
 	});
 
