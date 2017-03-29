@@ -232,10 +232,16 @@
 			<section class="booking" id="booking">
 				<h2>Бронирование</h2>
 				<div class="booking_wrapper">
-					<div class="selectdate">
-						Выберите дату:
-						<div class="input-field" id="selectdatepicker">
-							<input type="text" name="date" class="form-control" value="" />
+					<div class="booking_wrapper_head">
+						<div class="selectdate">
+							<i>Выберите дату:</i>
+							<div class="input-field" id="selectdatepicker">
+								<input type="text" name="date" class="form-control" value="" />
+							</div>
+						</div>
+						<div class="or">
+							<i>или</i>
+							<a href="#" class="btn" role="button" data-toggle="modal" data-target="#freegames"><span><i>ПОКАЗАТЬ</i> БЛИЖАЙШИЕ СВОБОДНЫЕ ИГРЫ</span></a>
 						</div>
 					</div>
 
@@ -271,6 +277,7 @@
 											<div class="top">
 												<div class="time">14:00</div>
 												<div class="date">22 ноября ‘16</div>
+												<div class="date-sm">22/11/16</div>
 											</div>
 											<div class="bottom">
 												Стоимость
@@ -289,6 +296,7 @@
 											<div class="top">
 												<div class="time">15:30</div>
 												<div class="date">22 ноября ‘16</div>
+												<div class="date-sm">22/11/16</div>
 											</div>
 											<div class="bottom">
 												Стоимость
@@ -307,6 +315,7 @@
 											<div class="top">
 												<div class="time">19:00</div>
 												<div class="date">22 ноября ‘16</div>
+												<div class="date-sm">22/11/16</div>
 											</div>
 											<div class="bottom">
 												Стоимость
@@ -325,6 +334,7 @@
 											<div class="top">
 												<div class="time">20:30</div>
 												<div class="date">22 ноября ‘16</div>
+												<div class="date-sm">22/11/16</div>
 											</div>
 											<div class="bottom">
 												Стоимость
@@ -343,6 +353,7 @@
 											<div class="top">
 												<div class="time">23:00</div>
 												<div class="date">22 ноября ‘16</div>
+												<div class="date-sm">22/11/16</div>
 											</div>
 											<div class="bottom">
 												Стоимость
@@ -361,6 +372,7 @@
 											<div class="top">
 												<div class="time">00:00</div>
 												<div class="date">22 ноября ‘16</div>
+												<div class="date-sm">22/11/16</div>
 											</div>
 											<div class="bottom">
 												Стоимость
@@ -379,6 +391,7 @@
 											<div class="top">
 												<div class="time">14:00</div>
 												<div class="date">22 ноября ‘16</div>
+												<div class="date-sm">22/11/16</div>
 											</div>
 											<div class="bottom">
 												Стоимость
@@ -397,6 +410,7 @@
 											<div class="top">
 												<div class="time">19:00</div>
 												<div class="date">22 ноября ‘16</div>
+												<div class="date-sm">22/11/16</div>
 											</div>
 											<div class="bottom">
 												Стоимость
@@ -415,6 +429,7 @@
 											<div class="top">
 												<div class="time">20:30</div>
 												<div class="date">22 ноября ‘16</div>
+												<div class="date-sm">22/11/16</div>
 											</div>
 											<div class="bottom">
 												Стоимость
@@ -728,7 +743,8 @@
 	<footer>
 		<div class="left">
 			<span class="copyright">© 2016 Pandorum</span>
-			<span class="quest">КВЕСТЫ В РЕАЛЬНОТИ </span></div>
+			<span class="quest">КВЕСТЫ В РЕАЛЬНОТИ </span>
+		</div>
 		<div class="right">
 			<div class="music">
 				<a href="#" title="" class="music_switch">
@@ -973,6 +989,131 @@
 	</div>
 </div>
 <!-- =/writeme -->
+
+
+
+<!-- =freegames -->
+<div class="modal fade" id="freegames" tabindex="-1" role="dialog" aria-labelledby="freegamesLabel">
+	<div class="modal-dialog" role="document">
+		<div class="modal-content">
+			<div class="modal-title" id="freegamesLabel">Ближайшие свободные игры</div>
+			<div class="games">
+				<div class="row">
+					<div class="row_wrapper">
+						<div class="date">22 ноября ‘16</div>
+						<div class="date-sm">22/11/16</div>
+						<div class="time">14:00</div>
+						<div class="price">
+							<strong>900<span class="rouble">p</span></strong> <span class="unit">/чел</span>
+						</div>
+						<a href="#" class="btn"><span>Забронировать</span></a>
+					</div>
+				</div>
+				<div class="row">
+					<div class="row_wrapper">
+						<div class="date">22 ноября ‘16</div>
+						<div class="date-sm">22/11/16</div>
+						<div class="time">14:00</div>
+						<div class="price">
+							<strong>900<span class="rouble">p</span></strong> <span class="unit">/чел</span>
+						</div>
+						<a href="#" class="btn"><span>Забронировать</span></a>
+					</div>
+				</div>
+				<div class="row">
+					<div class="row_wrapper">
+						<div class="date">22 ноября ‘16</div>
+						<div class="date-sm">22/11/16</div>
+						<div class="time">14:00</div>
+						<div class="price">
+							<strong>900<span class="rouble">p</span></strong> <span class="unit">/чел</span>
+						</div>
+						<a href="#" class="btn"><span>Забронировать</span></a>
+					</div>
+				</div>
+				<div class="row">
+					<div class="row_wrapper">
+						<div class="date">22 ноября ‘16</div>
+						<div class="date-sm">22/11/16</div>
+						<div class="time">14:00</div>
+						<div class="price">
+							<strong>900<span class="rouble">p</span></strong> <span class="unit">/чел</span>
+						</div>
+						<a href="#" class="btn"><span>Забронировать</span></a>
+					</div>
+				</div>
+				<div class="row">
+					<div class="row_wrapper">
+						<div class="date">22 ноября ‘16</div>
+						<div class="date-sm">22/11/16</div>
+						<div class="time">14:00</div>
+						<div class="price">
+							<strong>900<span class="rouble">p</span></strong> <span class="unit">/чел</span>
+						</div>
+						<a href="#" class="btn"><span>Забронировать</span></a>
+					</div>
+				</div>
+				<div class="row">
+					<div class="row_wrapper">
+						<div class="date">22 ноября ‘16</div>
+						<div class="date-sm">22/11/16</div>
+						<div class="time">14:00</div>
+						<div class="price">
+							<strong>900<span class="rouble">p</span></strong> <span class="unit">/чел</span>
+						</div>
+						<a href="#" class="btn"><span>Забронировать</span></a>
+					</div>
+				</div>
+				<div class="row">
+					<div class="row_wrapper">
+						<div class="date">22 ноября ‘16</div>
+						<div class="date-sm">22/11/16</div>
+						<div class="time">14:00</div>
+						<div class="price">
+							<strong>900<span class="rouble">p</span></strong> <span class="unit">/чел</span>
+						</div>
+						<a href="#" class="btn"><span>Забронировать</span></a>
+					</div>
+				</div>
+				<div class="row">
+					<div class="row_wrapper">
+						<div class="date">22 ноября ‘16</div>
+						<div class="date-sm">22/11/16</div>
+						<div class="time">14:00</div>
+						<div class="price">
+							<strong>900<span class="rouble">p</span></strong> <span class="unit">/чел</span>
+						</div>
+						<a href="#" class="btn"><span>Забронировать</span></a>
+					</div>
+				</div>
+				<div class="row">
+					<div class="row_wrapper">
+						<div class="date">22 ноября ‘16</div>
+						<div class="date-sm">22/11/16</div>
+						<div class="time">14:00</div>
+						<div class="price">
+							<strong>900<span class="rouble">p</span></strong> <span class="unit">/чел</span>
+						</div>
+						<a href="#" class="btn"><span>Забронировать</span></a>
+					</div>
+				</div>
+				<div class="row">
+					<div class="row_wrapper">
+						<div class="date">22 ноября ‘16</div>
+						<div class="date-sm">22/11/16</div>
+						<div class="time">14:00</div>
+						<div class="price">
+							<strong>900<span class="rouble">p</span></strong> <span class="unit">/чел</span>
+						</div>
+						<a href="#" class="btn"><span>Забронировать</span></a>
+					</div>
+				</div>
+			</div>
+			<button type="button" class="close" data-dismiss="modal"><img src="images/close-modal.png" alt="" /></button>
+		</div>
+	</div>
+</div>
+<!-- =/freegames -->
 
 
 <!-- InstanceEndEditable -->
