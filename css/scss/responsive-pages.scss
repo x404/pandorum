@@ -180,6 +180,7 @@
 			transform: scale(.63);
 		}
 	}
+
 }
 
 
@@ -3626,6 +3627,12 @@
 }
 
 
+@media (max-width: 360px){
+	.card .booking .selectdate #selectdatepicker:after{
+		top: 6px;
+	}
+}
+
 @media (max-width: 350px){
 	.actions_list .cell{
 		border-width: 2rem;
@@ -3847,7 +3854,11 @@
 				padding-top: 1.4rem;
 			}
 		}
+		.booking .selectdate #selectdatepicker:after{
+			top: 12px;
+		}
 	}
+
 
 
 
@@ -3884,4 +3895,5 @@
 		left: 15px !important;
 		width: 290px !important;
 	}
+
 }

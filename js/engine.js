@@ -451,7 +451,6 @@ $(document).ready(function(){
 		language: 'ru',
 		pickTime: false,
 		format: 'D MMMM YYYY',
-		direction : 'bottom',
 		defaultDate:dateNow
 	});
 
@@ -471,6 +470,26 @@ $(document).ready(function(){
 		// console.log(day1 + ' , ' + month1);
 		// console.log(day2 + ' , ' + month2);
 	});
+
+	$('#selectdatepicker').on('dp.show', function(e){
+		$('.fake').focus();
+		hw = $(window).height();
+
+		p = $('#selectdatepicker').offset().top;
+
+		st = $(window).scrollTop();
+
+
+		delta = hw + st - p;
+		h = st - delta + 50;
+
+		if ($(window).width() <= 1024) {
+			$('body,html').animate({
+				scrollTop: h
+			}, 800);
+		};
+	})
+
 
 
 	// mask

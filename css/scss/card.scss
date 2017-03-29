@@ -556,6 +556,9 @@
 								color: $color42;
 								line-height: 1;
 							}
+							.date-sm{
+								display: none;
+							}
 						}	
 						.bottom{
 							@extend .regularlightext;
@@ -1285,10 +1288,6 @@
 				top: 4px;
 				left: 0;
 			}
-		}
-
-		.date-sm{
-			display: none;
 		}
 
 		.price{
