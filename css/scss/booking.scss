@@ -1,0 +1,865 @@
+.bookinggame{
+	background: #191b1f;
+	overflow: auto;
+
+	.main{
+		margin-bottom: 9.6rem;
+		width: 167.5rem;
+	}
+
+	.outerwrapper{
+		background: #191b1f url(../images/bg-9.png) no-repeat center top;
+		background-attachment: fixed;
+	}
+
+	footer{
+		background-color: $color46;
+	}
+
+	.quest-info{
+		background: #101114;
+		box-shadow: 0 0 30px rgba(29, 241, 255, .6);
+		margin-top: 4rem;
+		min-height: 20.7rem;
+		padding: 4rem 3rem;
+		.pic{
+			background: url(../images/square.png) no-repeat center 12px ;
+			min-height: 102px;
+			min-width: 118px;
+			img{
+				display: block;
+				margin-left: auto;
+				margin-right: auto;
+			}
+		}
+
+		.description{
+			flex: 1;
+		}
+
+		p{
+			&.title{
+				@include font-size(1.5);
+				@extend .regularlightext;
+				color: $color45;
+			}
+		}
+		.info{
+			margin-left: 4rem;
+			margin-right: 5rem;
+			// width: 51.7rem;
+			// flex-grow: 1;
+			h2{
+				@extend .myriadbold;
+				@include font-size(3);
+				color: $color48;
+			}
+			&_bottom{
+				padding-top: 1.9rem;
+				.cell{
+					border-right: 1px solid $color49;
+					padding: 0 2.7rem;
+					&:first-child{
+						padding-left: 0;
+					}
+					&:last-child{
+						border-right: none;
+						padding-right: 0;
+					}
+					p{
+						&:not(.title){
+							@extend .myriadbold;
+							@include font-size(2.6);
+						}
+					}
+				}
+			}
+
+			.jq-selectbox{
+				&__select{
+					border: none;
+					background: none;
+					border-radius: 0;
+					// width: 50px;
+					padding-right: 20px;
+					padding-left: 0;
+					width: 50px;
+					&-text{
+						color: $color2;
+						@extend .myriadbold;
+						@include font-size(2.6);
+						text-align: center;
+					}
+
+				}
+				&:hover, &.opened{
+					.jq-selectbox__select-text{
+						color: #00fff0;
+					}
+					.jq-selectbox__trigger-arrow{
+						background-position: 0 -63px;
+					}
+				}
+				&__trigger{
+					border-left: 0;
+					width: 12px;
+					&-arrow{
+						@include sprite(-13px, -63px);
+						border: none;
+						height: 8px;
+						right: 0;
+						width: 12px;
+					}
+				}
+
+				.jq-selectbox__dropdown{
+					background: $color9;
+					li{
+						color: $color2;
+						@extend .semibold;
+						@include font-size(1.5);
+						&.sel{
+							color: $color12;
+						}
+						&:hover{
+							color: $color1;
+						}
+					}
+				}
+			}
+
+		}
+
+		.time{
+			@extend .myriadbold;
+			@include font-size(5);
+			position: relative;
+			padding-top: .6rem;
+			.hours,
+			.min{
+				@extend .myriadbold;
+				@include font-size(5);
+				border: 2px solid $color2;
+				height: 102px;
+				margin-left: 7px;
+				padding-top: 22px;
+				position: relative;
+				text-align: center;
+				width: 82px;
+				&:before{
+					@extend .before;
+					background: $color2;
+					height: 17px;
+					left: -8px;
+					margin-top: -8px;
+					top: 50%;
+					width: 5px;
+				}
+				span{
+					display: block;
+					line-height: 1;
+					position: relative;
+					&:before{
+						@extend .before;
+						border-top: 1px solid $color2;
+						margin-top: 3px;
+						top: 50%;
+						width: 100%;
+					}
+				}
+			}
+			.min{
+				&:after{
+					@extend .before;
+					background: $color2;
+					height: 17px;
+					right: -8px;
+					margin-top: -8px;
+					top: 50%;
+					width: 5px;
+				}
+			}
+
+			&:before{
+				@extend .before;
+			}
+
+		}
+
+		.cost-date{
+			padding-left: 3.2rem;
+			padding-top: 3px;
+			p{
+				&:not(.title){
+					@extend .myriadbold;
+					@include font-size(2.6);
+				}
+			}
+			.date{
+				margin-top: .8rem;
+			}
+		}
+	}
+
+	.userinfo{
+		margin-top: 5.6rem;
+		.row{
+			@extend .elform;
+			@include flexbox;
+			@include justify-content(space-between);
+			margin-top: 1.3rem;
+			position: relative;
+			.cell{
+				width: 40.8rem;
+				.form-control{
+					background: none;
+					border: none;
+					border-bottom: 2px solid $color2;
+					color: $color2;
+					height: 55px;
+					width: 100%;
+					&.error{
+						border-bottom-color: red !important;
+						color: red;
+					}
+				}
+
+				.is-focused{
+					.form-control{
+						border-bottom-color: $color9;
+					}
+				}
+
+				label.lerror{
+					color: red;
+				}
+	
+			}
+		}
+
+		.addgamers{
+			@include font-size(1.6);
+			margin-top: 3.4rem;
+			i{
+				font-style: normal;
+			}
+			a{
+				@include transition-param(color);
+				color: $color9;
+				margin-left: 2.7rem;
+				padding-left: 22px;
+				position: relative;
+				text-decoration: none;
+				&:hover{
+					color: $color6;
+				}
+
+				&:before{
+					@extend .before;
+					height: 14px;
+					left: 0;
+					top: 8px;
+					width: 14px;
+				}
+				&:before{
+					background:url(data:img/png;base64,iVBORw0KGgoAAAANSUhEUgAAAA4AAAAOBAMAAADtZjDiAAAABGdBTUEAALGPC/xhBQAAACBjSFJNAAB6JgAAgIQAAPoAAACA6AAAdTAAAOpgAAA6mAAAF3CculE8AAAAD1BMVEX///8Au8cAu8cAu8f///+55ySzAAAAA3RSTlMAvbf+GDIEAAAAAWJLR0QAiAUdSAAAAAd0SU1FB+EDCxUXExq9O4UAAAAgSURBVAjXY2BgYBBigABjYmhhYxAwZFAG00ZE64PaAwAILAS6IhZYngAAAABJRU5ErkJggg==) no-repeat left top;
+					top: 2px;
+				}
+				&:hover{
+					&:before{
+						background:url(data:img/png;base64,iVBORw0KGgoAAAANSUhEUgAAAA4AAAAOBAMAAADtZjDiAAAABGdBTUEAALGPC/xhBQAAACBjSFJNAAB6JgAAgIQAAPoAAACA6AAAdTAAAOpgAAA6mAAAF3CculE8AAAAElBMVEUA/+oB/+oA/+oA/+oA/+r///+zU+4KAAAABHRSTlMAAL23t/2QQAAAAAFiS0dEBfhv6ccAAAAHdElNRQfhAwsVGSlCMs+5AAAAMklEQVQI12NgYGBQZoAAF2y0ACOQBhIwvooLCDgxmIBpZwYBZPWMAlCaEc0csDjQHkEAePkG2lZoOhYAAAAASUVORK5CYII=) no-repeat left top;
+					}
+				}
+			}
+
+			.multiuser{
+				.now_link{
+					margin-left: 0;
+				}
+			}
+			span{
+				color: #85919f;
+				margin: 0 2.1rem 0 1.2rem;
+			}
+
+			a,
+			span,
+			label{
+				@extend .regularlightext;
+			}
+		}
+
+		.deluser{
+			background:url("data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAwAAAANCAMAAACq939wAAAABGdBTUEAALGPC/xhBQAAACBjSFJNAAB6JgAAgIQAAPoAAACA6AAAdTAAAOpgAAA6mAAAF3CculE8AAAAolBMVEX/AAD+AQH/AAD/AAD+AQH/AAD/AAD/AAD/AAD/AAD/AAD/AAD/AAD/AAD/AAD+AQH+AQH/AAD/AAD/AAD/AAD/AAD/AAD/AAD/AAD/AAD/AAD/AAD/AAD+AQH/AAD/AAD/AAD/AAD/AAD+AQH+AQH/AAD/AAD/AAD/AAD/AAD/AAD/AAD/AAD+AQH+AQH/AAD/AAD9AQL+AQH/AAD/AAD///86PXLmAAAANHRSTlMAAB2MWDSSNgHc/YUS8v43Am5lrxmE63uqY92fuC77C3b2YTXzF33s8YfoZk2XpM4YAR03e3w53wAAAAFiS0dENd622WsAAAAHdElNRQfhAw0ROzpDXD9HAAAAeUlEQVQI1zWMBxKCUAxEN3aQj6goVrAr9rL3P5uJXzKTmbc7eQEE/6np1hs+N1ttdIKwGxm7uIekz3BgzKFW6ciNM+WJN6czOs6rPwuSFS9zBswKJRG7X3G9sX67U3d/OJ7KFHL2fy5xfkVyu//EqHw88XqLehY/+AJuXQlacHcUtQAAAABJRU5ErkJggg==") no-repeat left top;
+			display: block;
+			height: 12px;
+			position: absolute;
+			width: 11px;
+			left: -34px;
+			top: 32px;
+		}
+	}
+
+
+
+	/* Cначала обозначаем стили для IE8 и более старых версий
+	т.е. здесь мы немного облагораживаем стандартный чекбокс. */
+	.checkbox {
+	  vertical-align: top;
+	  margin: 0 3px 0 0;
+	  width: 17px;
+	  height: 17px;
+	}
+	/* Это для всех браузеров, кроме совсем старых, которые не поддерживают
+	селекторы с плюсом. Показываем, что label кликабелен. */
+	.checkbox + label {
+	  cursor: pointer;
+	}
+
+	/* Далее идет оформление чекбокса в современных браузерах, а также IE9 и выше.
+	Благодаря тому, что старые браузеры не поддерживают селекторы :not и :checked,
+	в них все нижеследующие стили не сработают. */
+
+	/* Прячем оригинальный чекбокс. */
+	.checkbox:not(checked) {
+	  position: absolute;
+	  opacity: 0;
+	}
+	.checkbox:not(checked) + label {
+	  position: relative; /* будем позиционировать псевдочекбокс относительно label */
+	  padding: 0 0 0 38px; /* оставляем слева от label место под псевдочекбокс */
+	}
+	/* Оформление первой части чекбокса в выключенном состоянии (фон). */
+	.checkbox:not(checked) + label:before {
+	  content: '';
+	  position: absolute;
+	  top: -4px;
+	  left: 0;
+	  width: 28px;
+	  height: 28px;
+	  border: 2px solid $color2;
+	  @include transition-param(border-color);
+	}
+
+	.checkbox:not(checked) + label:hover:before{
+		border-color: $color9;
+	}
+
+	/* Оформление второй части чекбокса в выключенном состоянии (переключатель). */
+	.checkbox:not(checked) + label:after {
+	  content: '';
+	  position: absolute;
+	  top: 4px;
+	  left: 8px;
+	  width: 12px;
+	  height: 12px;
+	  background: $color9;
+	  opacity: 0;
+	  transition: all .2s; /* анимация, чтобы чекбокс переключался плавно */
+	}
+	/* Меняем фон чекбокса, когда он включен. */
+	.checkbox:checked + label:before {
+		border: 4px solid $color9;
+	}
+	/* Сдвигаем переключатель чекбокса, когда он включен. */
+	.checkbox:checked + label:after {
+		opacity: 1;
+
+	}
+	/* Показываем получение фокуса. */
+	.checkbox:focus + label:before {
+	}
+
+
+
+	.detailinfo{
+		margin-top: 8rem;
+		.flexbox{
+			@include justify-content(space-between);
+			.cell{
+				width: 40.8rem;
+			}
+
+			.health{
+				@extend .regularlightext;
+				@include font-size(1.6);
+				.value{
+					padding-top: 4.3rem;
+					div{
+						display: inline-block;
+					}
+					.vision{
+						margin-right: 2.8rem;
+					}
+				}
+			}
+
+			.language,
+			.birthday{
+				.jq-selectbox{
+					margin-top: 1.6rem;
+					width: 100%;
+
+					&__select{
+						border: none;
+						background: none;
+						border-radius: 0;
+						padding-right: 0;
+						padding-left: 0;
+						width: 100%;
+						height: 50px;
+						&-text{
+							@extend .regularlightext;
+							@include font-size(1.6);
+							@include transition;
+							border-bottom: 2px solid $color2;
+							color: $color2;
+							height: 50px;
+							padding-top: 11px;
+						}
+
+					}
+					&:hover, &.opened{
+						.jq-selectbox__select-text{
+							color: #00fff0;
+							border-bottom-color: $color9
+						}
+						.jq-selectbox__trigger-arrow{
+							background-position: 0 -63px;
+						}
+					}
+					&__trigger{
+						border-left: 0;
+						width: 12px;
+						&-arrow{
+							@include sprite(-13px, -63px);
+							border: none;
+							height: 8px;
+							right: 0;
+							top: 16px;
+							width: 12px;
+						}
+					}
+
+					.jq-selectbox__dropdown{
+						background: $color9;
+						margin-top: 0;
+						li{
+							color: $color2;
+							@extend .semibold;
+							@include font-size(1.5);
+							&.sel{
+								color: $color12;
+							}
+							&:hover{
+								color: $color1;
+							}
+						}
+					}
+				}
+			}
+
+
+			
+			.birthday{
+				.flexbox{
+					@include justify-content(space-between);
+				}
+
+				.day{
+					width: 78px;
+					margin-right: 2.8rem;
+				}
+
+				.month{
+					flex-grow: 1;
+				}
+
+				.year{
+					margin-left: 2.8rem;
+					width: 70px;
+				}
+			}
+		}
+	}
+
+
+	.payment,
+	.souvenir,
+	.userinfo,
+	.detailinfo{
+		h2{
+			@include font-size(2.4);
+			@extend .myriadbold;
+			font-weight: normal;
+		}
+	}
+
+	.payment{
+		&_list{
+			padding-top: 3rem;
+			.item{
+				margin-right: 10rem;
+				position: relative;
+				width: 41rem;
+				@include transition-param(border);
+				&:last-child{
+					margin-right: 0;
+				}
+				label{
+					display: block;
+					padding: 2.2rem;
+					height: 100%;
+					.title{
+						@include font-size(1.8);
+						@extend .myriadbold;
+						display: block;
+						padding-left: 4rem;
+					}
+				}
+
+				&_desc{
+					@extend .regularlightext;
+					@include font-size(1.5);
+					color: $color45;
+					line-height: 1.35;
+					margin-top: 1.2rem;
+					padding-left: 4.3rem;
+					.card{
+						background: none;
+						margin-top: .5rem;
+						vertical-align: top;
+					}
+				}
+
+				.title,
+				.item_desc{
+					position: relative;
+					z-index: 2;
+				}
+			}
+		}
+	}
+
+	.radio {
+		height: 28px;
+		margin: 0 3px 0 0;
+		vertical-align: top;
+		width: 28px;
+
+		& + label{
+			border: 2px solid $color44;
+			@include transition-param(border);
+			cursor: pointer;
+			&:after{
+				left: 25px;
+				top: 23px;
+			}
+
+			&:before{
+				@extend .before;
+				@include transition-param(opacity);
+				background: $color46;
+				border-color: $color46;
+				box-shadow: 0 0 30px rgba(29, 241, 255, .6);
+				height: 100%;
+				left: 0;
+				opacity: 0;
+				top: 0;
+				width: 100%;
+			}
+			
+		}
+
+		&:not(checked) {
+			opacity: 0;
+			position: absolute;
+
+			& + label{
+				padding: 0 0 0 35px;
+				&:hover{
+					border-color: #00bbc7;
+				}
+			}
+		}
+	}
+
+
+	.radio:not(checked) + label:after {
+		content: '';
+		position: absolute;
+		width: 28px;
+		height: 28px;
+		border: 2px solid #fff;
+		border-radius: 50%;
+		transition: opacity .2s;
+	}
+
+
+	.radio:not(checked):hover + label:after {
+		border-color: #0099a3;
+	}
+
+
+	.radio:checked + label:before{
+
+		opacity: 1;
+	}
+
+	.radio:checked + label:after {
+		background:url("data:img/png;base64,iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAMAAAAoLQ9TAAAABGdBTUEAALGPC/xhBQAAACBjSFJNAAB6JgAAgIQAAPoAAACA6AAAdTAAAOpgAAA6mAAAF3CculE8AAAAWlBMVEUAmaMAmaMAmaMAmaMAmaMAmaMAmaMAmaMAmaMAmaMAmaMAmaMAmaMAmaMAmaMAmaMAmaMAmaMAmaMAmaMAmaMGm6WEztPk9PWHz9T////q9/eK0NWN0dbn9fb4g0iiAAAAFHRSTlMAJ43M/HL2BreQLSrY1fnw89uTz9+QIMgAAAABYktHRBnsbrWIAAAAB3RJTUUH4QMLExsRXItpFwAAAHNJREFUGNNtj9sSgCAIREmttHtJ9/r/30ygmqY6L+DOAi5AIFLaGK0iOIkTZJKYn6nFG5sGweEDBZCZp2ByMfTDOA69WAoq0xyYqCuhorKQsFBXv4UG2ntklZGOl277vvFS9z6bgVgu3N/XP+E4vkf0Ev8A8XUPQ6cM7VUAAAAASUVORK5CYII=") no-repeat center center;
+		opacity: 1;
+		border-color: #0099a3;
+	}
+
+	.radio:focus + label:before {
+	}
+
+
+
+	.payment{
+		margin-top: 8rem;
+	}
+
+
+	.souvenir{
+		margin-top: 7.5rem;
+		&-carousel{
+			border-bottom: 1px solid #47494c;
+			padding-bottom: 3rem;
+			padding-top: 4rem;
+			width: 135rem;
+			margin-left: auto;
+			margin-right: auto;
+			.item{
+				text-align: center;
+				width: 210px;
+				margin-left: auto;
+				margin-right: auto;
+				a{
+					text-decoration: none;
+				}
+				.pic{
+					min-height: 155px;
+					@include flexbox;
+					@include align-items(center);
+					@inlcude justify-content(center);
+					a{
+						display: block;
+						margin-left: auto;
+						margin-right: auto;
+					}
+					img{
+						margin-left: auto;
+						margin-right: auto;
+					}
+				}
+				h3{
+					@include font-size(2);
+					@extend .regularlightext;
+					padding-top: .8rem;
+					a{
+						text-decoration: none;
+						@include transition-param(color);
+						&:hover{
+							color: $color18;
+						}
+					}
+				}
+
+				.price{
+					padding-top: 1.1rem;
+					p{
+						&:not(.value){
+							@extend .regularlightext;
+							color: $color47;
+						}
+						&.value{
+							@extend .myriadbold;
+							@include font-size(1.8);
+						}
+					}
+				}
+				.count{
+					padding-top: 1rem;
+					a{
+						text-decoration: none;
+						text-indent: -9999em;
+						position: relative;
+						height: 14px;
+						width: 14px;
+						display: inline-block;
+						&:before{
+							@extend .before;
+							height: 14px;
+							left: 0;
+							top: 8px;
+							width: 14px;
+						}
+						&.minus{
+							margin-right: 1.2rem;
+							&:before{
+								background:url(data:img/png;base64,iVBORw0KGgoAAAANSUhEUgAAAA4AAAACAgMAAAAV5AU5AAAABGdBTUEAALGPC/xhBQAAACBjSFJNAAB6JgAAgIQAAPoAAACA6AAAdTAAAOpgAAA6mAAAF3CculE8AAAADFBMVEUAu8cAu8cAu8f////dNXnVAAAAAnRSTlO9t3L9O+IAAAABYktHRAMRDEzyAAAAB3RJTUUH4QMLFRMxq7G/ZQAAABJJREFUCNdj0Fq1qoEha9WqCQAUBARN8TuO1gAAAABJRU5ErkJggg==) no-repeat left top;
+							}
+							&:hover{
+								&:before{
+									background:url(data:img/png;base64,iVBORw0KGgoAAAANSUhEUgAAAA4AAAACBAMAAACapPCZAAAABGdBTUEAALGPC/xhBQAAACBjSFJNAAB6JgAAgIQAAPoAAACA6AAAdTAAAOpgAAA6mAAAF3CculE8AAAAD1BMVEUA/uoA/uoA/uoA/+r///+8Exn0AAAAAnRSTlO9t3L9O+IAAAABYktHRASPaNlRAAAAB3RJTUUH4QMLFRguxU1rWwAAABZJREFUCNdjYFIyNjYyUmAQAtLGSooAEFICH0QUwLoAAAAASUVORK5CYII=) no-repeat left top;
+								}
+							}
+						}
+						&.plus{
+							margin-left: 1.2rem;
+							&:before{
+								background:url(data:img/png;base64,iVBORw0KGgoAAAANSUhEUgAAAA4AAAAOBAMAAADtZjDiAAAABGdBTUEAALGPC/xhBQAAACBjSFJNAAB6JgAAgIQAAPoAAACA6AAAdTAAAOpgAAA6mAAAF3CculE8AAAAD1BMVEX///8Au8cAu8cAu8f///+55ySzAAAAA3RSTlMAvbf+GDIEAAAAAWJLR0QAiAUdSAAAAAd0SU1FB+EDCxUXExq9O4UAAAAgSURBVAjXY2BgYBBigABjYmhhYxAwZFAG00ZE64PaAwAILAS6IhZYngAAAABJRU5ErkJggg==) no-repeat left top;
+								top: 2px;
+							}
+							&:hover{
+								&:before{
+									background:url(data:img/png;base64,iVBORw0KGgoAAAANSUhEUgAAAA4AAAAOBAMAAADtZjDiAAAABGdBTUEAALGPC/xhBQAAACBjSFJNAAB6JgAAgIQAAPoAAACA6AAAdTAAAOpgAAA6mAAAF3CculE8AAAAElBMVEUA/+oB/+oA/+oA/+oA/+r///+zU+4KAAAABHRSTlMAAL23t/2QQAAAAAFiS0dEBfhv6ccAAAAHdElNRQfhAwsVGSlCMs+5AAAAMklEQVQI12NgYGBQZoAAF2y0ACOQBhIwvooLCDgxmIBpZwYBZPWMAlCaEc0csDjQHkEAePkG2lZoOhYAAAAASUVORK5CYII=) no-repeat left top;
+								}
+							}
+						}
+					}
+					.amount{
+						@extend .regularlightext;
+						@include font-size(1.5);
+					}
+				}
+			}
+
+			.owl-nav{
+				left: 0;
+				position: absolute;
+				top: 0;
+				width: 100%;
+				.owl-prev,
+				.owl-next{
+					background: url(../images/prevnext2.png) no-repeat left top;
+					$w : 31px;
+					$h : 44px;
+					position: absolute;
+					height: $h;
+					top: 150px;
+					width: $w;
+					z-index: 9999;
+					&:before{
+						background: url(../images/prevnext2.png) no-repeat left -44px;
+						@include transition-param(opacity);
+						@extend .before;
+						height: $h;
+						opacity: 0;
+						width: $w;
+						left: 0;
+						top: 0;
+						z-index: 10000;
+					}
+					&:hover{
+						&:before{
+							opacity: 1;
+						}
+					}
+				}
+
+				.owl-prev{
+					left: -32px;
+				}
+				.owl-next{
+					@include rotation(180deg);
+					right: -35px;
+				}
+			}			
+		}
+
+
+		.sum{
+			@extend .regularlightext;
+			@include font-size(2);
+			padding-top: 1.9rem;
+			text-align: center;
+
+		}
+	}
+}
+
+
+.booking_bottom{
+	background-color: $color46;
+	padding: 5.7rem 0 6.5rem 23.3rem;
+	&_wrapper{
+		@include flexbox;
+		@include align-items(center);
+		width: 145.5rem;
+	}
+
+
+	.sum-promo{
+		@include flexbox;
+		flex-grow: 1;
+	}
+		
+	.sum{
+		text-align: right;
+		flex-grow: 1;
+		padding-right: 7rem;
+		@include font-size(3);
+			@extend .regularlightext;
+		span{
+			@extend .myriadbold;
+		}
+		i{
+			font-style: normal;
+		}
+	}
+	.promo{
+		@extend .regularlightext;
+		@include font-size(1.6);
+		margin-top: -1rem;
+	}
+
+	.promo{
+		.form-control{
+			@include placeholder;
+			background: none;
+			border: none;
+			border-bottom: 2px solid $color2;
+			color: $color2;
+			height: 50px;
+			text-align: center;
+			width: 16.5rem;
+		}
+	}
+
+
+	.btn{
+		@include spritebtn(-9px, -1341px);
+		@include font-size(2);
+		$h : 92px;
+		$w : 336px;
+		height: $h;
+		margin-left: 4rem;
+		position: relative;
+		text-align: center;
+		top: 1rem;
+		width: $w;
+		span{
+			@extend .myriadbold;
+			@include transition-param(color);
+			display: block;
+			padding-top: 2.3rem;
+		}
+		&:before{
+			@include spritebtn(-9px, -1458px);
+			height: $h;
+			width: $w;
+		}
+		&:hover{
+			span{
+				color: $color1;
+			}
+		}
+	}
+}
+
+input:focus::-webkit-input-placeholder {
+    opacity: 0;
+}

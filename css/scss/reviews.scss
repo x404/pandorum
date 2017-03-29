@@ -1,0 +1,690 @@
+.reviews{
+	background: url(../images/bg-6.jpg) no-repeat center top /cover;	
+	background-attachment: fixed;
+	
+	.shadow-main,
+	.shadow-flamp,
+	.shadow-tripadv{
+		position: fixed;
+		bottom: 0;
+		height: 97px;
+	}
+	
+	.shadow-main{
+		background: url(../images/review-shadow.png) repeat-x left bottom;
+		left: 0;
+		width: calc(100% - 435px);
+	}
+
+	.shadow-flamp{
+		background: url(../images/gradient-flamp.png) repeat-x left bottom;
+		right: 0;
+		width: 435px;
+	}
+	.shadow-tripadv{
+		background: url(../images/gradient-trip.png) repeat-x left bottom;
+		right: 0;
+		width: 435px;
+	}
+
+	.main{
+		margin-bottom: 0;
+		width: 143rem;
+		&_header{
+			.btn, .sort, h1{
+				display: inline-block;
+				vertical-align: top;
+			}
+
+			.btn{
+				background: url(../images/callback-btn.png) no-repeat left -696px;
+				@include font-size(1.5);
+				$h : 70px;
+				$w : 210px;
+				height: $h;
+				margin-left: 1.3rem;
+				margin-top: 1.2rem;
+				width: $w;
+				text-align: center;
+				span{
+					@extend .regular;
+					display: block;
+					padding-top: 1.8rem;
+				}
+				&:before{
+					background: url(../images/callback-btn.png) no-repeat left -795px;
+					height: $h;
+					width: $w;
+				}
+				&:hover{
+					span{
+						color: $color1;
+					}
+				}
+			}
+
+			.sort{
+				color: $color25;
+				margin-top: 2.2rem;
+				margin-left: 2.4rem;
+				@include font-size(1.7);
+				@extend .regularlightext;
+			}
+		}
+	}
+
+	.mCSB_scrollTools{
+		// opacity: 0 !important;
+	}
+
+	.mCSB_inside > .mCSB_container{
+		margin-right: 0;
+	}
+
+	.review_list{
+		margin-top: 3rem;
+		min-height: 300px;
+		padding-bottom: 150px;
+		position: relative;
+		width: 110rem;
+		@include flexbox;
+		@include justify-content(space-between);
+		&:before,
+		&:after{
+			@extend .before;
+			margin-left: 0px;
+			width: 5px;
+			left: 50%;
+		}
+		
+		&:before{
+			background: #202939;
+			height: 100%;
+		}
+		&:after{
+			top: -6px;
+			width: 0;
+			height: 0;
+			border-left: 3px solid transparent;
+			border-right: 2px solid transparent;
+			border-bottom: 6px solid #202939;
+		}
+
+		.review{
+			@include transition;
+			border: 2px solid $color26;
+			margin-bottom: 4rem;
+			padding: 2.5rem 3rem;
+			position: relative;
+			width: calc(100% - 39px);
+			&:before,
+			&:after{
+				@extend .before;
+				background: url(../images/review-loc.png) no-repeat right top;
+				height: 25px;
+				top: 43px;
+				width: 56px;
+			}
+			
+			&:before{
+				@include transition-param(opacity);
+				background-position: right bottom;
+				opacity: 0;
+				z-index: 2;
+			}
+
+			&:hover{
+				background: #121316;
+				box-shadow: 0 0 40px rgba(0, 187, 199, 1);
+				&:before{
+					opacity: 1;
+				}
+				border-color: $color9;
+				.review_wrapper{
+					.user_info{
+						&:after{
+							width: 12.5rem;
+						}
+					}
+				}
+			}
+			&_wrapper{
+				position: relative;
+				.user_info{
+					@include flexbox;
+					@include align-items(center);
+					
+					position: relative;
+					padding-bottom: 2.4rem;
+					.user_info_meta{
+						padding-right: 1.6rem;
+					}
+					p{
+						&:not(.name){
+							@include font-size(1.5);
+							@extend .regularlightext;
+							color: $color27;
+							padding-top: .5rem;
+						}
+						&.name{
+							@include font-size(1.7);
+							color: $color2;
+						}						
+					}
+
+					&:after{
+						@extend .before;
+						@include transition-param(width);
+						border-top: 1px solid #0098a3;
+						bottom: 0;
+						width: 6.5rem;
+					}
+				}
+				.user_text{
+					@extend .regularlightext;
+					@include font-size(1.9);
+					line-height: 1.4;
+					margin-right: 2.1rem;
+					padding-top: 2rem;
+					position: relative;
+					&:before,
+					&:after{
+						@extend .before;
+						@include sprite;
+						width: 39px;
+						height: 27px;
+					}
+				}
+
+				.more{
+					@extend .regularlightext;
+					margin-top: 1.8rem;
+					&_link{
+						@include font-size(1.7);
+						@include transition-param(color);
+						color: $color28;
+						text-decoration: none;
+						position: relative;
+						&:before{
+							@extend .before;
+							height: 6px;
+							width: 8px;
+							
+							top: 7px;
+							@include sprite(-18px, -36px);
+						}
+						&:hover{
+							color: $color18;
+							&:before{
+								background-position: -9px -36px;
+							}
+						}
+					}
+				}
+
+				.stars{
+					@include font-size(1.7);
+					@extend .myriadbold;
+					margin-top: 2.2rem;
+					.current{
+						color: $color29;
+					}
+					.stars_rate{
+						margin-right: 1.2rem;
+						img{
+							vertical-align: top;
+							margin-left: .1rem;
+							margin-right: .1rem;
+						}
+					}
+				}
+			}
+		}
+
+		.column_left,
+		.column_right{
+			width: 50%;
+		}
+
+		.column_left{
+			text-align: right;
+			.review{
+				&:before,
+				&:after{
+					right: -56px;
+				}
+
+				&_wrapper{
+					.user_info{
+						@include justify-content(flex-end);
+						&:after{
+							right: 1.9rem;
+						}
+					}
+
+					.more_link{
+						&:before{
+							left: -22px;
+						}
+					}
+
+					.user_text{
+						&:before{
+							background-position: 0 -107px;
+							left: 0;
+							top: 0;
+						}
+
+						&:after{
+							background-position: 0 -107px;
+							right: -40px;
+							bottom: -10px;
+							@include rotation(180deg);
+						}
+					}
+
+					.more{
+						margin-right: 2.1rem;
+					}
+
+					.stars{
+						margin-right: 2rem;
+					}
+				}
+			}
+
+
+		}
+		.column_right{
+			padding-top: 8.5rem;
+			padding-left: 44px;
+			text-align: left;
+			.review{
+				&:before,
+				&:after{
+					@include rotation(180deg);
+					left: -56px;
+				}
+
+				.user_info{
+					.photo{
+						order: 0;
+						img{
+							vertical-align: top;
+						}
+					}
+					.user_info_meta{
+						order: 1;
+						padding-left: 1.4rem;
+					}
+
+					&:after{
+						left: 20px;
+					}
+				}
+
+				&_wrapper{
+					.more,
+					.stars,
+					.user_text{
+						padding-left: 2rem;
+					}
+					.more_link{
+						&:before{
+							right: -22px;
+						}
+					}
+
+					.user_text{
+						&:before{
+							background-position: 0 -107px;
+							left: -24px;
+							top: 10px;
+						}
+
+						&:after{
+							background-position: 0 -107px;
+							right: -20px;
+							bottom: -25px;
+							@include rotation(180deg);
+						}
+					}
+				}
+			}
+		}
+	}
+}
+
+.sort{
+	.jq-selectbox{
+		margin-left: 1rem;
+		&.opened{
+			.jq-selectbox__select-text{
+				color: $color2;
+			}
+			.jq-selectbox__trigger-arrow{
+				@include rotation(180deg);
+				background-position: -13px -63px;
+			}
+		}
+	}
+	.jq-selectbox__select{
+		background: none;
+		border: none;
+		padding-right: 25px;
+		&-text{
+			@include font-size(1.6);
+			@include transition-param(color);
+			border-bottom: 2px solid $color3;
+			color: $color3;
+			padding-top: .6rem;
+			&:hover{
+				border-bottom-color: $color2;
+			}
+		}
+
+		.jq-selectbox__trigger{
+			width: 12px;
+			border-left: none;
+			&-arrow{
+				@include sprite(0, -63px);
+				border: none;
+				height: 8px;
+				top: 12px;
+				width: 12px;
+			}
+		}
+		&:hover{
+			background: none;
+			.jq-selectbox__select-text{
+				color: $color2;				
+			}
+			.jq-selectbox__trigger-arrow{
+				background-position: -13px -63px;
+			}
+		}
+	}
+	.jq-selectbox.focused .jq-selectbox__select{
+		border: none;
+	}
+
+	.jq-selectbox__dropdown{
+		background: $color9;
+		margin-top: 0;
+		// margin-left: 10px;
+		li{
+			@include transition;
+			color: $color2;
+			@include font-size(1.5);
+			@extend .semibold;
+			&.sel,
+			&:hover{
+				background-color: $color13;
+				color: $color1;
+			}
+			&:hover{
+			}
+		}
+	}
+}
+
+
+.other_reviews{
+	height: 100%;	
+	padding-top: 20rem;
+	position: fixed;
+	right: 0;
+	top: 0;
+	width: 435px;
+
+	.mCSB_scrollTools{
+		opacity: 0 !important;
+	}
+
+	&.flamp{
+		background: #2e6be5 url(../images/gradient-2.gif) repeat-y left top;
+
+		.title{
+			@include font-size(4);
+		}
+
+		.user_info{
+			.mark{
+				@include rounded(3.5rem);
+				height: 35px;
+				line-height: 1;
+				padding: .8rem 0 1rem 1.6rem;
+				position: absolute;
+				right: 0;
+				top: 0;
+				width: 74px;
+				&.mark-5{
+					background-color: #1dbf60;
+				}
+				&.mark-4{
+					background-color: #99c21d;
+				}
+				&.mark-1{
+					background-color: #ff4c5b;
+				}
+			}
+		}
+
+		.review{
+			.date{
+				color: $color30;
+				padding: 1.5rem 0; 
+				padding-left: 6rem !important;
+			}
+		}
+	}
+
+	&.tripadvisor{
+		background: #589442 url(../images/gradient-3.gif) repeat-y left top;
+		.title{
+			@include font-size(3.2);
+		}
+
+		.review{
+			.date{
+				color: #c7e2be;
+			}
+		}
+
+		.mark-date{
+			@include flexbox;
+			@include align-items(center);
+			// padding-left: 6rem;
+			margin-top: 1rem;
+			.mark{
+				padding-right: .6rem;
+			}
+		}
+
+		.user_text{
+			padding-top: 1.2rem;
+		}
+	}
+
+	.link_company{
+		position: absolute;
+		left: 27px;
+		top: 0;
+	}
+
+	&_content{
+		position: relative;
+		padding-left: 3rem;
+		padding-right: 0;
+		
+	}
+
+	.title{		
+		@extend .myriadbold;
+		padding-left: 6rem;
+		img{
+			vertical-align: top;
+			margin-top: -4px;
+		}
+	}
+
+	&_wrapper{
+		padding-bottom: 110px;
+	}
+
+	.review{
+		margin-bottom: 5.5rem;
+		margin-top: 4rem;
+		position: relative;
+		margin-right: 6rem;
+		.user{
+			&_info{
+				@include flexbox;
+				.photo{
+					// position: absolute;
+					left: -65px;
+					// left: 0;
+					margin-right: 1.2rem;
+					top: 0;
+				}
+	
+
+				.name,
+				.mark{
+					@extend .myriadbold;
+					@include font-size(2);
+				}
+
+				.name{
+					a{
+						@extend .tdn;
+					}
+				}
+			
+				.score{
+					@extend .myriadbold;
+					@include font-size(1.5);
+					padding-left: 20px;
+					position: relative;
+					&:before{
+						@extend .before;
+						width: 14px;
+						height: 10px;
+						left: 0;
+						top: 4px;
+						@include sprite(-25px, 0);
+					}
+				}
+			}
+			&_text{
+				@extend .regularlightext;
+				@include font-size(1.4);
+				line-height: 1.5;
+			}
+		}
+
+		.user_text,
+		.more{
+			padding-left: 6rem !important;
+		}
+
+		.date{
+			@extend .regularlightext;
+			@include font-size(1.5);
+		}
+		.more{
+			padding-top: 1.2rem;
+			a{
+				color: $color31;
+				@extend .tdu;
+			}
+		}
+	}
+}
+
+
+.fullreview{
+	.modal-dialog{
+		@include drop-shadow(0, 0, 30px, .5);
+		background-color: $color4;
+		padding: 3.5rem;
+		width: 967px;
+		&:after{
+			@extend .before;
+			width: 0;
+			height: 0;
+			left: 50px;
+			bottom: -60px;
+			border-top: 60px solid $color4; 
+			border-right: 60px solid transparent;
+		}
+	}
+
+	.modal-content{
+		padding-right: 4rem;
+	}
+
+	.close{
+		top: -10px;
+	}
+
+	.top{
+		@include flexbox;
+		@include align-items(center);
+		.meta{
+			margin-left: 1.4rem;
+		}
+	}
+
+	.name{
+		@extend .myriadbold;
+		@include font-size(1.7);
+	}
+
+	.date{
+		color: $color33;
+		@extend .regularlightext;
+		@include font-size(1.5);
+		padding-top: .5rem;
+	}
+
+	.mark{
+		@extend .myriadbold;
+		@include font-size(1.4);
+		background: url(../images/star2.png) no-repeat;
+		height: 53px;
+		margin-left: 2rem;
+		padding-top: 19px;
+		text-align: center;
+		width: 55px;
+		img{
+			vertical-align: top;
+		}
+	}
+	
+	.text{
+		@extend .regularlightext;
+		@include font-size(1.5);
+		border-left: 4px solid $color32;
+		line-height: 1.7;
+		margin-left: 7.9rem;
+		padding-left: 2.5rem;
+		position: relative;
+		&:before{
+			@extend .before;
+			border-top: 1px solid #464b53;
+			right: 0;
+			width: calc(100% - 2.5rem);
+			top: -25px;			
+		}
+		p{
+			margin: 2rem 0;
+		}
+	}
+}
+
+#addgeneralreview{
+	.btn{
+		padding-top: 1.6rem;
+	}
+}

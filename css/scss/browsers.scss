@@ -1,0 +1,181 @@
+::-ms-clear {
+        display: none;
+}
+
+_::-webkit-:host:not(:root:root), #callback-form .btn span{
+	padding-top: 1.9rem;
+}
+
+_::-webkit-:host:not(:root:root), .header .support .btn{
+	padding-top: 11px;
+}
+
+_::-webkit-:host:not(:root:root), #writeus .btn{
+	padding-top: 1.9rem;
+}
+
+_::-webkit-:host:not(:root:root), #addgeneralreview .btn{
+	padding-top: 1.7rem;
+}
+
+_::-webkit-:host:not(:root:root), .card .intro_wrapper .bottom .right .btn span{
+	padding-top: 2rem;
+}
+
+_::-webkit-:host:not(:root:root), .addreview .submit{
+	padding-top: 17px;
+}
+
+
+.ie10 footer .right .music{
+	svg{
+		display: none;
+	}
+	&_switch{
+		&:after{
+			@include sprite(-40px, -107px);
+			height: 49px;
+			width: 23px;
+		}
+	}
+}
+
+
+@supports (-ms-ime-align:auto) {
+	// edge
+	footer .right .music{
+		svg{
+			display: none;
+		}
+		&_switch{
+			&:after{
+				@include sprite(-40px, -107px);
+				height: 49px;
+				width: 23px;
+			}
+		}
+	}
+}
+
+@media screen and (-ms-high-contrast: active), (-ms-high-contrast: none) {
+	//ie11
+	.wrap{
+		display: block;
+		&.contacts{
+			@include flexbox;
+		}
+	}
+
+	footer .right .music{
+		svg{
+			display: none;
+		}
+		&_switch{
+			&:after{
+				@include sprite(-40px, -107px);
+				height: 49px;
+				width: 23px;
+			}
+		}
+	}
+
+	.news_list_row .cell .cell_wrapper .datetime{
+		margin-right: 4rem;
+	}
+
+	.page{
+		footer{
+			margin-top: -80px;
+			height: 2rem;
+		}
+		main{
+			margin-bottom: 2rem;
+		}
+	}
+
+	.card main{
+		display: block;
+	}
+}
+
+
+
+_::-webkit-:host:not(:root:root), .header .city-select-link:after{
+	top: 5px;
+}
+
+
+_::-webkit-:host:not(:root:root), footer .right{
+	.music svg{
+		display: none;
+	}
+	.music_switch{
+		&:after{
+			@include sprite(-40px, -107px);
+			height: 49px;
+			width: 23px;
+		}
+	}
+}
+
+_::-webkit-:host:not(:root:root), .header .switch #lang-styler .jq-selectbox__select-text{
+	width: 40px;
+}
+
+
+_::-webkit-:host:not(:root:root), .catalog .main_header .btn span{
+	top: 39px;
+}
+
+_::-webkit-:host:not(:root:root), .sort {
+	.jq-selectbox__select-text{
+		padding-top: 0;
+	}
+	.jq-selectbox__select .jq-selectbox__trigger-arrow{
+		top: 6px;
+	}
+}
+
+_::-webkit-:host:not(:root:root), .reviews .review_list .review_wrapper .more_link:before{
+	top: 5px;
+}
+
+_::-webkit-:host:not(:root:root), .fullreview .mark{
+	padding-top: 21px;
+}
+
+_::-webkit-:host:not(:root:root), .other_reviews .review .user_info .score{
+	padding-top: 2px;
+}
+
+
+_::-webkit-:host:not(:root:root), .card .booking .date-places .places .item_bottom a{
+	padding-top: 1.8rem;
+}
+
+_::-webkit-:host:not(:root:root), .card {
+	.recommendation_list .item .btn{
+		padding-top: 12px;
+	}
+	.card .reviews .bottom .btn span{
+		padding-top: 2rem;
+	}
+}
+
+
+
+_::-webkit-:host:not(:root:root), .bookinggame .quest-info .time{
+	.min,
+	.hours{
+		span{
+			padding-top: .7rem;
+			&:before{
+				margin-top: 0;
+			}
+		}
+	} 
+}
+
+_::-webkit-:host:not(:root:root), .bookinggame .quest-info .info .jq-selectbox__trigger-arrow{
+	top: 10px;
+}

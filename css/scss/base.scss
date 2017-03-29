@@ -1,0 +1,404 @@
+html,body,ul,ol,li,dl,dt,p,h1,h2,h3,h4,h5,h6,form,fieldset,a,img,label{margin:0;padding:0;border:0}
+header, section, footer, aside, nav, article {display:block}
+ul{list-style:none}
+$color1:#000;
+$color2:#fff;
+$color3:#0099a3;
+$color4:#262c35;
+$color5:#8cadbe;
+$color6:#00fff0;
+$color7:#3d4652;
+$color8:#798091;
+$color9:#00bbc7;
+$color10:#c3d7e1;
+$color11:#83959e;
+$color12:#101115;
+$color13:#00f9ff;
+$color14:#262132;
+$color15:#a4acb4;
+$color16:#c0cee5;
+$color17:#8898a1;
+$color18:#00ffea;
+$color19:#00dae8;
+$color20:#191b1f;
+$color21:#7f8393;
+$color22:#496a6c;
+$color23:#d0d0d0;
+$color24:#ff3030;
+$color25:#989a9d;
+$color26:#111721;
+$color27:#919fa8;
+$color28:#00c2cf;
+$color29:#ffc000;
+$color30:#b9c8e7;
+$color31:#ffea00;
+$color32:#0099a2;
+$color33:#a3b6c1;
+$color34:#c3bad0;
+$color35:#d4d6e0;
+$color36:#868688;
+$color37:#075157;
+$color38:#a7a7a7;
+$color39:#758595;
+$color40:#252525;
+$color41:#24272c;
+$color42:#949494;
+$color43:#008a89;
+$color44:#47494c;
+$color45:#6a7984;
+$color46:#101114;
+$color47:#8b8f97;
+$color48:#00bac6;
+$color49:#404143;
+$color50:#3b4149;
+
+
+* {
+	-webkit-box-sizing: border-box;
+	-moz-box-sizing: border-box;
+	box-sizing: border-box;
+}
+
+*:before,
+*:after {
+	-webkit-box-sizing: border-box;
+	-moz-box-sizing: border-box;
+	box-sizing: border-box;
+}
+
+html {
+  -ms-text-size-adjust: 100%;
+  -webkit-text-size-adjust: 100%;
+  font-size: 62.5%
+}
+
+
+body{
+	font-family: MyriadProRegular, sans-serif;
+	// @include flexbox;
+	// flex-flow: column;
+	font-display: swap;
+	min-height: 100vh;
+	color: $color2;
+	// font-size:10px;
+	// font-size: 1.4rem;
+
+	@include font-size(1.4);
+	@include rounded;
+}
+
+html, body{
+	height: 100%
+}
+
+
+@media screen and (-ms-high-contrast: active), (-ms-high-contrast: none) {
+	//ie11
+}
+
+
+
+*:focus{outline:none}
+
+input::-moz-focus-inner{
+	border: 0;
+	padding: 0;
+}
+
+
+.outerwrapper{
+	-webkit-flex: 1;
+	flex: 1;
+}
+
+
+.wrap{
+	background: url(../images/noise.jpg) #040405;
+	@include flexbox;
+	flex-flow: column;
+	flex: 1;
+	overflow: hidden;
+	position: relative;
+	// min-height: 100vh;
+	height: 100vh;
+}
+
+
+/*** standart classes *****/
+a{color:$color2;}
+h1{@include font-size(6); @extend .myriadbold;}
+// h2{@include font-size(6); @extend .myriadbold;}
+h3{@include font-size(2.6); @extend .myriadbold; font-weight: normal;}
+
+
+
+*:focus{outline:none}
+
+input::-moz-focus-inner{
+	border: 0;
+	padding: 0;
+}
+
+
+.outerwrapper{
+	// -webkit-flex: 1;
+	// -ms-flex: 1;
+	// flex: 1;
+}
+
+
+strong{
+	font-weight: normal;
+	@extend .semibold;
+}
+
+@font-face {
+	font-family: "MyriadProRegular";
+	src: url("../fonts/MyriadProRegular/MyriadProRegular.woff") format("woff"),
+	url("../fonts/MyriadProRegular/MyriadProRegular.ttf") format("truetype");
+	font-style: normal;
+	font-weight: normal;
+}
+
+.regular{font-family: "MyriadProRegular";}
+
+
+@font-face {
+	font-family: 'MyriadProLight';
+	src: url('../fonts/MyriadPro-Light/MyriadProLight.woff2') format('woff2'),
+		 url('../fonts/MyriadPro-Light/MyriadProLight.woff') format('woff'),
+		 url('../fonts/MyriadPro-Light/MyriadProLight.ttf') format('truetype'),
+		 url('../fonts/MyriadPro-Light/MyriadProLight.svg#MyriadProLight') format('svg');
+	font-style: normal;
+	font-weight: 300;
+}
+
+.regularlight{font-family: "MyriadProLight";}
+
+
+@font-face {
+	font-family: 'MyriadProLightExt';
+	src: url('../fonts/MyriadPro-LightSemiExt.ttf') format('truetype');
+	font-style: normal;
+	font-weight: 300;
+}
+
+.regularlightext{font-family: "MyriadProLightExt";}
+
+
+
+/* font-family: "MyriadProBold"; */
+@font-face {
+	font-family: "MyriadProBold";
+	src: url("../fonts/MyriadProBold/MyriadProBold.woff") format("woff"),
+	url("../fonts/MyriadProBold/MyriadProBold.ttf") format("truetype");
+	font-style: normal;
+	font-weight: normal;
+}
+.myriadbold{
+	font-family: "MyriadProBold";
+}
+
+/* font-family: "MyriadProItalic"; */
+@font-face {
+	font-family: "MyriadProItalic";
+	src: url("../fonts/MyriadProItalic/MyriadProItalic.woff") format("woff"),
+	url("../fonts/MyriadProItalic/MyriadProItalic.ttf") format("truetype");
+	font-style: normal;
+	font-weight: normal;
+}
+.italic{
+	font-family: "MyriadProItalic";
+}
+
+/* font-family: "MyriadProSemiBold"; */
+@font-face {
+	font-family: "MyriadProSemiBold";
+	src: url("../fonts/MyriadProSemiBold/MyriadProSemiBold.woff") format("woff"),
+	url("../fonts/MyriadProSemiBold/MyriadProSemiBold.ttf") format("truetype");
+	font-style: normal;
+	font-weight: normal;
+}
+.semibold{
+	font-family: "MyriadProSemiBold";
+}
+
+/* font-family: "MyriadProBoldItalic"; */
+@font-face {
+	font-family: "MyriadProBoldItalic";
+	src: url("../fonts/MyriadProBoldItalic/MyriadProBoldItalic.woff") format("woff"),
+	url("../fonts/MyriadProBoldItalic/MyriadProBoldItalic.ttf") format("truetype");
+	font-style: normal;
+	font-weight: normal;
+}
+/* font-family: "MyriadProSemiBoldItalic"; */
+@font-face {
+	font-family: "MyriadProSemiBoldItalic";
+	src: url("../fonts/MyriadProSemiBoldItalic/MyriadProSemiBoldItalic.woff") format("woff"),
+	url("../fonts/MyriadProSemiBoldItalic/MyriadProSemiBoldItalic.ttf") format("truetype");
+	font-style: normal;
+	font-weight: normal;
+}
+
+
+@font-face {
+	font-family: 'rouble';
+	src: url('../fonts/rouble/rouble-webfont.eot');
+	src: url('../fonts/rouble/rouble-webfont.eot?#iefix') format('embedded-opentype'),
+	    	url('../fonts/rouble/rouble-webfont.woff') format('woff'),
+	    	url('../fonts/rouble/rouble-webfont.ttf') format('truetype');
+	font-weight: normal;
+	font-style: normal;
+}
+.rouble {
+  font-family: 'rouble';
+  text-transform: none;
+}
+
+
+
+.tdn{
+	text-decoration: none;
+	&:hover{
+		text-decoration: underline;
+	}
+}
+
+.tdu{
+	text-decoration: underline;
+	&:hover{
+		text-decoration: none;
+	}
+}
+
+
+.flexbox{
+	@include flexbox;
+}
+
+
+@mixin sprite($x:0, $y:0){
+	background-image: url(../images/sprite.png);
+	background-repeat: no-repeat;
+	background-position: $x $y;
+}
+
+@mixin spritebtn($x:0, $y:0){
+	background-image: url(../images/callback-btn.png);
+	background-repeat: no-repeat;
+	background-position: $x $y;
+}
+
+.before{
+	content: "";
+	display: block;
+	position: absolute;
+}
+
+
+.form-control {
+   border: 1px solid $color3;
+   border-radius: 0;
+   @extend .regularlightext;
+   // margin-top: 0.6rem;
+	font-size: 16px;
+	&:focus,
+	&:active{
+		// border-color: $color5;
+	}
+}
+
+.btn{
+	@include font-size(1.7);
+	background: none;
+	border: none;
+	color: $color2;
+	cursor: pointer;
+	display: block;
+	text-transform: uppercase;
+	position: relative;
+	text-decoration: none;
+	text-align: center;
+	&:before{
+		@include transition-param(opacity);
+		@extend .before;
+		opacity: 0;
+	}
+	&:hover{
+		&:before{
+			opacity: 1;
+		}
+	}
+	span{
+		position: relative;
+		z-index: 2;
+	}
+}
+
+// logomenu hover state 
+.l-with-nav{
+	nav ul{
+		li{
+			&.icon1{
+				&:after{
+					opacity: .5;
+				}
+			}
+		}
+	}
+	footer{
+		&:before{
+			background: #070b10;
+		}
+	}
+}
+
+
+.home{
+	.main{
+		position: relative;
+		left: 0;
+	}
+}
+
+
+
+
+.inner{
+	position: relative;
+	z-index: 2;
+	.main{
+		margin-bottom: 3rem;
+		padding-left: 24.3rem;
+		padding-top: 10rem;
+	}
+
+	h1{
+		text-transform: uppercase;
+	}
+
+	footer{
+		padding-bottom: 6rem;
+	}
+}
+
+
+.hide{
+	display: none;
+}
+
+
+
+
+.center-block{
+	margin-left: auto;
+	margin-right: auto;
+	display: block;
+}
+
+
+body.modal-open {
+    overflow: hidden;
+    position:fixed;
+    width: 100%;
+}

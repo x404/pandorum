@@ -1,0 +1,135 @@
+.l-with-nav{
+	.home{
+		.bg{
+			// left: 48rem;
+			background-position: 240px center
+		}
+		.main{
+			left: 24rem;
+		}
+		.play{
+			margin-left: 423px
+		}
+	}
+}
+
+
+.maintransition{
+	transition: left 0.4s;
+	will-change : left;
+}
+
+.home{
+	.main{
+		@extend .maintransition;
+		height: calc(100% - 100px);
+		width: 100%;
+		position: relative;
+	}
+	.bg{
+		// @extend .maintransition;
+		will-change : background-position;
+		transition: background-position .4s;
+		background:url(../images/bg.jpg) no-repeat center center;
+			// url(../images/noise.jpg) repeat center center #040405;
+		bottom: 0;
+		left: 0;
+		position: absolute;
+		right: 0;
+		top: 0;
+	}
+
+	.play{
+		transition: margin-left 0.4s;
+		@extend .regularlightext;
+		@include font-size(3);
+		background: url(../images/play-btn.png) no-repeat;
+		color: $color2;
+		display: block;
+		height: 241px;
+		left: 50%;
+		margin: 148px 0 0 183px;
+		padding: 2rem 6rem;
+		position: absolute;
+		text-align: center;
+		text-decoration: none;
+		text-indent: -9999em;
+		text-transform: uppercase;
+		top: 50%;
+		width: 294px;
+		z-index: 10;
+		&:after{
+			@extend .before;
+			@include transition-param(opacity);
+			background: url(../images/play-btn.png) no-repeat 0 -240px;
+			height: 273px;
+			left: 0;
+			opacity: 0;
+			top: -17px;
+			width: 294px;
+		}
+		&:hover{
+			&:after{
+				opacity: 1;
+			}
+		}
+	}
+
+	.text{
+		bottom: 0;
+		left: 0;
+		margin-top: 32rem;
+		position: absolute;
+		right: 0;
+		top: 0;
+	}
+
+	.text-1,
+	.text-2{
+		@include font-size(2);
+		@extend .myriadbold;
+		position: relative;
+		z-index: 2;
+	}
+
+	.text-1{
+		padding-left: 24rem;
+		
+		position: absolute;
+		top: 50%;
+		margin-top: -35rem;
+
+		.column{
+			margin-right: 3rem;
+			div{
+				margin-bottom: 1.6rem;
+			}
+		}
+	}
+
+	.text-2{
+		letter-spacing: .5rem;
+		line-height: 1.5;
+		position: absolute;
+		right: 245px;
+		top: 0;
+	}
+
+	.text-3{
+		a{
+			@extend .tdu;
+			@include transition-param(color);
+			&:hover{
+				color: $color6;
+			}
+		}
+		@include font-size(2.2);
+		bottom: 15rem;
+		line-height: 1.5;
+		position: absolute;
+		right: 6rem;
+		text-align: right;
+		text-transform: uppercase;
+		z-index: 2;
+	}
+}

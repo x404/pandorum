@@ -1,0 +1,105 @@
+.actions{
+	background-attachment: fixed;
+	background: url(../images/bg-2.jpg) no-repeat center center / cover;
+	overflow: auto;
+
+	// height: inherit !important;
+	// position: relative;
+	// z-index: 2;
+	.outerwrapper{
+		// padding-left: 24.3rem;
+	}
+
+	&_list{
+		// padding-top: 9rem;
+		padding-bottom: 6.4rem;
+		h1{
+			text-transform: uppercase;
+		}
+
+		&_row{
+			// padding: 3rem;
+			flex-wrap: wrap;
+			.cell{
+				border: 3rem solid $color14;			
+				margin-top: 3rem;
+				margin-bottom: 1rem;
+				margin-right: 3.8rem;
+				width: 45.3rem;
+				&:nth-child(3n){
+					margin-right: 0;
+				}
+
+				h3{
+					@include font-size(2);
+					@extend .myriadbold;
+					flex-grow: 1;
+				}
+
+				.pic{
+					bottom: 0;
+					left: 0;
+					position: absolute;
+					right: 0;
+					top: 0;
+					z-index: -1;
+					&:after,
+					&:before{
+						@extend .before;
+						height: 100%;
+						width: 100%;
+						left: 0;
+						top: 0;
+					}
+
+					&:before{
+						@include transition-param(background-color);
+						background-color: rgba(50, 41, 64, .6);
+					}
+					&:after{
+						@include transition(.5s);
+						background-color: $color3;
+						left: -100%;
+						top: -100%;
+						z-index: 9;
+					}
+					img{
+						display: block;
+						max-width: 100%;
+					}
+				}
+
+				.datetime{
+					background-color: rgba(0, 0, 0, .5);
+					color: $color15;
+					padding: .6rem 1rem;
+					align-self: flex-start;
+				}
+				.cell_wrapper{
+					@include flexbox;
+					border: 2px solid $color3;
+					flex-direction: column;
+					min-height: 27.5rem;
+					overflow: hidden;
+					padding: 3.5rem 3.8rem;
+					position: relative;
+					text-decoration: none;
+					&:hover{
+						h3{
+							text-decoration: underline;
+						}
+						.pic{
+							&:after{
+								left: 0;
+								top: 0;								
+							}
+						}
+					}
+				}
+			}
+		}
+		&_wrapper{
+
+		}
+	}
+}
