@@ -39,6 +39,11 @@
 }
 
 @media (max-width: 1024px){
+	.inner{
+		h1{
+			@include font-size(4)
+		}
+	}
 }
 
 @media (max-width: 991px){
@@ -84,15 +89,9 @@
 		}
 	}
 
-
 	.wrap{
 		height: auto;
 		min-height: 100vh;
-	}
-
-
-	.mobile-menu{
-		// display: block;
 	}
 
 	.header{
@@ -156,6 +155,12 @@
 			display: block;
 		}
 	}
+
+	.inner{
+		h1{
+			@include font-size(3.6)
+		}
+	}
 }
 
 
@@ -183,8 +188,6 @@
 
 @media (max-width: 736px) and (orientation: landscape){
 }
-
-
 
 
 
@@ -242,6 +245,12 @@
 	}
 	#opencity .cities .column{
 		@include columns(100%, 1, 0px);
+	}
+
+	.inner{
+		h1{
+			@include font-size(3.2)
+		}
 	}
 }
 
@@ -357,6 +366,12 @@
 			a{
 				margin: 0 .5rem;
 			}
+		}
+	}
+
+	.inner{
+		h1{
+			@include font-size(3)
 		}
 	}
 }

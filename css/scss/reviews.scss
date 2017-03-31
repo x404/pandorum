@@ -43,7 +43,7 @@
 				$w : 210px;
 				height: $h;
 				margin-left: 1.3rem;
-				margin-top: 1.2rem;
+				// margin-top: 1.2rem;
 				width: $w;
 				text-align: center;
 				span{
@@ -65,7 +65,7 @@
 
 			.sort{
 				color: $color25;
-				margin-top: 2.2rem;
+				margin-top: 1rem;
 				margin-left: 2.4rem;
 				@include font-size(1.7);
 				@extend .regularlightext;
