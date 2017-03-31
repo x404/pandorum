@@ -127,7 +127,6 @@ input::-moz-focus-inner{
 /*** standart classes *****/
 a{color:$color2;}
 h1{@include font-size(4.6); @extend .myriadbold;}
-// h2{@include font-size(6); @extend .myriadbold;}
 h3{@include font-size(2.6); @extend .myriadbold; font-weight: normal;}
 
 

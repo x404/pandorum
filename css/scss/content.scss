@@ -35,7 +35,7 @@
 			margin: 1rem 0;	
 		}
 
-		h1{@include font-size(6); @extend .myriadbold;}
+		h1{@include font-size(4.6); @extend .myriadbold;}
 		h2{@include font-size(4); @extend .myriadbold; font-weight: normal;}
 		h2.light{@include font-size(4); @extend .regularlightext; font-weight: normal;}
 		h3{@include font-size(3.4); @extend .myriadbold;}
