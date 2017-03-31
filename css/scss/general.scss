@@ -274,13 +274,15 @@
 		margin-left: 2.9rem;
 	}
 	&:before{
-		@extend .before;
-		border-left: 1px solid #011f21;
-		height: 100%;
-		left: 85px;
-		top: 0;
-		width: 1px;
-		z-index: 2;
+		// вертикальная линия на меню
+		
+		// @extend .before;
+		// border-left: 1px solid #011f21;
+		// height: 100%;
+		// left: 85px;
+		// top: 0;
+		// width: 1px;
+		// z-index: 2;
 	}
 
 	ul{
