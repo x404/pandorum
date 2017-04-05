@@ -76,7 +76,7 @@ $(document).ready(function(){
 			_ul.css('max-height', 'none');
 			_srollPane.mCustomScrollbar({
 				scrollButtons : {enable:true},
-				autoDraggerLength : true
+				autoDraggerLength : false
 			});
 		}		
 	});
@@ -94,7 +94,7 @@ $(document).ready(function(){
 			_ul.css('max-height', 'none');
 			_srollPane.mCustomScrollbar({
 				scrollButtons : {enable:true},
-				autoDraggerLength : true
+				autoDraggerLength : false
 			});
 		}		
 	});
@@ -111,8 +111,8 @@ $(document).ready(function(){
 			_srollPane.height(height);
 			_ul.css('max-height', 'none');
 			_srollPane.mCustomScrollbar({
-				scrollButtons : {enable:true},
-				autoDraggerLength : true
+				scrollButtons : {enable:false},
+				autoDraggerLength : false
 			});
 		}		
 	});
@@ -130,8 +130,8 @@ $(document).ready(function(){
 			_srollPane.height(height);
 			_ul.css('max-height', 'none');
 			_srollPane.mCustomScrollbar({
-				scrollButtons : {enable:true},
-				autoDraggerLength : true
+				scrollButtons : {enable:false},
+				autoDraggerLength : false
 			});
 		}
 	});
@@ -149,8 +149,8 @@ $(document).ready(function(){
 			_srollPane.height(height);
 			_ul.css('max-height', 'none');
 			_srollPane.mCustomScrollbar({
-				scrollButtons : {enable:true},
-				autoDraggerLength : true
+				scrollButtons : {enable:false},
+				autoDraggerLength : false
 			});
 		}
 	});	
@@ -163,8 +163,8 @@ $(document).ready(function(){
 
 
 	$('#other_reviews-scroller').mCustomScrollbar({
-		scrollButtons : {enable:true},
-		autoDraggerLength : true
+		scrollButtons : {enable:false},
+		autoDraggerLength : false
 	});	
 
 

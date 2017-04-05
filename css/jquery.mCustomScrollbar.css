@@ -50,7 +50,7 @@ y-axis
 		top: 0;
 		right: 0;
 		bottom: 0;
-		height: 675px;
+		// height: 675px;
 		z-index: 10;
 	}
 
@@ -106,6 +106,7 @@ y-axis
 	.mCSB_scrollTools .mCSB_buttonUp,
 	.mCSB_scrollTools .mCSB_buttonDown{
 		display: block;
+		// display: none !;		
 		position: absolute;
 		height: 6px;
 		width: 100%;

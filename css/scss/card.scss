@@ -860,6 +860,13 @@
 						top: 0;
 					}
 				}
+
+				.mCSB_scrollTools{
+					height: auto;
+					.mCSB_draggerContainer{
+						margin: 0;
+					}
+				}
 			}
 
 			.jq-selectbox{
@@ -1099,6 +1106,9 @@
 	}
 	/* =/reviews
 	--------------------------- */	
+
+
+
 }
 
 

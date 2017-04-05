@@ -301,6 +301,16 @@
 	}
 
 
+	.mCSB_scrollTools{
+		height: auto;
+		.mCSB_draggerContainer{
+			margin: 0;
+		}
+		.mCSB_buttonUp, 
+		.mCSB_buttonDown{
+			opacity: 0 !important;
+		}
+	}
 
 	/* Cначала обозначаем стили для IE8 и более старых версий
 	т.е. здесь мы немного облагораживаем стандартный чекбокс. */
